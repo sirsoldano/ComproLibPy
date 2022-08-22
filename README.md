@@ -9,7 +9,7 @@
 - 深さ優先探索
 - modpow
 - bit演算
-- 素数因数 [Prime.py](/algorithm/Prime.py)
+- 素数因数約数 [Prime.py](/algorithm/Prime.py)
 
 ## データ構造集
 - 累積和
