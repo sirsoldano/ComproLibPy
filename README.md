@@ -10,6 +10,7 @@
 - modpow
 - bit演算
 - 素数因数約数 [Prime.py](/algorithm/Prime.py)
+- 場合の数 [Combination.py](/algorithm/Combination.py)
 
 ## データ構造集
 - 累積和
