@@ -42,3 +42,18 @@ def tridivPL(n,PL):
 
 import collections
 collections.Counter(tridiv(int(input())))
+
+#GCD
+# tc : log(A+B)
+# ul : over 10^18
+def gcd(A,B):
+	while A>=1 and B>=1 :
+		if(A>B):
+			A = A%B
+		else:
+			B = B%A
+	return A if A else B
+# use library
+import math
+math.gcd(A,B)
+lcm = A*B//math.gcd(A,B)
