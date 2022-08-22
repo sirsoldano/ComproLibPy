@@ -53,6 +53,10 @@ def gcd(A,B):
 		else:
 			B = B%A
 	return A if A else B
+def gcd(A,B):
+	if B==0:
+		return A
+	return(B,A%B)
 # use library
 import math
 math.gcd(A,B)
