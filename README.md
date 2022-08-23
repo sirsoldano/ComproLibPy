@@ -13,6 +13,7 @@
 - 素数因数約数 [Prime.py](/algorithm/Prime.py)
 - 場合の数と確率期待値 [CombinationEV.py](/algorithm/CombinationEV.py)
 - 再帰 [Recursion.py](/algorithm/Recursion.py)
+- 幾何学 [Vector.py](/algorithm/Vector.py)
 
 ## データ構造集
 - 累積和
