@@ -4,16 +4,16 @@
 ## アルゴリズム集
 - 二分探索
 - bit全探索
-- 動的計画法 [DP.py](/algorithm/DP.py)
+- [動的計画法](/algorithm/DP.py)
 - 貪欲法
 - 幅優先探索
 - 深さ優先探索
 - modpow
 - bit演算
-- 素数因数約数 [Prime.py](/algorithm/Prime.py)
-- 場合の数と確率期待値 [CombinationEV.py](/algorithm/CombinationEV.py)
-- 再帰 [Recursion.py](/algorithm/Recursion.py)
-- 幾何学 [Vector.py](/algorithm/Vector.py)
+- [素数因数約数](/algorithm/Prime.py)
+- [場合の数と確率期待値](/algorithm/CombinationEV.py)
+- [再帰](/algorithm/Recursion.py)
+- [幾何学](/algorithm/Vector.py)
 
 ## データ構造集
 - 累積和
