@@ -16,7 +16,7 @@
 - [幾何学](/algorithm/Vector.py)
 
 ## データ構造集
-- 累積和
+- [階差と累積和](/struct/FDnCS.py)
 - DP行列化
 - UnionFind木
 - Fenwick木
