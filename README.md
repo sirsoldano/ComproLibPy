@@ -36,7 +36,7 @@ from itertools import permutations,combinations
 permutations(list,subnum)
 # 二分探索
 from bisect import bisect_left,bisect
-bitsect_left(list,num)
+bisect_left(list,num)
 ~~~
 
 ## 計算量表
