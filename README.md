@@ -28,7 +28,7 @@ sys.setrecursionlimit(10**6)
 sys.exit() # return 0
 # 入力系
 N,M = map(int,input().split()
-A = list(map(int,input().split())
+A = list(map(int,input().split()))
 XY = [list(map(int,input().split()) for n in range(N)]
 # 順列、部分集合
 from itertools import permutations,combinations
