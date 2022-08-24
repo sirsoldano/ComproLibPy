@@ -9,7 +9,17 @@ def erast(N):
 				is_prime[i*p]=0
 		p+=1
 	return prime
-
+# 約数の個数を事前列挙
+# tc : NlogN
+# ul : 10^7
+def divisors(N):
+	div = [0,1]+[2]*(N-1)
+	for n in range(2,N//2+1):
+	    i=2
+	    while n*i<=N:
+			div[n*i]+=1
+			i+=1
+	return div
 # tc : √N
 # ul : 10^12
 def tridiv(n):
