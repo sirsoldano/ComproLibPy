@@ -1,0 +1,38 @@
+import sys
+input = sys.stdin.readline
+sys.setrecursionlimit(10**6)
+edge,node=[[] for n in range(N)],[-1]*N
+for m in range(M):
+    a,b = map(int,input().split())
+    edge[a-1].append(b-1)
+    edge[b-1].append(a-1)
+
+# tc : N+M
+def dfs(pos):
+	node[pos] = 1
+	for p in edge[pos]:
+		dfs(p) if node[p]==0 else None
+def dfs(pos):
+	stack=[pos]
+	node[pos]=1
+	while len(stack)>0:
+		pos = stack.pop()
+		for p in edge[pos]:
+			if node[p]==-1:
+				stack.append(p)
+				node[p]=1
+# tc : N+M
+import queue
+def bfs(pos):
+	q = queue.Queue()
+	q.put(pos)
+	node[pos]=0
+	while not q.empty():
+		pos = q.get()
+		for p in edge[pos]:
+			if node[p]==-1:
+				q.put(p)
+				node[p]=node[pos]+1
+
+# 単一始点最短経路問題、全点対間最短経路問題(Warshall-Floyd:N^3)
+# 最大フロー問題(Ford-Fulkerson、Dinic)、二部マッチング(Hopcroft-Karp:M√N)
