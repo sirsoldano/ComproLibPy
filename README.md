@@ -6,8 +6,7 @@
 - bit全探索
 - [動的計画法](/algorithm/DP.py)
 - 貪欲法
-- 幅優先探索
-- 深さ優先探索
+- [グラフ理論](/algorithm/Graph.py)
 - modpow
 - bit演算
 - [素数因数約数](/algorithm/Prime.py)
