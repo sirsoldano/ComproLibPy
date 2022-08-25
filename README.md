@@ -3,12 +3,12 @@
 
 ## アルゴリズム集
 - 二分探索
-- bit全探索
+- bit
 - [動的計画法](/algorithm/DP.py)
 - 貪欲法
 - [グラフ理論](/algorithm/Graph.py)
-- modpow
-- bit演算
+- [行列](/algorithm/Linear.py)
+- [モジュラ](/algorithm/Mod.py)
 - [素数因数約数](/algorithm/Prime.py)
 - [場合の数と確率期待値](/algorithm/CombinationEV.py)
 - [再帰](/algorithm/Recursion.py)
