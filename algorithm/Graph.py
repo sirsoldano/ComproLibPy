@@ -1,11 +1,12 @@
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10**6)
+N,M = map(int,input().split())
 edge,node=[[] for n in range(N)],[-1]*N
 for m in range(M):
-    a,b = map(int,input().split())
-    edge[a-1].append(b-1)
-    edge[b-1].append(a-1)
+	a,b = map(int,input().split())
+	edge[a-1].append(b-1)
+	edge[b-1].append(a-1)
 
 # tc : N+M
 def dfs(pos):
@@ -34,5 +35,16 @@ def bfs(pos):
 				q.put(p)
 				node[p]=node[pos]+1
 
+# DSmaze
+H,W = map(int,input().split())
+edge = [list() for n in range(H*W)]
+node = sum([list(map(lambda x:0 if x=="#" else -1,input().rstrip())) for h in range(H)],[])
+direc = (1,W) # 左上から処理するので右と下だけ
+for h in range(1,H-1):
+	for w in range(1,W-1):
+		for d in direc:
+			if node[h*W+w] and node[h*W+w+d]:
+				edge[h*W+w].append(h*W+w+d)
+				edge[h*W+w+d].append(h*W+w)
 # 単一始点最短経路問題、全点対間最短経路問題(Warshall-Floyd:N^3)
 # 最大フロー問題(Ford-Fulkerson、Dinic)、二部マッチング(Hopcroft-Karp:M√N)
