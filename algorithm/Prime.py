@@ -5,8 +5,7 @@ def erast(N):
 	while p<=N:
 		if is_prime[p]:
 			prime.append(p)
-			for i in range(2,N//p+1)
-				is_prime[i*p]=0
+			for i in range(2,N//p+1) : is_prime[i*p]=0
 		p+=1
 	return prime
 # 約数の個数を事前列挙
@@ -31,8 +30,7 @@ def tridiv(n):
 			n//=f
 		else:
 			f = f+2 if f>2 else 3
-	if n>1:
-		pf.append(n)
+	if n>1 : pf.append(n)
 	return pf
 # 複数回実行する場合は事前に素数列挙
 # PL=erast(int(n**0.5))
@@ -45,8 +43,7 @@ def tridivPL(n,PL):
 			n//=PL[ind]
 		else:
 			ind+=1
-	if n>1:
-		pf.append(n)
+	if n>1 : pf.append(n)
 	return pf
 
 
@@ -58,15 +55,12 @@ collections.Counter(tridiv(int(input())))
 # ul : over 10^18
 def gcd(A,B):
 	while A>=1 and B>=1 :
-		if(A>B):
-			A = A%B
-		else:
-			B = B%A
+		if(A>B) : A = A%B
+		else : B = B%A
 	return A if A else B
 def gcd(A,B):
-	if B==0:
-		return A
-	return(B,A%B)
+	if B==0 : return A
+	else : return gcd(B,A%B)
 # use library
 import math
 math.gcd(A,B)
