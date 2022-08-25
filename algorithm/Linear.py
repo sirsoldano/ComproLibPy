@@ -1,8 +1,8 @@
 class Linear:
 	def __init__(self,mod):
 		self.mod = mod
-	def modpowL(self,a,p,ans=None):
-		if ans is None : ans = [[1 if m==n else 0 for m in range(len(a))] for n in range(len(a))]
+	def modpowL(self,a,p):
+		ans = [[1 if m==n else 0 for m in range(len(a))] for n in range(len(a))]
 		while p>0:
 			if p&1 : ans = self.mulmodL(ans,a)
 			p>>=1
