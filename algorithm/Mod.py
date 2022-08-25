@@ -1,17 +1,16 @@
-# b^(M-1) ≡ 1 (mod M) M:prime, 1 <= b < M
+# ^(M-1) ≡ 1 (mod M) M:prime, 1 <= b < M
 # b*modular ≡ 1 (mod M) ≡ b^(M-1)
 # modular = b^(M-2) % M
-
 
 class MOD:
     def __init__(self,mod):
         self.mod = mod
         self.F = []
-    def modpow(self,a,b):
+    def modpow(self,a,p):
         ans = 1
-        while b>0:
-            if b&1 : ans=ans*a%self.mod
-            b>>=1
+        while p>0:
+            if p&1 : ans=ans*a%self.mod
+            p>>=1
             a=a*a%self.mod
         return ans
     def modC(self,x,y):
