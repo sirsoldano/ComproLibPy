@@ -65,3 +65,12 @@ def gcd(A,B):
 import math
 math.gcd(A,B)
 lcm = A*B//math.gcd(A,B)
+
+# 倍数の集合 ( N//lcm を集合個数奇数個は加算、偶数個は減算してbit全探索)
+# https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_be
+for b in range(1,(1<<K)):
+	cnt, lcm = 0, 1
+	for k in range(K) : 
+		if b&(1<<k) : cnt, lcm = cnt+1, lcm*A[k]//math.gcd(lcm,A[k])
+	ans = ans + N//lcm if cnt%2 else ans - N//lcm
+print(ans)
