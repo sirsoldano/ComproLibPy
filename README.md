@@ -37,6 +37,8 @@ permutations(list,subnum)
 # 二分探索
 from bisect import bisect_left,bisect
 bisect_left(list,num)
+# 小数点以下切り上げ
+(A+div-1) // div
 ~~~
 
 ## 計算量表
