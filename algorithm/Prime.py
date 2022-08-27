@@ -68,4 +68,3 @@ for b in range(1,(1<<K)):
     for k in range(K) : 
         if b&(1<<k) : cnt, lcm = cnt+1, lcm*A[k]//math.gcd(lcm,A[k])
     ans = ans + N//lcm if cnt%2 else ans - N//lcm
-print(ans)
