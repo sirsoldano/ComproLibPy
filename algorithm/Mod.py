@@ -21,9 +21,8 @@ class MOD:
             for x in range(1,x+1) : fx = fx*x%self.mod
             for y in range(1,y+1) : fy = fy*y%self.mod
             for xy in range(1,x+y+1) : fxy = fxy*xy%self.mod
-        fx = self.modpow(fx,self.mod-2)
-        fy = self.modpow(fy,self.mod-2)
-        return fxy*fx%self.mod*fy%self.mod
+        deno = self.modpow(fx*fy%self.mod,self.mod-2)
+        return fxy*deno%self.mod
     def modF(self,N):
         self.F = [1]*(N+1)
-        for n in range(1,N+1) : self.F[n] = self.F[n-1]*n
+        for n in range(1,N+1) : self.F[n] = self.F[n-1] * n % self.mod
