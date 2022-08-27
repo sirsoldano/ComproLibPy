@@ -35,6 +35,7 @@ def bfs(s):
                 q.put(p)
                 node[p]=node[pos]+1
 # Dijkstra法
+# https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_ap, https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_bl
 import heapq
 edge = [{nn:dist} for n in range(N)]
 def dijkstra(s):
