@@ -1,6 +1,7 @@
 # ^(M-1) ≡ 1 (mod M) M:prime, 1 <= b < M
 # b*modular ≡ 1 (mod M) ≡ b^(M-1)
 # modular = b^(M-2) % M
+# pythonではb^pの%Mはpow(b,p,M)でも可。つまりmodular=pow(b,M-2,M)でよい(繰り返し二乗法)
 
 class MOD:
     def __init__(self,mod):
