@@ -58,5 +58,29 @@ for h in range(1,H-1):
             if node[h*W+w] and node[h*W+w+d]:
                 edge[h*W+w].append(h*W+w+d)
                 edge[h*W+w+d].append(h*W+w)
+# 強連結性成分分解
+class SCC:
+    def __init__(self,N):
+        self._n = N
+        self.teds = [[] for n in range(N)]
+        self.reds = [[] for n in range(N)]
+        self.nnums = []
+        self.used = [False]*N
+        self.inc = 0
+    def addedge(self,a,b):
+        self.teds[a].append(b)
+        self.reds[b].append(a)
+    def tdfs(self,pos):
+        self.used[pos]=True
+        for p in self.teds[pos] :
+            if self.used[p]==False:
+                self.tdfs(p)
+        self.nnums.append(pos)
+    def rdfs(self,pos):
+        self.used[pos]=False
+        self.inc += 1
+        for p in self.reds[pos] :
+            if self.used[p]==True:
+                self.rdfs(p)
 # 単一始点最短経路問題、全点対間最短経路問題(Warshall-Floyd:N^3)
 # 最大フロー問題(Ford-Fulkerson、Dinic)、二部マッチング(Hopcroft-Karp:M√N)
