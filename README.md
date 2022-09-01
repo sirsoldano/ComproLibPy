@@ -16,6 +16,7 @@
 
 ## データ構造集
 - [階差と累積和](/struct/FDnCS.py)
+- [木構造](/struct/tree.py)
 - DP行列化
 - UnionFind木
 - Fenwick木
