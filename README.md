@@ -60,4 +60,4 @@ bisect_left(list,num)
 |60|10<sup>9</sup>|**10<sup>18</sup>**|-|-|-|-|-|
 
 ## 典型90問
-- [答え側を2分探索](https://atcoder.jp/contests/typical90/submissions/34487062){:target="_blank" rel="noopener"}（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/001.jpg){:target="_blank" rel="noopener"}）
+- [答え側を2分探索](https://atcoder.jp/contests/typical90/submissions/34487062)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/001.jpg)）
