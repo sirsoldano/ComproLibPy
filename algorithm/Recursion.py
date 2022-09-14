@@ -21,3 +21,15 @@ def MergeSort(l,r) :
             c1+=1
         cnt+=1
     for c in range(cnt) : A[l+c]=ordered[c]
+
+#自然数の和の組み合わせ列挙
+def addCombinations(nums, i, total, sum_left):
+    prev_num = nums[i - 1] if (i > 0) else 1
+    for k in range(prev_num, total + 1):
+        nums[i] = k
+        if sum_left > k and i+1<total : addCombinations(nums, i + 1, total, sum_left - k)
+        if sum_left == k : combs.add(tuple(nums[:i+1]+[0]*(total-i-1)))
+combs = set()
+addCombinations([0]*betn,0,betn,unbn)
+for comb in combs:
+    for perm in set(permutations(comb)):
