@@ -5,7 +5,7 @@
 - 二分探索
 - bit
 - [動的計画法](/algorithm/DP.py)
-- 貪欲法
+- [貪欲法](/algorithm/Greedy.py)
 - [グラフ理論](/algorithm/Graph.py)
 - [行列](/algorithm/Linear.py)
 - [モジュラ](/algorithm/Mod.py)
