@@ -24,4 +24,12 @@ for n in range(N):
 print(dp[N][0])
 # 桁DPは行列化して繰り返し二乗法を利用可能
 
+# 部分集合の場合の数は状態DP https://github.com/E869120/kyopro_educational_90/blob/main/editorial/008.jpg
+# dp[全体集合の何文字目][部分集合の何文字目]
+dp = [[0]*7 for n in range(len(S)+1)]
+for n in range(1,len(S)+1):
+    for i in range(7) : dp[n][i]=dp[n-1][i]
+    if S[n-1]==0 : dp[n][0]=1+dp[n-1][0]
+    else : dp[n][S[n-1]] = (dp[n][S[n-1]]+dp[n-1][S[n-1]-1])%1000000007
+
 # 部分和問題、コイン問題、編集距離、重み付き区間スケジューリング、巡回セールスマン
