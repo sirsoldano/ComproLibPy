@@ -33,6 +33,9 @@ N=int(input())
 N,M = map(int,input().split())
 A = list(map(int,input().split()))
 XY = [list(map(int,input().split())) for n in range(N)]
+S = list(map(lambda x:ord(x)-97,input().rstrip()))
+# 文字出力
+print("".join(map(lambda i:chr(i+97),ans)))
 # 順列、部分集合
 from itertools import permutations,combinations
 permutations(list,subnum)
