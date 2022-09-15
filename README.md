@@ -34,6 +34,8 @@ N,M = map(int,input().split())
 A = list(map(int,input().split()))
 XY = [list(map(int,input().split())) for n in range(N)]
 S = list(map(lambda x:ord(x)-97,input().rstrip()))
+atc, S = list(map(lambda c:ord(c)-97,"atcoder")), [] # atcoder文字列のunicode番list
+[ S.append(atc.index(ord(c)-97)) if ord(c)-97 in atc else None for c in input() ] # 文字列をatcoderインデックスlistに変換
 # 文字出力
 print("".join(map(lambda i:chr(i+97),ans)))
 # 順列、部分集合
