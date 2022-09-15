@@ -29,6 +29,7 @@ input = sys.stdin.readline # 文字列には使用不可
 sys.setrecursionlimit(10**6)
 sys.exit() # return 0
 # 入力系
+N=int(input())
 N,M = map(int,input().split())
 A = list(map(int,input().split()))
 XY = [list(map(int,input().split())) for n in range(N)]
