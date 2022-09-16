@@ -1,4 +1,4 @@
-# 階層なしUF木
+# 階層なしUF木 https://atcoder.jp/contests/typical90/tasks/typical90_l
 class UnionFind:
     def __init__(self,n):
         self.uft = [-1]*n
