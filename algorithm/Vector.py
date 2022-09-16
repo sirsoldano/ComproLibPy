@@ -1,6 +1,12 @@
 # distance**2
 def distpow(axy,bxy=(0,0)) :
     return (axy[0]-bxy[0])**2 + (axy[1]-bxy[1])**2
+# degree
+import math
+def angleDeg(axy,bxy=(0,0)):
+    return math.degrees(math.atan2(axy[1]-bxy[1],axy[0]-bxy[0]))%360
+def angleRad(axy,bxy=(0,0)):
+    return math.atan2(axy[1]-bxy[1],axy[0]-bxy[0])%(math.pi*2)
 # inner product ( <90:innnerP>0, >90:innerP<0, =90:innerP=0 )
 def innerP(axy,bxy,cxy=(0,0),dxy=(0,0)) :
     return (axy[0]-cxy[0])*(bxy[0]-dxy[0]) + (axy[1]-cxy[1])*(bxy[1]-dxy[1])
