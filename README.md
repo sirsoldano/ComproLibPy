@@ -44,6 +44,7 @@ permutations(list,subnum)
 # 二分探索
 from bisect import bisect_left,bisect
 bisect_left(list,num)
+min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 # 小数点以下切り上げ
 (A+div-1) // div
 ~~~
