@@ -13,3 +13,12 @@ while n<N and len(ans)<K:
             ans.append(j)
             n=ncpos[n][j]+1
             break
+
+# 経時タスクの取捨選択は締め切り(終了時間)でソート https://atcoder.jp/contests/typical90/tasks/typical90_k
+# dp[タスク順][タイムポイント]でタスクの可否で場合分け
+DCS = sorted([tuple(map(int,input().split())) for n in range(N)]) # D:締め切り, C:所要時間, S:報酬
+dp = [[0]*5001 for n in range(N+1)]
+for n in range(1,N+1):
+    for t in range(5001):
+        if DCS[n-1][1]<=t<=DCS[n-1][0] : dp[n][t] = max(dp[n-1][t],dp[n-1][t-DCS[n-1][1]]+DCS[n-1][2])
+        else : dp[n][t] = dp[n-1][t]
