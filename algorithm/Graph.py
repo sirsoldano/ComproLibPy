@@ -12,7 +12,7 @@ for m in range(M):
 def dfs(pos):
     node[pos] = 1
     for p in edge[pos]:
-        dfs(p) if node[p]==0 else None
+        if node[p]==0 : dfs(p)
 def dfs(s):
     stack=[s]
     node[s]=1
