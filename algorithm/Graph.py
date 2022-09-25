@@ -9,6 +9,7 @@ for m in range(M):
     edge[b-1].append(a-1)
 
 # tc : N+M
+# PyPyだとたまにTLEするのでその場合はPythonで提出
 def dfs(pos):
     node[pos] = 1
     for p in edge[pos]:
