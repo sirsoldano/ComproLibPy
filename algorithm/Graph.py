@@ -58,6 +58,16 @@ for h in range(1,H-1):
             if node[h*W+w] and node[h*W+w+d]:
                 edge[h*W+w].append(h*W+w+d)
                 edge[h*W+w+d].append(h*W+w)
+
+# 経路復元 探索時に一つ前のnode番号をnodeに記録しておく
+def getpath(t):
+    path = []
+    while t != 0:
+        path.append(t)
+        t = node[t]
+    path.reverse()
+    return path
+
 # 強連結性成分分解
 class SCC:
     def __init__(self,N):
