@@ -14,14 +14,14 @@ class MOD:
             p>>=1
             a=a*a%self.mod
         return ans
-    def modC(self,x,y):
+    def modC(self,X,Y):
         if self.F:
-            fx,fy,fxy = self.F[x],self.F[y],self.F[x+y]
+            fx,fy,fxy = self.F[X],self.F[Y],self.F[X+Y]
         else:
             fx,fy,fxy = 1,1,1
-            for x in range(1,x+1) : fx = fx*x%self.mod
-            for y in range(1,y+1) : fy = fy*y%self.mod
-            for xy in range(1,x+y+1) : fxy = fxy*xy%self.mod
+            for x in range(1,X+1) : fx = fx*x%self.mod
+            for y in range(1,Y+1) : fy = fy*y%self.mod
+            for xy in range(1,X+Y+1) : fxy = fxy*xy%self.mod
         deno = self.modpow(fx*fy%self.mod,self.mod-2)
         return fxy*deno%self.mod
     def modF(self,N):
