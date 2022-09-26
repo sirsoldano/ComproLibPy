@@ -18,7 +18,7 @@
 - [階差と累積和](/struct/FDnCS.py)
 - [木構造](/struct/tree.py)
 - [UnionFind木](/struct/UF.py)
-- Fenwick木
+- [Fenwick木(BIT)](/struct/Fenwick.py)
 - DP行列化
 
 ## 頻出記述
