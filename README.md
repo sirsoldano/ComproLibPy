@@ -2,8 +2,7 @@
 提出しすぎてAtCoder提出歴から探すのが困難になってきたため作成
 
 ## アルゴリズム集
-- 二分探索
-- bit
+- [二分探索](/algorithm/BinarySearch.py)
 - [動的計画法](/algorithm/DP.py)
 - [貪欲法](/algorithm/Greedy.py)
 - [グラフ理論](/algorithm/Graph.py)
@@ -13,6 +12,7 @@
 - [場合の数と確率期待値](/algorithm/CombinationEV.py)
 - [再帰](/algorithm/Recursion.py)
 - [幾何学](/algorithm/Vector.py)
+- [bit演算諸々](/algorithm/Bit.py)
 
 ## データ構造集
 - [階差と累積和](/struct/FDnCS.py)
@@ -69,3 +69,4 @@ min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 
 ## 典型90問
 - [答え側を2分探索](https://atcoder.jp/contests/typical90/submissions/34487062)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/001.jpg)）
+- [桁DP](https://atcoder.jp/contests/typical90/submissions/33173921)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/005-01.jpg)）
