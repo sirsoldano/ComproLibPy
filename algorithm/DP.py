@@ -32,4 +32,12 @@ for n in range(1,len(S)+1):
     if S[n-1]==0 : dp[n][0]=1+dp[n-1][0]
     else : dp[n][S[n-1]] = (dp[n][S[n-1]]+dp[n-1][S[n-1]-1])%1000000007
 
+# 数列操作は区間DP https://github.com/E869120/kyopro_educational_90/blob/main/editorial/019.jpg
+dp = [[100000000000000000]*2*N for n in range(2*N-1)]
+for l in range(2*N-1) : dp[l][l+1] = abs(A[l+1]-A[l])
+for n in range(3,2*N,2):
+    for l in range(2*N-n):
+        dp[l][l+n] = dp[l+1][l+n-1]+abs(A[l]-A[l+n])
+        for m in range(l+1,l+n-1) : dp[l][l+n] = min(dp[l][l+n],dp[l][m]+dp[m+1][l+n])
+print(dp[0][2*N-1])
 # 部分和問題、コイン問題、編集距離、重み付き区間スケジューリング、巡回セールスマン
