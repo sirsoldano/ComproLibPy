@@ -69,7 +69,8 @@ def getpath(t):
     path.reverse()
     return path
 
-# 強連結性成分分解
+# 強連結性成分分解 https://atcoder.jp/contests/typical90/submissions/35212815
+# https://github.com/E869120/kyopro_educational_90/blob/main/editorial/021.jpg
 class SCC:
     def __init__(self,N):
         self._n = N
