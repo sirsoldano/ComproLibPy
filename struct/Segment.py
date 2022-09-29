@@ -23,8 +23,7 @@ sys.setrecursionlimit(100000)
 class segT:
     def __init__(self,N):
         self.slen = 1
-        while(self.slen<N):
-            self.slen<<=1
+        while(self.slen<N) : self.slen<<=1
         self.st = [0] * (self.slen*2)
         self.lz = [0] * (self.slen*2)
     def deval(self,k):
@@ -35,8 +34,7 @@ class segT:
         self.lz[k]=0
     def update(self,l,r,h,k,tl,tr):
         self.deval(k)
-        if tr<=l or r<=tl :
-            return
+        if tr<=l or r<=tl : return
         if l<=tl and tr<=r :
             self.lz[k]=h
             self.deval(k)
@@ -46,10 +44,8 @@ class segT:
         self.st[k] = max(self.st[k*2],self.st[k*2+1])
     def getmax(self,l,r,k,tl,tr):
         self.deval(k)
-        if tr<=l or r<=tl :
-            return 0
-        elif l<=tl and tr<=r :
-            return self.st[k]
+        if tr<=l or r<=tl : return 0
+        elif l<=tl and tr<=r : return self.st[k]
         else :
             lc = self.getmax(l,r,k*2,tl,(tl+tr)//2)
             rc = self.getmax(l,r,k*2+1,(tl+tr)//2,tr)
