@@ -77,3 +77,4 @@ min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 - [辞書順は貪欲法](https://atcoder.jp/contests/typical90/submissions/34867193)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/006.jpg)）
 - [連結判定はUnionFind](https://atcoder.jp/contests/typical90/submissions/34889083)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/012.jpg)）
 - [加算と総和を繰返すにはFenwickTree](https://atcoder.jp/contests/typical90/submissions/35192768)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/017-03.jpg)）
+- [更新と取得を繰返すにはSegmentTree](https://atcoder.jp/contests/typical90/submissions/35241803)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/029-02.jpg)）
