@@ -16,6 +16,8 @@ class fenT:
         return ans
 
 # セグメント木
+# 解説 https://algo-logic.info/segment-tree/
+# 競プロ典型 https://github.com/E869120/kyopro_educational_90/blob/main/editorial/029-02.jpg
 import sys
 sys.setrecursionlimit(100000)
 class segT:
