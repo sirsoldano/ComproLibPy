@@ -80,3 +80,4 @@ min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 - [更新と取得を繰返すにはSegmentTree](https://atcoder.jp/contests/typical90/submissions/35241803)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/029-02.jpg)）
 - [素因数列挙はエラトステネスで非素数への加算](https://atcoder.jp/contests/typical90/submissions/35241997)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/030.jpg)）
 - [交互ゲームはgrundy数/dp/貪欲法](https://atcoder.jp/contests/typical90/submissions/35243279)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/031.jpg)）
+- [連続区間は尺取法(単調増加なら二分探索も)](https://atcoder.jp/contests/typical90/submissions/35245981)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/034.jpg)）
