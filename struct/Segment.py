@@ -15,6 +15,25 @@ class fenT:
             n -= n&-n
         return ans
 # セグメント木
+class segT:
+    def __init__(self,N):
+        self.slen = 1
+        while(self.slen<N) : self.slen<<=1
+        self.st = [-1] * (self.slen*2)
+    def update(self,i,x):
+        i += self.slen
+        self.st[i] = x
+        while i>=2 :
+            i>>=1
+            self.st[i] = max(self.st[i*2],self.st[i*2+1])
+    def getmax(self,l,r) : return self._getmax(l,r,1,0,self.slen)
+    def _getmax(self,l,r,k,tl,tr):
+        if l<=tl and tr<=r : return self.st[k]
+        elif tr<=l or r<=tl : return -1
+        else :
+            lc = self._getmax(l,r,k*2,tl,(tl+tr)//2)
+            rc = self._getmax(l,r,k*2+1,(tl+tr)//2,tr)
+            return max(lc,rc)
 
 # 遅延セグメント木
 # 解説 https://algo-logic.info/segment-tree/
@@ -31,13 +50,7 @@ class segT:
             self.lz[k*2+1]=max(self.lz[k],self.lz[k*2+1])
         self.st[k]=max(self.st[k],self.lz[k])
         self.lz[k]=-1
-    def updatePoint(self,i,x):
-        i += self.slen
-        self.st[i] = x
-        while i>=2 :
-            i>>=1
-            self.st[i] = max(self.st[i*2],self.st[i*2+1])
-    def updateSect(self,l,r,h) : return self._update(l,r,h,1,0,self.slen)
+    def update(self,l,r,h) : return self._update(l,r,h,1,0,self.slen)
     def _update(self,l,r,h,k,tl,tr):
         self.deval(k)
         if l<=tl and tr<=r :
