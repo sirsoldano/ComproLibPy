@@ -3,6 +3,13 @@
 # 1辺追加すると閉路が一つ出現
 
 # 木の直径アルゴリズム (https://github.com/E869120/kyopro_educational_90/blob/main/editorial/003.jpg)
+# 根付き木の最短距離を担う各辺重み＝部下数*(N-部下数)
+def dfs(pos):
+    node[pos] = 1
+    for p in edge[pos]:
+        if node[p]==0 : 
+            dfs(p)
+            node[pos] += node[p]
 # 根付き木へのダブリングで最近共通祖先
 class DubTree:
     def __init__(self,N):
