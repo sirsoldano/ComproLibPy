@@ -22,6 +22,13 @@ if outerP(axy,dxy,cxy,cxy)==0 and outerP(bxy,dxy,cxy,cxy)==0:
 elif outerP(axy,dxy,cxy,cxy)*outerP(bxy,dxy,cxy,cxy)<=0 and outerP(cxy,bxy,axy,axy)*outerP(dxy,bxy,axy,axy)<=0:
     True
 
+# マンハッタン距離、45度回転
+for n in range(N) : 
+    x,y = map(int,input().split())
+    p.append((x-y,x+y))
+def getdist(p1,p2):
+    return max(abs(p1[0]-p2[0]),abs(p1[1]-p2[1]))
+
 # 最近点対問題(分割統治法)
 # 凸包の構築(Andrewのアルゴリズム)
 # ボロノイ図(Fortuneのアルゴリズム)
