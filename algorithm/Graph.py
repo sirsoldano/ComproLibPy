@@ -94,5 +94,68 @@ class SCC:
         for p in self.reds[pos] :
             if self.used[p]==True:
                 self.rdfs(p)
+
+# 最大フロー問題(Dinic法)
+# 解説 https://tjkendev.github.io/procon-library/python/max_flow/dinic.html
+from collections import deque
+class Dinic:
+    def __init__(self, N):
+        self.N = N
+        self.e = [[] for i in range(N)]
+
+    def add_edge(self, fr, to, cap):
+        forward = [to, cap, None]
+        forward[2] = backward = [fr, 0, forward]
+        self.e[fr].append(forward)
+        self.e[to].append(backward)
+
+    def add_multi_edge(self, v1, v2, cap1, cap2):
+        edge1 = [v2, cap1, None]
+        edge1[2] = edge2 = [v1, cap2, edge1]
+        self.e[v1].append(edge1)
+        self.e[v2].append(edge2)
+
+    def bfs(self, s, t):
+        self.level = level = [None]*self.N
+        deq = deque([s])
+        level[s] = 0
+        e = self.e
+        while deq:
+            v = deq.popleft()
+            lv = level[v] + 1
+            for w, cap, _ in e[v]:
+                if cap and level[w] is None:
+                    level[w] = lv
+                    deq.append(w)
+        return level[t] is not None
+
+    def dfs(self, v, t, f):
+        if v == t:
+            return f
+        level = self.level
+        for e in self.it[v]:
+            w, cap, rev = e
+            if cap and level[v] < level[w]:
+                d = self.dfs(w, t, min(f, cap))
+                if d:
+                    e[1] -= d
+                    rev[1] += d
+                    return d
+        return 0
+
+    def flow(self, s, t):
+        flow = 0
+        INF = 10000000000000000000
+        e = self.e
+        while self.bfs(s, t):
+            *self.it, = map(iter, self.e)
+            f = INF
+            while f:
+                f = self.dfs(s, t, INF)
+                flow += f
+        return flow
+# 燃やす埋める問題(https://atcoder.jp/contests/typical90/tasks/typical90_an)
+# 解説 https://zenn.dev/kiwamachan/articles/37a2c646f82c7d
+
 # 単一始点最短経路問題、全点対間最短経路問題(Warshall-Floyd:N^3)
-# 最大フロー問題(Ford-Fulkerson、Dinic)、二部マッチング(Hopcroft-Karp:M√N)
+# 二部マッチング(Hopcroft-Karp:M√N)
