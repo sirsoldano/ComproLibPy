@@ -61,6 +61,17 @@ for h in range(H):
             edge[h*W+w].append(h*W+w+W)
             edge[h*W+w+W].append(h*W+w)
 
+edge = [[list() for w in range(W)] for h in range(H)]
+node = [list(map(lambda x:False if x=="#" else -1,input().rstrip())) for h in range(H)]
+for h in range(H):
+    for w in range(W):
+        if w<W-1 and node[h][w] and node[h][w+1]:
+            edge[h][w].append((h,w+1,1))
+            edge[h][w+1].append((h,w,3))
+        if h<H-1 and node[h][w] and node[h+1][w]:
+            edge[h][w].append((h+1,w,0))
+            edge[h+1][w].append((h,w,2))
+
 # 経路復元 探索時に一つ前のnode番号をnodeに記録しておく
 def getpath(t):
     path = []
