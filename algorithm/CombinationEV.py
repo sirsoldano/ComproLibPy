@@ -11,3 +11,11 @@ for a in range(N-4):
 
 # 全出現までの回数期待値 r枚出現時 : (r/N)^0+(r/N)^1+(r/N)^2+(r/N)^3+... = N/(N-r)
 # https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_z
+
+# 各桁の数字の和＝Kの通り数
+# https://github.com/E869120/kyopro_educational_90/blob/main/editorial/042.jpg
+dp = [1]+[0]*K
+for k in range(1,K+1):
+    for i in range(1,min(k,9)+1):
+        dp[k]+=dp[k-i]
+        dp[k]%=1000000007
