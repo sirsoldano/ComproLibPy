@@ -51,14 +51,15 @@ def dijkstra(s):
 # DSmaze
 H,W = map(int,input().split())
 edge = [list() for n in range(H*W)]
-node = sum([list(map(lambda x:0 if x=="#" else -1,input().rstrip())) for h in range(H)],[])
-direc = (1,W) # 左上から処理するので右と下だけ
-for h in range(1,H-1):
-    for w in range(1,W-1):
-        for d in direc:
-            if node[h*W+w] and node[h*W+w+d]:
-                edge[h*W+w].append(h*W+w+d)
-                edge[h*W+w+d].append(h*W+w)
+node = sum([list(map(lambda x:False if x=="#" else -1,input().rstrip())) for h in range(H)],[])
+for h in range(H):
+    for w in range(W):
+        if w<W-1 and node[h*W+w] and node[h*W+w+1]:
+            edge[h*W+w].append(h*W+w+1)
+            edge[h*W+w+1].append(h*W+w)
+        if h<H-1 and node[h*W+w] and node[h*W+w+W]:
+            edge[h*W+w].append(h*W+w+W)
+            edge[h*W+w+W].append(h*W+w)
 
 # 経路復元 探索時に一つ前のnode番号をnodeに記録しておく
 def getpath(t):
