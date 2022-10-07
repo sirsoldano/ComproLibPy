@@ -24,6 +24,15 @@ for n in range(N):
 print(dp[N][0])
 # 桁DPは行列化して繰り返し二乗法を利用可能
 
+# 部分集合はbitDP https://github.com/E869120/kyopro_educational_90/blob/main/editorial/045.jpg
+# dp[選び出したグループ数][部分集合のbit表現] tc:3^N
+for k in range(1,K+1):
+    for n in range(1,1<<N):
+        b = n
+        while b>0:
+            dp[k][n] = min(dp[k][n],max(dp[k-1][n-b],d[b]))
+            b = (b-1)&n
+
 # 部分集合の場合の数は状態DP https://github.com/E869120/kyopro_educational_90/blob/main/editorial/008.jpg
 # dp[全体集合の何文字目][部分集合の何文字目]
 dp = [[0]*7 for n in range(len(S)+1)]
