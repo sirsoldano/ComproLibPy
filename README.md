@@ -1,5 +1,5 @@
 # 競プロPythonLibrary自分用
-提出しすぎてAtCoder提出歴から探すのが困難になってきたため作成\n
+提出しすぎてAtCoder提出歴から探すのが困難になってきたため作成  
 テスト環境:[[paiza]](https://paiza.io/ja/projects/new) [[atcoder]](https://atcoder.jp/contests/typical90/custom_test)
 
 ## アルゴリズム集
