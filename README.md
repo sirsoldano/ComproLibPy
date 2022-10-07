@@ -1,6 +1,8 @@
 # 競プロPythonLibrary自分用
 提出しすぎてAtCoder提出歴から探すのが困難になってきたため作成  
-　テスト環境：[[paiza]](https://paiza.io/ja/projects/new) [[atcoder]](https://atcoder.jp/contests/typical90/custom_test)
+ テスト環境：[[paiza]](https://paiza.io/ja/projects/new) [[atcoder]](https://atcoder.jp/contests/typical90/custom_test)  
+ アル数：[[問題]](https://atcoder.jp/contests/math-and-algorithm)  [[解説]](https://github.com/E869120/math-algorithm-book)
+ 典型90問：[[問題]](https://atcoder.jp/contests/typical90)  [[解説]](https://github.com/E869120/kyopro_educational_90)  
 
 ## アルゴリズム集
 - [二分探索](/algorithm/BinarySearch.py)
@@ -69,7 +71,7 @@ min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 |40|1,000,000|**10<sup>12</sup>**|-|-|-|-|-|
 |60|10<sup>9</sup>|**10<sup>18</sup>**|-|-|-|-|-|
 
-## 典型90問　[[問題]](https://atcoder.jp/contests/typical90)  [[解説]](https://github.com/E869120/kyopro_educational_90)
+## 典型90問
 - [最少数え上げ要素を選択#25](https://atcoder.jp/contests/typical90/submissions/35225706)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/025.jpg)）
 - [答え側を2分探索#1](https://atcoder.jp/contests/typical90/submissions/34487062)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/001.jpg)）
 - [ダブリング(根付き木)#35](https://atcoder.jp/contests/typical90/submissions/35368779)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/035-02.jpg)）
