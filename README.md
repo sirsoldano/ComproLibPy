@@ -20,7 +20,7 @@
 - [木構造](/struct/tree.py)
 - [UnionFind木](/struct/UF.py)
 - [セグメント木(Fenwick,BIT)](/struct/Segment.py)
-- DP行列化
+- bit
 
 ## 頻出記述
 ~~~
