@@ -11,3 +11,12 @@ class UnionFind:
         if ra!=rb : self.uft[ra]=rb
     def same(self,a,b):
         return self.root(a)==self.root(b)
+
+# 最少全域木
+items.sort()
+ans,cnt=0,0
+for c,l,r in items :
+    if uf.same(l,r)==False:
+        uf.union(l,r)
+        ans, cnt = ans+c, cnt+1
+if cnt==N : print(ans)
