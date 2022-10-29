@@ -4,6 +4,12 @@ def DivCon(l,r) :
     m = (l+r)//2
     return divcon(l,m)+divcon(m,r)
 
+# メモ化再帰(https://atcoder.jp/contests/abc275/editorial/5110)
+from functools import lru_cache
+@lru_cache
+def f(n):
+    if n == 0 : return 1
+    else : return f(n // 2) + f(n // 3)
 # マージソート
 # tc : NlogN
 # ul : 10^6
