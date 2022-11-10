@@ -22,6 +22,7 @@ for m in range(M):
         pos+=1
 
 # dpの64倍高速化
+xy = sorted([list(map(lambda x:int(x)-1,input().split())) for m in range(M)],key=lambda x:(x[1],x[0]))
 ab = [tuple(map(lambda x:int(x)-1,input().split())) for q in range(Q)]
 for q in range(0,Q,50):
     dp = [0]*N
