@@ -90,6 +90,7 @@ min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 - [素因数列挙はエラトステネスで非素数への加算#30](https://atcoder.jp/contests/typical90/submissions/35241997)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/030.jpg)）
 - [各桁の数字の和＝Kの通り数は単調DP#42](https://atcoder.jp/contests/typical90/submissions/35427310)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/042.jpg)）
 - [XOR問題や順番を問わない数列操作は掃き出し法#57](https://atcoder.jp/contests/typical90/submissions/36314716)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/057.jpg)）
+- [bit演算で64倍高速化#59](https://atcoder.jp/contests/typical90/submissions/36357617)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/059-02.jpg)）
 - [交互ゲームはgrundy数/dp/貪欲法#31](https://atcoder.jp/contests/typical90/submissions/35243279)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/031.jpg)）
 - [連続区間は尺取法(単調増加なら二分探索も)#34](https://atcoder.jp/contests/typical90/submissions/35245981)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/034.jpg)）
 - [マンハッタン距離は45度回転#36](https://atcoder.jp/contests/typical90/submissions/35370438)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/036.jpg)）
