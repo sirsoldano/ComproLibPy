@@ -20,3 +20,11 @@ for m in range(M):
             if n!=pos and A[n]&(1<<m) : A[n] ^= A[pos]
         if S&(1<<m) : S ^= A[pos]
         pos+=1
+
+# dpの64倍高速化
+ab = [tuple(map(lambda x:int(x)-1,input().split())) for q in range(Q)]
+for q in range(0,Q,50):
+    dp = [0]*N
+    for i in range(q,min(Q,q+50)) : dp[ab[i][0]] += 1<<(i-q)
+    for m in xy : dp[m[1]] |= dp[m[0]]
+    for i in range(q,min(Q,q+50)): print("Yes") if dp[ab[i][1]]&1<<(i-q) else print("No")
