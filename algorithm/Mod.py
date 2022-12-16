@@ -7,6 +7,7 @@ class MOD:
     def __init__(self,mod):
         self.mod = mod
         self.F = []
+        self.Finv = []
     def modpow(self,a,p):
         ans = 1
         while p>0:
@@ -16,14 +17,16 @@ class MOD:
         return ans
     def modC(self,X,Y):
         if self.F:
-            fx,fy,fxy = self.F[X],self.F[Y],self.F[X+Y]
+            return self.F[X+Y]*self.Finv[X]%self.mod*self.Finv[Y]%self.mod
         else:
             fx,fy,fxy = 1,1,1
             for x in range(1,X+1) : fx = fx*x%self.mod
             for y in range(1,Y+1) : fy = fy*y%self.mod
             for xy in range(1,X+Y+1) : fxy = fxy*xy%self.mod
-        deno = self.modpow(fx*fy%self.mod,self.mod-2)
-        return fxy*deno%self.mod
+            deno = self.modpow(fx*fy%self.mod,self.mod-2)
+            return fxy*deno%self.mod
     def modF(self,N):
         self.F = [1]*(N+1)
         for n in range(1,N+1) : self.F[n] = self.F[n-1] * n % self.mod
+        self.Finv = [0]*(N+1)
+        for n in range(0,N+1) : self.Finv[n] = self.modpow(self.F[n], self.mod-2)
