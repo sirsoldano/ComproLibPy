@@ -101,3 +101,4 @@ min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 - [完全結合の部分は点を追加することで辺数を削減可能#54](https://atcoder.jp/contests/typical90/submissions/36189224)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/054.jpg)）
 - [ループ(周期性)検出で繰り返し削減#58](https://atcoder.jp/contests/typical90/submissions/36319380)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/058.jpg)）
 - [最長増加部分列(LIS)アルゴリズム#60](https://atcoder.jp/contests/typical90/submissions/36358194)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/060.jpg)）
+- [クエリ先読み#68](https://atcoder.jp/contests/typical90/submissions/37317678)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/068.jpg)）
