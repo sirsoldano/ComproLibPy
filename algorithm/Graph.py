@@ -48,6 +48,45 @@ def dijkstra(s):
             if node[p]==-1 or node[p]>pos[0]+dist:
                 node[p] = pos[0]+dist
                 heapq.heappush(q,(node[p],p))
+# トポロジカルソート
+q = deque()
+for n in range(N):
+    if node[n]==0:
+        q.append(n)
+ans = []
+while q:
+    v = q.popleft()
+    ans.append(v)
+    for s in edge[v]:
+        node[s] -= 1
+        if node[s]==0:
+            q.append(s)
+# 深さありトポロジカルソート
+stack=[]
+for n in range(N):
+    if node[n]==0:
+        stack.append(n)
+temp = [-1]*N
+ans = []
+def dfs(dep):
+    if dep==N:
+        ans.append(tuple(temp))
+        return True
+    if len(stack)==0 : return False
+    for n in range(len(stack)-1,-1,-1):
+        if len(ans)==K : break
+        s = stack.pop(n)
+        for p in edge[s]:
+            node[p]-=1
+            if node[p]==0 : stack.append(p)
+        temp[dep]=s+1
+        if not dfs(dep+1) : return False
+        for p in edge[s]:
+            if node[p]==0 : stack.pop()
+            node[p]+=1
+        stack.insert(n,s)
+    return True
+dfs(0)
 # DSmaze
 H,W = map(int,input().split())
 edge = [list() for n in range(H*W)]
