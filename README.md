@@ -76,6 +76,7 @@ min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 - [最少数え上げ要素を選択#25](https://atcoder.jp/contests/typical90/submissions/35225706)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/025.jpg)）
 - [答え側を2分探索#1](https://atcoder.jp/contests/typical90/submissions/34487062)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/001.jpg)）
 - [半分全探索＋2分探索#51](https://atcoder.jp/contests/typical90/submissions/36008121)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/051.jpg)）
+- [円環はlistにして複製連結で二分探索可能に#76](https://atcoder.jp/contests/typical90/submissions/38541165)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/076.jpg)）
 - [ダブリング(根付き木)#35](https://atcoder.jp/contests/typical90/submissions/35368779)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/035-02.jpg)）
 - [桁DP#5](https://atcoder.jp/contests/typical90/submissions/33173921)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/005-01.jpg)）
 - [部分集合はbitDP#45](https://atcoder.jp/contests/typical90/submissions/35441720)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/045.jpg)）
@@ -105,4 +106,3 @@ min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 - [最長増加部分列(LIS)アルゴリズム#60](https://atcoder.jp/contests/typical90/submissions/36358194)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/060.jpg)）
 - [クエリ先読み#68](https://atcoder.jp/contests/typical90/submissions/37317678)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/068.jpg)）
 - [一方通行のルート探索はトポロジカルソート(閉路検出も)#71](https://atcoder.jp/contests/typical90/submissions/38447554)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/071-03.jpg)）
-- [円環はlistにして2倍で二分探索可能に#76](https://atcoder.jp/contests/typical90/submissions/38541165)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/076.jpg)）
