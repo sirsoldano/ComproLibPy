@@ -19,3 +19,19 @@ for k in range(1,K+1):
     for i in range(1,min(k,9)+1):
         dp[k]+=dp[k-i]
         dp[k]%=1000000007
+
+# 包除原理（余事象の合成）https://github.com/E869120/kyopro_educational_90/blob/main/editorial/080.jpg
+ans = 2**D
+for i in range(1,2**N):
+    con = 0
+    temp = 0
+    for n in range(N):
+        if 2**n & i :
+            temp|=a[n]
+            con+=1
+    free = 0
+    for d in range(D):
+        if 2**d&temp==0:
+            free+=1
+    if con%2==1 : ans-=2**free
+    else : ans+=2**free
