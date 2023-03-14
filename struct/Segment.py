@@ -1,7 +1,7 @@
 # フェニック木(BinaryIndexedTree)
 # 解説 https://qiita.com/R_olldIce/items/f2f7930e7f67963f0493
 # 競プロ典型 https://github.com/E869120/kyopro_educational_90/blob/main/editorial/017-03.jpg
-class fenT:
+class FenT:
     def __init__(self,N):
         self.fen=[0]*(N+1)
     def add(self,n):
@@ -15,7 +15,7 @@ class fenT:
             n -= n&-n
         return ans
 # セグメント木
-class segT:
+class SegT:
     def __init__(self,N):
         self.slen = 1
         while(self.slen<N) : self.slen<<=1
@@ -38,7 +38,7 @@ class segT:
 # 遅延セグメント木
 # 解説 https://algo-logic.info/segment-tree/
 # 競プロ典型 https://github.com/E869120/kyopro_educational_90/blob/main/editorial/029-02.jpg
-class segT:
+class SegT:
     def __init__(self,N):
         self.slen = 1
         while(self.slen<N) : self.slen<<=1
