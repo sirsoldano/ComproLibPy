@@ -26,31 +26,41 @@
 - bit
 
 ## 頻出記述
+### sys系
 ~~~
-# sys系
 import sys
 input = sys.stdin.readline # 文字列には使用不可
 sys.setrecursionlimit(10**6)
 sys.exit() # return 0
-# 入力系
+~~~
+### 入力系
+~~~
 N=int(input())
 N,M = map(int,input().split())
 A = list(map(int,input().split()))
 XY = [list(map(int,input().split())) for n in range(N)]
 INF = 1<<60
-# 文字入出力
+~~~
+### 文字入出力
+~~~
 S = list(map(lambda x:ord(x)-97,input().rstrip()))
 atc, S = list(map(lambda c:ord(c)-97,"atcoder")), [] # atcoder文字列のunicode番list
 [ S.append(atc.index(ord(c)-97)) if ord(c)-97 in atc else None for c in input() ] # 文字列をatcoderインデックスlistに変換
 print("".join(map(lambda i:chr(i+97),ans)))
-# 順列、部分集合
+~~~
+### 順列、部分集合
+~~~
 from itertools import permutations,combinations
 permutations(list,subnum)
-# 二分探索
+~~~
+### 二分探索
+~~~
 from bisect import bisect_left,bisect
 bisect_left(list,num)
 min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
-# 小数点以下切り上げ
+~~~
+### 小数点以下切り上げ
+~~~
 (A+div-1) // div
 ~~~
 
