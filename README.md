@@ -64,6 +64,11 @@ min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 from collections import defaultdict as dd
 multiset = dd(int)
 ~~~
+#### 座標圧縮
+~~~
+sa = sorted(set(A))
+cc = { v: i for i, v in enumerate(sa) }
+~~~
 #### 小数点以下切り上げ
 ~~~
 (A+div-1) // div
