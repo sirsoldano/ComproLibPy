@@ -83,7 +83,7 @@ class SegT:
             rc = self._getmax(l,r,k*2+1,(tl+tr)//2,tr)
             return max(lc,rc)
 
-# 多重集合
+# 多重集合（https://qiita.com/toast-uz/items/a63f2d57ec7321186f12）
 import bisect
 class MultiSet:
     # n: サイズ、compress: 座圧対象list-likeを指定(nは無効)
