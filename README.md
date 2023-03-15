@@ -59,11 +59,6 @@ from bisect import bisect_left,bisect
 bisect_left(list,num)
 min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 ~~~
-#### 多重集合(簡易)
-~~~
-from collections import defaultdict as dd
-multiset = dd(int)
-~~~
 #### 座標圧縮
 ~~~
 sa = sorted(set(A))
@@ -73,6 +68,12 @@ cc = { v: i for i, v in enumerate(sa) }
 ~~~
 (A+div-1) // div
 ~~~
+#### 多重集合(簡易)
+~~~
+from collections import defaultdict as dd
+multiset = dd(int)
+~~~
+- [多重集合はC++で](https://atcoder.jp/contests/abc241/submissions/39758254)
 
 ## 計算量表
 |logN|√N|**N**|NlogN|N<sup>2</sup>|N<sup>3</sup>|2<sup>N</sup>|N!|
