@@ -73,7 +73,10 @@ cc = { v: i for i, v in enumerate(sa) }
 from collections import defaultdict as dd
 multiset = dd(int)
 ~~~
-- [多重集合はC++で](https://atcoder.jp/contests/abc241/submissions/39758254)
+[多重集合はC++で](https://atcoder.jp/contests/abc241/submissions/39758254)
+#### 周期性利用
+[競典58](https://atcoder.jp/contests/typical90/submissions/36319380)
+[ABC241E](https://atcoder.jp/contests/abc241/submissions/39758881)
 
 ## 計算量表
 |logN|√N|**N**|NlogN|N<sup>2</sup>|N<sup>3</sup>|2<sup>N</sup>|N!|
