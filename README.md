@@ -59,6 +59,22 @@ from bisect import bisect_left,bisect
 bisect_left(list,num)
 min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 ~~~
+#### グラフ入力
+~~~
+import sys
+input = sys.stdin.readline
+sys.setrecursionlimit(10**6)
+N,M = map(int,input().split())
+edge,node=[[] for n in range(N)],[0]*N
+for m in range(M):
+    a,b = map(int,input().split())
+    edge[a-1].append(b-1)
+    edge[b-1].append(a-1)
+def dfs(pos):
+    node[pos] = 1
+    for p in edge[pos]:
+        if node[p]==0 : dfs(p)
+~~~
 #### 座標圧縮
 ~~~
 sa = sorted(set(A))
