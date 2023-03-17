@@ -35,13 +35,13 @@ class MOD:
 class MOD:
     def __init__(self,mod):
         self.mod = mod
-        self.F = [0]*100000
-        self.Finv = [0]*100000
+        self.fac = [0]*100000
+        self.finv = [0]*100000
         self.inv = [0]*100000
-        self.F[0] = self.F[1] = self.Finv[0] = self.Finv[1] = self.inv[1] = 1
+        self.fac[0] = self.fac[1] = self.finv[0] = self.finv[1] = self.inv[1] = 1
         for i in range(2,100000):
-            self.F[i] = self.F[i-1]*i%mod
+            self.fac[i] = self.fac[i-1]*i%mod
             self.inv[i] = mod-self.inv[mod%i]*(mod//i)%mod
-            self.Finv[i] = self.Finv[i-1]*self.inv[i]%mod
+            self.finv[i] = self.finv[i-1]*self.inv[i]%mod
     def modC(self,X,Y):
-        return self.F[X+Y]*self.Finv[X]%self.mod*self.Finv[Y]%self.mod
+        return self.fac[X+Y]*self.finv[X]%self.mod*self.finv[Y]%self.mod
