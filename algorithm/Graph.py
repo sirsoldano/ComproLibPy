@@ -48,6 +48,18 @@ def dijkstra(s):
             if node[p]==-1 or node[p]>pos[0]+dist:
                 node[p] = pos[0]+dist
                 heapq.heappush(q,(node[p],p))
+# Warshall-Floyd(tc:N^3)
+abc,d=[],[[1<<60]*N for n in range(N)]
+for m in range(M):
+    a,b,c = map(int,input().split())
+    d[a-1][b-1]=c
+    d[b-1][a-1]=c
+    abc.append((a-1,b-1,c))
+for a in range(N):
+    for b in range(N):
+        for c in range(N):
+            d[b][c] = min(d[b][c],d[b][a]+d[a][c])
+
 # トポロジカルソート
 q = deque()
 for n in range(N):
