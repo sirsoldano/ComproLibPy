@@ -24,16 +24,16 @@ def dfs(s):
                 stack.append(p)
                 node[p]=1
 # tc : N+M
-import queue
+from collections import deque
 def bfs(s):
-    q = queue.Queue()
-    q.put(s)
+    q = deque()
+    q.append(s)
     node[s]=0
-    while not q.empty():
-        pos = q.get()
+    while q:
+        pos = q.popleft()
         for p in edge[pos]:
             if node[p]==-1:
-                q.put(p)
+                q.append(p)
                 node[p]=node[pos]+1
 # Dijkstra法
 # https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_ap, https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_bl
