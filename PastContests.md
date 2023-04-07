@@ -13,3 +13,5 @@
 |ABC243|[E](https://atcoder.jp/contests/abc243/tasks/abc243_e)|300程まではWF法|
 |ABC244|[D](https://atcoder.jp/contests/abc244/tasks/abc244_d)|転倒数、偶置換奇置換|
 |ABC244|[E](https://atcoder.jp/contests/abc244/tasks/abc244_e)|辿り着く通り数はDP|
+|ABC245|[E](https://atcoder.jp/contests/abc245/tasks/abc245_e)|箱選びは箱と中身を混ぜて並べる|
+|ABC245|[F](https://atcoder.jp/contests/abc245/tasks/abc245_f)|志向グラフのループ検出|
