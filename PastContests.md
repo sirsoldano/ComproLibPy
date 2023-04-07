@@ -15,3 +15,4 @@
 |ABC244|[E](https://atcoder.jp/contests/abc244/tasks/abc244_e)|辿り着く通り数はDP|
 |ABC245|[E](https://atcoder.jp/contests/abc245/tasks/abc245_e)|箱選びは箱と中身を混ぜて並べる|
 |ABC245|[F](https://atcoder.jp/contests/abc245/tasks/abc245_f)|志向グラフのループ検出|
+|ABC246|[D](https://atcoder.jp/contests/abc246/tasks/abc246_d)|**○以上の満たす数でa,b決定**は片側の候補をループしてもう片側を尺取又はO(1)|
