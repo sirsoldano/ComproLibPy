@@ -220,5 +220,17 @@ class Dinic:
 # 燃やす埋める問題(https://atcoder.jp/contests/typical90/tasks/typical90_an)
 # 解説 https://zenn.dev/kiwamachan/articles/37a2c646f82c7d
 
+# 巡回セールスマン問題(bitDP) N=20まで ABC301E https://qiita.com/Ll_e_ki/items/fa475f5bb224ada9be97
+dp=[[1<<60]*len(wei) for b in range(1<<len(wei))]
+for n in range(len(wei)) : dp[1<<n][n]=wei[0][n]
+for b in range(1<<(len(wei)-1)):
+    b = b<<1 | 1
+    for fr in range(len(wei)):
+        for to in range(len(wei)):
+            if (1<<fr)&b==0 : continue
+            if (1<<to)&b==0 and dp[b][fr]+wei[fr][to] < dp[b|(1<<to)][to]:
+                dp[b|(1<<to)][to] = dp[b][fr]+wei[fr][to]
+print(dp[1<<len(wei)][0])
+
 # 単一始点最短経路問題、全点対間最短経路問題(Warshall-Floyd:N^3)
 # 二部マッチング(Hopcroft-Karp:M√N)
