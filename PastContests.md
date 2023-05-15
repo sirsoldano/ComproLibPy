@@ -17,5 +17,4 @@
 |ABC245|[F](https://atcoder.jp/contests/abc245/tasks/abc245_f)|志向グラフのループ検出|
 |ABC246|[D](https://atcoder.jp/contests/abc246/tasks/abc246_d)|**○以上の満たす数でa,b決定**は片側の候補をループしてもう片側を尺取又はO(1)|
 |ABC246|[E](https://atcoder.jp/contests/abc246/tasks/abc246_e)|ダイクストラより早い01bfs|
-
 |ABC301|[E](https://atcoder.jp/contests/abc301/tasks/abc301_e)|N=20で最短経路長bit全探索は巡回セールスマン|
