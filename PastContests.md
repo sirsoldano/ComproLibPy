@@ -18,5 +18,6 @@
 |ABC246|[D](https://atcoder.jp/contests/abc246/tasks/abc246_d)|**○以上の満たす数でa,b決定**は片側の候補をループしてもう片側を尺取又はO(1)|
 |ABC246|[E](https://atcoder.jp/contests/abc246/tasks/abc246_e)|ダイクストラより早い01bfs|
 |ABC246|[F](https://atcoder.jp/contests/abc246/tasks/abc246_f)|N=18の場合の数は除法原理かも|
+|ABC247|[E](https://atcoder.jp/contests/abc247/tasks/abc247_e)|満たす区間の個数は尺取法か除法原理。coreの無い判定は別 [ABC295D](https://atcoder.jp/contests/abc295/tasks/abc295_d)|
 ||||
 |ABC301|[E](https://atcoder.jp/contests/abc301/tasks/abc301_e)|N=20で最短経路長bit全探索は巡回セールスマン|
