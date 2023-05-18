@@ -24,5 +24,6 @@
 |ABC248|[F](https://atcoder.jp/contests/abc248/tasks/abc248_f)|漸化式で表せる状態変化は状態dp|
 |ABC249|[E](https://atcoder.jp/contests/abc249/tasks/abc249_e)|ランレングスは圧縮前と圧縮後でdp|
 |ABC250|[E](https://atcoder.jp/contests/abc250/tasks/abc250_e)|集合はハッシュで状態記録も可|
+|ABC250|[F](https://atcoder.jp/contests/abc250/tasks/abc250_f)|多角形二分割の丁度良い面積は尺取法|
 ||||
 |ABC301|[E](https://atcoder.jp/contests/abc301/tasks/abc301_e)|N=20で最短経路長bit全探索は巡回セールスマン|
