@@ -22,6 +22,7 @@
 |ABC247|[F](https://atcoder.jp/contests/abc247/tasks/abc247_f)|カードの表裏に数字分散はグラフかも|
 |ABC248|[C](https://atcoder.jp/contests/abc248/tasks/abc248_c)|**場合の数に見えてdpで解ける事も**。ある項までの合計数で管理|
 |ABC248|[F](https://atcoder.jp/contests/abc248/tasks/abc248_f)|漸化式で表せる状態変化は状態dp|
-|ABC249|[E](https://atcoder.jp/contests/abc248/tasks/abc249_e)|ランレングスは圧縮前と圧縮後でdp|
+|ABC249|[E](https://atcoder.jp/contests/abc249/tasks/abc249_e)|ランレングスは圧縮前と圧縮後でdp|
+|ABC250|[E](https://atcoder.jp/contests/abc250/tasks/abc250_e)|集合はハッシュで状態記録も可|
 ||||
 |ABC301|[E](https://atcoder.jp/contests/abc301/tasks/abc301_e)|N=20で最短経路長bit全探索は巡回セールスマン|
