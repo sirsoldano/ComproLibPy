@@ -1,6 +1,6 @@
 # tc : NloglogN
 # ul : 10^7
-def erast(N):
+def eratos(N):
     prime,is_prime,p = [],[0,0]+[1]*(N-1),2
     while p<=N:
         if is_prime[p]:
