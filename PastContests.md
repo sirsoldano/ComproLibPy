@@ -27,5 +27,6 @@
 |ABC250|[F](https://atcoder.jp/contests/abc250/tasks/abc250_f)|多角形二分割の丁度良い面積は尺取法|
 |ABC251|[D](https://atcoder.jp/contests/abc251/tasks/abc251_d)|構築問題、x進数を作れパズル|
 |ABC251|[F](https://atcoder.jp/contests/abc251/tasks/abc251_f)|残辺すべてが卑尊はDFS木、非卑尊はBFS木|
+|ABC252|[F](https://atcoder.jp/contests/abc252/tasks/abc252_f)|棒長結合問題は二分木のイメージ|
 ||||
 |ABC301|[E](https://atcoder.jp/contests/abc301/tasks/abc301_e)|N=20で最短経路長bit全探索は巡回セールスマン|
