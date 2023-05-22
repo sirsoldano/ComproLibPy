@@ -60,8 +60,12 @@ from bisect import bisect_left,bisect
 bisect_left(list,num)
 min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 ~~~
-#### 座標圧縮
+#### 座標
 ~~~
+# 探索方向
+tera=((1,0),(0,1),(-1,0),(0,-1)) # x,y = y,-x でも可
+octa=((1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,-1),(0,-1),(1,-1))
+# 圧縮
 sa = sorted(set(A))
 cc = { v: i for i, v in enumerate(sa) }
 ~~~
