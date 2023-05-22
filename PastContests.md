@@ -33,4 +33,5 @@
 |ABC254|[D](https://atcoder.jp/contests/abc254/tasks/abc254_d)|約数内の最大平方根はエラトステネスと同要領|
 ||||
 |ABC301|[E](https://atcoder.jp/contests/abc301/tasks/abc301_e)|N=20で最短経路長bit全探索は巡回セールスマン|
+|ABC302|[B](https://atcoder.jp/contests/abc302/tasks/abc302_b)|計算量が許すなら愚直に8方向探索を|
 |ABC302|[F](https://atcoder.jp/contests/abc302/tasks/abc302_f)|辺も頂点とみなしてみる超頂点|
