@@ -45,7 +45,18 @@ class SegT:
             lc = self._getmax(l,r,k*2,tl,(tl+tr)//2)
             rc = self._getmax(l,r,k*2+1,(tl+tr)//2,tr)
             return max(lc,rc)
-
+    def getmax(self,l,r):
+        l += self.slen; r += self.slen
+        res = 0
+        while l < r:
+            if l & 1 : 
+                res = max(res, self.st[l])
+                l += 1
+            if r & 1: 
+                r -= 1 
+                res = max(res, self.st[r])
+            l >>= 1; r >>= 1
+        return res
 # 遅延セグメント木
 # 解説 https://algo-logic.info/segment-tree/
 # 競プロ典型 https://github.com/E869120/kyopro_educational_90/blob/main/editorial/029-02.jpg
