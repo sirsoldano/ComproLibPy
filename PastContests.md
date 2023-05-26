@@ -32,6 +32,7 @@
 |ABC253|[F](https://atcoder.jp/contests/abc253/tasks/abc253_f)|代入クエリは出力ごとに直前代入を記録|
 |ABC254|[D](https://atcoder.jp/contests/abc254/tasks/abc254_d)|約数内の最大平方根はエラトステネスと同要領|
 |ABC254|[F](https://atcoder.jp/contests/abc254/tasks/abc254_f)|クエリごとの区間解はセグメント木で管理|
+|ABC255|[E](https://atcoder.jp/contests/abc254/tasks/abc255_e)|漸化式変形で初項算出可能とし全探索して一番多い初項を選ぶ|
 ||||
 |ABC301|[E](https://atcoder.jp/contests/abc301/tasks/abc301_e)|N=20で最短経路長bit全探索は巡回セールスマン|
 |ABC302|[B](https://atcoder.jp/contests/abc302/tasks/abc302_b)|計算量が許すなら愚直に8方向探索を|
