@@ -35,6 +35,7 @@
 |ABC255|[E](https://atcoder.jp/contests/abc255/tasks/abc255_e)|漸化式変形で初項算出可能とし全探索して一番多い初項を選ぶ|
 |ABC256|[E](https://atcoder.jp/contests/abc256/tasks/abc256_e)|出次数1のグラフは連結成分ひとつにつき閉路1つ|
 |ABC256|[F](https://atcoder.jp/contests/abc256/tasks/abc256_f)|数列の累積和の累積和はある項の寄与度を計算し展開|
+|ABC257|[E](https://atcoder.jp/contests/abc257/tasks/abc257_e)|dpでTLEの時は桁に着目が有効なことも|
 ||||
 |ABC301|[E](https://atcoder.jp/contests/abc301/tasks/abc301_e)|N=20で最短経路長bit全探索は巡回セールスマン|
 |ABC302|[B](https://atcoder.jp/contests/abc302/tasks/abc302_b)|計算量が許すなら愚直に8方向探索を|
