@@ -48,6 +48,9 @@ S = list(map(lambda x:ord(x)-97,input().rstrip()))
 atc, S = list(map(lambda c:ord(c)-97,"atcoder")), [] # atcoder文字列のunicode番list
 [ S.append(atc.index(ord(c)-97)) if ord(c)-97 in atc else None for c in input() ] # 文字列をatcoderインデックスlistに変換
 print("".join(map(lambda i:chr(i+97),ans)))
+#ランレングス圧縮
+from itertools import groupby
+compressed = [(k, len(list(g))) for k,g in groupby(s)]
 ~~~
 #### 順列、部分集合
 ~~~
@@ -56,8 +59,7 @@ permutations(list,subnum)
 ~~~
 #### 二分探索
 ~~~
-from bisect import bisect_left,bisect
-bisect_left(list,num)
+from bisect import bisect_left as bl
 min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 ~~~
 #### 座標
