@@ -16,7 +16,9 @@ if outerP(axy,dxy,cxy,cxy)==0 and outerP(bxy,dxy,cxy,cxy)==0:
         True
 elif outerP(axy,dxy,cxy,cxy)*outerP(bxy,dxy,cxy,cxy)<=0 and outerP(cxy,bxy,axy,axy)*outerP(dxy,bxy,axy,axy)<=0:
     True
-
+# 円が接するかの判定
+def istouched(cs1,cs2):
+    return (cs1[2]+cs2[2])**2>=distpow(cs1[:2],cs2[:2]) and distpow(cs1[:2],cs2[:2])+min(cs1[2],cs2[2])>=max(cs1[2],cs2[2])
 # マンハッタン距離、45度回転
 for n in range(N) : 
     x,y = map(int,input().split())
