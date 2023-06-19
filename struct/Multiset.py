@@ -30,6 +30,7 @@ class Multiset:
 
 
 # lower_boundが必要な場合はこちら
+# https://qiita.com/toast-uz/items/a63f2d57ec7321186f12
 import bisect
 class MultiSet:
     # n: サイズ、compress: 座圧対象list-likeを指定(nは無効)
