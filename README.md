@@ -23,7 +23,7 @@
 - [木構造](/struct/tree.py)
 - [UnionFind木](/struct/UF.py)
 - [セグメント木(Fenwick,BIT)](/struct/Segment.py)
-- bit
+- [MultiSet(重複セット)](/struct/Multiset.py)
 
 ## 頻出記述
 #### sys系
