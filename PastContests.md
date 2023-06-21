@@ -38,6 +38,7 @@
 |ABC257|[E](https://atcoder.jp/contests/abc257/tasks/abc257_e)|dpでTLEの時は桁に着目が有効なことも|
 |ABC258|[E](https://atcoder.jp/contests/abc258/tasks/abc258_e)|鳩の巣原理でループへ帰着する問題|
 |ABC259|[F](https://atcoder.jp/contests/abc259/tasks/abc259_f)|木の取捨選択はdfsで木dp|
+|ABC260|[E](https://atcoder.jp/contests/abc260/tasks/abc260_e)|条件を満たす連続部分列の数は尺取法(たまに除法定理やdp)|
 ||||
 |ABC301|[E](https://atcoder.jp/contests/abc301/tasks/abc301_e)|N=20で最短経路長bit全探索は巡回セールスマン|
 |ABC302|[B](https://atcoder.jp/contests/abc302/tasks/abc302_b)|計算量が許すなら愚直に8方向探索を|
