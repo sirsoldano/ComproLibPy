@@ -25,6 +25,16 @@ class FenT:
             else:
                 l=m
         return l
+    def lower_bound(self,n):
+        l,r=0,len(self.tree)
+        n=self._sum(n)+1
+        while r-l>1:
+            m=(l+r)//2
+            if self._sum(m)>=n:
+                r=m
+            else:
+                l=m
+        return r
 # セグメント木
 class SegT:
     def __init__(self,N):
