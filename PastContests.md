@@ -42,6 +42,7 @@
 |ABC260|[F](https://atcoder.jp/contests/abc260/tasks/abc260_f)|TLEしそうなN数でも最小数着目で鳩の巣原理で解ける|
 |ABC261|[E](https://atcoder.jp/contests/abc261/tasks/abc261_e)|bitごとに処理した数値を答えの配列に\|=できる|
 |ABC261|[F](https://atcoder.jp/contests/abc261/tasks/abc261_f)|Fenwick木は-1で復すれば再利用可能|
+|ABC262|[D](https://atcoder.jp/contests/abc262/tasks/abc262_d)|選ぶ項数と余りでdp|
 ||||
 |ABC301|[E](https://atcoder.jp/contests/abc301/tasks/abc301_e)|N=20で最短経路長bit全探索は巡回セールスマン|
 |ABC302|[B](https://atcoder.jp/contests/abc302/tasks/abc302_b)|計算量が許すなら愚直に8方向探索を|
