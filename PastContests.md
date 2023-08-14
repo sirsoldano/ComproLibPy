@@ -49,3 +49,4 @@
 |ABC302|[B](https://atcoder.jp/contests/abc302/tasks/abc302_b)|計算量が許すなら愚直に8方向探索を|
 |ABC302|[F](https://atcoder.jp/contests/abc302/tasks/abc302_f)|辺も頂点とみなしてみる超頂点|
 |ABC309|[F](https://atcoder.jp/contests/abc309/tasks/abc309_f)|3要素の比較にソート+セグ木(圧座後)|
+|ABC314|[E](https://atcoder.jp/contests/abc314/tasks/abc314_e)|到達期待値は末尾から計算|
