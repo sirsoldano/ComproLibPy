@@ -44,6 +44,7 @@
 |ABC261|[F](https://atcoder.jp/contests/abc261/tasks/abc261_f)|Fenwick木は-1で復すれば再利用可能|
 |ABC262|[D](https://atcoder.jp/contests/abc262/tasks/abc262_d)|選ぶ項数と余りでdp|
 |ABC262|[E](https://atcoder.jp/contests/abc262/tasks/abc262_e)|グラフ辺の奇遇は次数の奇遇で解く|
+|ABC263|[E](https://atcoder.jp/contests/abc263/tasks/abc263_e)|到達期待値は末尾から計算、ゼロの処理が肝|
 ||||
 |ABC301|[E](https://atcoder.jp/contests/abc301/tasks/abc301_e)|N=20で最短経路長bit全探索は巡回セールスマン|
 |ABC302|[B](https://atcoder.jp/contests/abc302/tasks/abc302_b)|計算量が許すなら愚直に8方向探索を|
