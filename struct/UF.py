@@ -15,6 +15,8 @@ class UnionFind:
         return 0
     def same(self,a,b):
         return self.find(a)==self.find(b)
+    def size(self,a):
+        return -self.uft[self.find(a)]
 
 # 最少全域木
 items.sort()
