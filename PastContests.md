@@ -56,3 +56,4 @@
 |ABC315|[F](https://atcoder.jp/contests/abc315/tasks/abc315_f)|制約から最低限必要な状態数を見積もる|
 |ABC317|[E](https://atcoder.jp/contests/abc317/tasks/abc317_e)|マップ探索はグラフ作成不要、毎クエリ4方向見るだけ|
 |ABC317|[F](https://atcoder.jp/contests/abc317/tasks/abc317_f)|2進数で桁DP（**未完**）|
+|ABC318|[F](https://atcoder.jp/contests/abc318/tasks/abc318_f)|変化座標候補を事前列挙|
