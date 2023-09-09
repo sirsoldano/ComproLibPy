@@ -99,6 +99,22 @@ def dfs(dep):
         stack.insert(n,s)
     return True
 dfs(0)
+# 閉路検出
+def dfsloop(pos,bef):
+    node[pos] = 1
+    for p in edge[pos]:
+        if node[p]==0 : 
+            flag = dfsloop(p,pos)
+            if len(loop)>0 and flag==True : 
+                loop.append(p)
+                if pos==loop[0]:
+                    loop.append(pos)
+        elif node[p]==1 and p != bef:
+            loop.append(p)
+            return True
+        if len(loop)>0 : 
+            return False if loop[0]==loop[-1] else True
+    return False
 # DSmaze
 H,W = map(int,input().split())
 edge = [list() for n in range(H*W)]
