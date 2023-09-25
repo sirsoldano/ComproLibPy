@@ -1,6 +1,7 @@
 ## 過去問
 |Contest|Q|Point|
 |:----|:----|:----|
+|ABC127|[E](https://atcoder.jp/contests/abc127/tasks/abc127_e)|その組み合わせが何回数えられるか＋マンハッタンは縦横分解可|
 |ABC239|[E](https://atcoder.jp/contests/abc239/tasks/abc239_e)|根付き木dfs(240Eも)|
 |ABC239|[F](https://atcoder.jp/contests/abc239/tasks/abc239_f)|辺数管理しながらマージ|
 |ABC240|[F](https://atcoder.jp/contests/abc240/tasks/abc240_f)|２層の階差数列は微分のイメージ(極大極小)|
