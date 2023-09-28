@@ -49,6 +49,7 @@
 |ABC264|[E](https://atcoder.jp/contests/abc264/tasks/abc264_e)|辺は切る処理より繋ぐ処理が楽|
 |ABC265|[F](https://atcoder.jp/contests/abc265/tasks/abc265_f)|累積和で計算量1オーダーダウン（**未完**）|
 |ABC267|[F](https://atcoder.jp/contests/abc267/tasks/abc267_f)|木の距離管理は直径の両端から|
+|ABC268|[F](https://atcoder.jp/contests/abc268/tasks/abc268_f)|並べ替えの最適解はcmp関数で|
 ||||
 |ABC301|[E](https://atcoder.jp/contests/abc301/tasks/abc301_e)|N=20で最短経路長bit全探索は巡回セールスマン|
 |ABC302|[B](https://atcoder.jp/contests/abc302/tasks/abc302_b)|計算量が許すなら愚直に8方向探索を|
