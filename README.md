@@ -62,11 +62,24 @@ permutations(list,subnum)
 from bisect import bisect_left as bl
 min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 ~~~
+#### キュー
+~~~
+from collections import deque
+q = deque()
+q.append(s)
+while q:
+    pos = q.popleft()
+import heapq as hq
+q = []
+hq.heappush(q,i)
+hq.heappop(q)
+~~~
 #### 座標
 ~~~
 # 探索方向
 tera=((1,0),(0,1),(-1,0),(0,-1)) # x,y = y,-x でも可
 octa=((1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,-1),(0,-1),(1,-1))
+tera={"U":(1,0),"R":(0,1),"D":(-1,0),"L":(0,-1)}
 # 圧縮
 sa = sorted(set(A))
 cc = { v: i for i, v in enumerate(sa) }
