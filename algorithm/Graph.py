@@ -1,3 +1,4 @@
+# https://hcpc-hokudai.github.io/archive/graph_shortest_path_mst_001.pdf
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10**6)
