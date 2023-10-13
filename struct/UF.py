@@ -11,9 +11,8 @@ class UnionFind:
         return self.uft[pos]
     def union(self,a,b):
         ra,rb = self.root(a),self.root(b)
-        if ra==rb :
-            return 0
-        elif self.rank[ra] < self.rank[rb] :
+        if ra==rb : return
+        if self.rank[ra] < self.rank[rb] :
             self.uft[ra] = rb
         else :
             self.uft[rb] = ra
