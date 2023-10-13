@@ -26,16 +26,15 @@ def dfs(s):
                 node[p]=1
 # tc : N+M
 from collections import deque
-def bfs(s):
-    q = deque()
-    q.append(s)
-    node[s]=0
-    while q:
-        pos = q.popleft()
-        for p in edge[pos]:
-            if node[p]==-1:
-                q.append(p)
-                node[p]=node[pos]+1
+q = deque()
+q.append(0)
+node[0]=0
+while q:
+    pos = q.popleft()
+    for p in edge[pos]:
+        if node[p]==-1:
+            q.append(p)
+            node[p]=node[pos]+1
 # Dijkstra法
 # https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_ap, https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_bl
 import heapq
