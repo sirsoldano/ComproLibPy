@@ -52,7 +52,7 @@
 |ABC267|[F](https://atcoder.jp/contests/abc267/tasks/abc267_f)|木の距離管理は直径の両端から|
 |ABC268|[F](https://atcoder.jp/contests/abc268/tasks/abc268_f)|並べ替えの最適解はcmp関数で|
 |ABC270|[D](https://atcoder.jp/contests/abc270/tasks/abc270_d)|交互ターンゲームは残り石数をnと置いてdp|
-|ABC270|[F](https://atcoder.jp/contests/abc270/tasks/abc270_f)|多点ワープはnodeと見做す。最小全域木はクラスカル法かダイクストラ|
+|ABC270|[F](https://atcoder.jp/contests/abc270/tasks/abc270_f)|多点ワープはnodeと見做す。最小全域木はクラスカル法かプラム法(ダイクストラ)|
 ||||
 |ABC301|[E](https://atcoder.jp/contests/abc301/tasks/abc301_e)|N=20で最短経路長bit全探索は巡回セールスマン|
 |ABC302|[B](https://atcoder.jp/contests/abc302/tasks/abc302_b)|計算量が許すなら愚直に8方向探索を|
