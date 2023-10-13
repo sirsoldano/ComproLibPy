@@ -1,4 +1,6 @@
 # 階層なしUF木 https://atcoder.jp/contests/typical90/tasks/typical90_l
+import sys
+sys.setrecursionlimit(10**6)
 class UnionFind:
     def __init__(self,n):
         self.uft = [-1]*n
