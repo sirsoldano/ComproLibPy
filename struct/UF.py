@@ -4,21 +4,22 @@ sys.setrecursionlimit(10**6)
 class UnionFind:
     def __init__(self,n):
         self.uft = [-1]*n
-    def find(self,pos):
+        self.rank = [0]*n
+    def root(self,pos):
         if self.uft[pos] == -1 : return pos
-        self.uft[pos]=self.find(self.uft[pos])
+        self.uft[pos]=self.root(self.uft[pos])
         return self.uft[pos]
     def union(self,a,b):
-        ra,rb = self.find(a),self.find(b)
-        if ra!=rb : 
-            if self.uft[ra]>self.uft[rb] : ra,rb = rb,ra
-            self.uft[ra] += self.uft[rb]
+        ra,rb = self.root(a),self.root(b)
+        if ra==rb :
+            return 0
+        elif self.rank[ra] < self.rank[rb] :
+            self.uft[ra] = rb
+        else :
             self.uft[rb] = ra
-        return 0
+            if self.rank[ra]==self.rank[rb] : self.rank[ra]+=1
     def same(self,a,b):
-        return self.find(a)==self.find(b)
-    def size(self,a):
-        return -self.uft[self.find(a)]
+        return self.root(a)==self.root(b)
 
 # 最少全域木
 items.sort()
