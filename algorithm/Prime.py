@@ -31,7 +31,7 @@ def tridiv(n):
     if n>1 : pf.append(n)
     return pf
 # 複数回実行する場合は事前に素数列挙
-# PL=erast(int(n**0.5))
+# PL=eratos(int(n**0.5))
 def tridivPL(n,PL):
     pf, ind = [], 0
     while ind<len(PL) and PL[ind]*PL[ind]<=n:
