@@ -19,6 +19,19 @@ def divisors(N):
             div[n*i]+=1
             i+=1
     return div
+#約数の列挙
+# tc : √N
+# ul : 10^12
+def divs(n):
+    ldiv , udiv = [], []
+    i = 1
+    while i*i <= n:
+        if n % i == 0:
+            ldiv.append(i)
+            if i != n // i:
+                udiv.append(n//i)
+        i += 1
+    return ldiv + udiv[::-1]
 # tc : √N
 # ul : 10^12
 def tridiv(n):
