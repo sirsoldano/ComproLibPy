@@ -3,10 +3,10 @@
 |:----|:----|:----|
 |ABC127|[E](https://atcoder.jp/contests/abc127/tasks/abc127_e)|その組み合わせが何回数えられるか＋マンハッタンは縦横分解可|
 |ABC130|[E](https://atcoder.jp/contests/abc130/tasks/abc130_e)|最長共通部分列(LCS)のDP＋二次元累積和|
+|ABC136|[E](https://atcoder.jp/contests/abc136/tasks/abc136_e)|約数でループ|
 |ABC239|[E](https://atcoder.jp/contests/abc239/tasks/abc239_e)|根付き木dfs(240Eも)|
 |ABC239|[F](https://atcoder.jp/contests/abc239/tasks/abc239_f)|辺数管理しながらマージ|
 |ABC240|[F](https://atcoder.jp/contests/abc240/tasks/abc240_f)|２層の階差数列は微分のイメージ(極大極小)|
-|ABC241|[D](https://atcoder.jp/contests/abc241/tasks/abc241_d)|**multisetとlower_bound前提ならば即C++で**|
 |ABC241|[E](https://atcoder.jp/contests/abc241/tasks/abc241_e)|周期性利用問題の典型|
 |ABC241|[F](https://atcoder.jp/contests/abc241/tasks/abc241_f)|滑る床、無理にグラフに落とし込む必要無くBFSは可能|
 |ABC242|[C](https://atcoder.jp/contests/abc242/tasks/abc242_c)|辿り着ける通り数はDP、漸化式はDPか行列|
@@ -64,6 +64,7 @@
 |ABC317|[F](https://atcoder.jp/contests/abc317/tasks/abc317_f)|2進数で桁DP（**未完**）|
 |ABC318|[F](https://atcoder.jp/contests/abc318/tasks/abc318_f)|変化座標候補を事前列挙|
 |ABC322|[F](https://atcoder.jp/contests/abc322/tasks/abc322_f)|モノイドセグ木|
+|ABC324|[F](https://atcoder.jp/contests/abc324/tasks/abc324_f)|答えの二分探索はfloatでも可|
 
 ## 典型90問
 - [最少数え上げ要素を選択#25](https://atcoder.jp/contests/typical90/submissions/35225706)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/025.jpg)）
