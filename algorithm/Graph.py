@@ -59,7 +59,16 @@ for a in range(N):
     for b in range(N):
         for c in range(N):
             d[b][c] = min(d[b][c],d[b][a]+d[a][c])
-
+# Bellman-Ford
+d = [0]+[1<<60]*(N-1)
+for n in range(N):
+  update = []
+  for a in range(N):
+    for b,c in edge[a]:
+      if d[a]<1<<60 and d[b] > d[a] + c:
+        d[b] = d[a] + c
+        update.append(b)
+  if len(update)==0 : break
 # トポロジカルソート
 q = deque()
 for n in range(N):
