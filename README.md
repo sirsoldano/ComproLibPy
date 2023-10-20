@@ -88,8 +88,12 @@ cc = { v: i for i, v in enumerate(sa) }
 ~~~
 (A+div-1) // div
 ~~~
-#### 多重集合(簡易)
+#### 多重集合
 ~~~
+# add,pop,clear,remove,discard,bisect_left,bisect_right,count,index
+from sortedcontainers import SortedList
+sl = SortedList()
+# 簡易版
 from collections import defaultdict as dd
 multiset = dd(int)
 ~~~
