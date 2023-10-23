@@ -6,6 +6,7 @@
 |ABC136|[E](https://atcoder.jp/contests/abc136/tasks/abc136_e)|約数でループ|
 |ABC137|[D](https://atcoder.jp/contests/abc137/tasks/abc137_d)|時限タスクの優先順は時間遡りが有効なことも|
 |ABC137|[E](https://atcoder.jp/contests/abc137/tasks/abc137_e)|最長経路は-1倍で最短経路問題＋負辺あるならベルマンフォード|
+|ABC139|[F](https://atcoder.jp/contests/abc139/tasks/abc139_f)|偏角ソート後に探索|
 |ABC239|[E](https://atcoder.jp/contests/abc239/tasks/abc239_e)|根付き木dfs(240Eも)|
 |ABC239|[F](https://atcoder.jp/contests/abc239/tasks/abc239_f)|辺数管理しながらマージ|
 |ABC240|[F](https://atcoder.jp/contests/abc240/tasks/abc240_f)|２層の階差数列は微分のイメージ(極大極小)|
