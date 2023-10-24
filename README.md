@@ -101,7 +101,17 @@ multiset = dd(int)
 #### 周期性利用
 [競典58](https://atcoder.jp/contests/typical90/submissions/36319380)
 [ABC241E](https://atcoder.jp/contests/abc241/submissions/39758881)
-
+#### ローリングハッシュ
+[ABC141E](https://atcoder.jp/contests/abc141/submissions/46893571)
+~~~
+mod = 1000000007
+h1,h2 = [0]*(N+1),[0]*(N+1)
+for n in range(N) : 
+  h1[n+1] = (h1[n]*998244353+s[n])%mod
+  h2[n+1] = (h2[n]*100000007+s[n])%mod
+r1 = pow(998244353,strlen,mod)
+(h1[l1+strlen]-r1*h1[l1])%mod==(h1[l2+strlen]-r1*h1[l2])%mod
+~~~
 ## 計算量表
 |logN|√N|**N**|NlogN|N<sup>2</sup>|N<sup>3</sup>|2<sup>N</sup>|N!|
 |:----|:----|:----|:----|:----|:----|:----|:----|
