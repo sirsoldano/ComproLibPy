@@ -98,7 +98,30 @@ sl = SortedList()
 from collections import defaultdict as dd
 multiset = dd(int)
 ~~~
-[多重集合はC++で](https://atcoder.jp/contests/abc241/submissions/39758254)
+#### グラフ入力
+~~~
+import sys
+N,M = map(int,input().split())
+edge,node=[[] for n in range(N)],[-1]*N
+for m in range(M):
+    a,b = map(int,input().split())
+    edge[a-1].append(b-1)
+    edge[b-1].append(a-1)
+from collections import deque
+q,node[0] = deque(),0
+q.append(0)
+while q:
+    pos = q.popleft()
+    for p in edge[pos]:
+        if node[p]==-1:
+            q.append(p)
+            node[p]=node[pos]+1
+sys.setrecursionlimit(10**6)
+def dfs(pos):
+    node[pos] = 1
+    for p in edge[pos]:
+        if node[p]==-1 : dfs(p)
+~~~
 #### 周期性利用
 [競典58](https://atcoder.jp/contests/typical90/submissions/36319380)
 [ABC241E](https://atcoder.jp/contests/abc241/submissions/39758881)
@@ -112,6 +135,18 @@ for n in range(N) :
   h2[n+1] = (h2[n]*100000007+s[n])%mod
 r1 = pow(998244353,strlen,mod)
 (h1[l1+strlen]-r1*h1[l1])%mod==(h1[l2+strlen]-r1*h1[l2])%mod
+~~~
+#### 行列回転
+~~~
+# 90deg right
+a = [x for x in zip(*a[::-1])] # a[::-1]で上下逆、zip(*a)で転置
+# 90deg left
+a = [x for x in [*zip(*a)][::-1]] # rightの逆順序
+# 180deg
+a = [a[n][::-1] for n in range(N)]
+a = [x for x in a[::-1]]
+# 転置
+a = [x for x in zip(*a)]
 ~~~
 ## 計算量表
 |logN|√N|**N**|NlogN|N<sup>2</sup>|N<sup>3</sup>|2<sup>N</sup>|N!|
