@@ -70,6 +70,7 @@
 |ABC318|[F](https://atcoder.jp/contests/abc318/tasks/abc318_f)|変化座標候補を事前列挙|
 |ABC322|[F](https://atcoder.jp/contests/abc322/tasks/abc322_f)|モノイドセグ木|
 |ABC324|[F](https://atcoder.jp/contests/abc324/tasks/abc324_f)|答えの二分探索はfloatでも可|
+|ABC326|[F](https://atcoder.jp/contests/abc324/tasks/abc326_f)|N=40は半分全列挙|
 
 ## 典型90問
 - [最少数え上げ要素を選択#25](https://atcoder.jp/contests/typical90/submissions/35225706)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/025.jpg)）
