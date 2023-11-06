@@ -103,3 +103,10 @@ class SegT:
             lc = self._getmax(l,r,k*2,tl,(tl+tr)//2)
             rc = self._getmax(l,r,k*2+1,(tl+tr)//2,tr)
             return max(lc,rc)
+# atcoder library
+# 解説 https://qiita.com/hyouchun/items/1748bd320d2188a999f2
+# 例題 https://atcoder.jp/contests/abc327/submissions/47323870
+from atcoder.lazysegtree import LazySegTree
+lst = LazySegTree(max, 0, lambda f, x: f + x, lambda f, g: f + g, 0, [0] * mx )
+lst.apply(l,r,1)
+ans = max(ans,lst.all_prod())
