@@ -35,13 +35,16 @@ def divs(n):
 # tc : √N
 # ul : 10^12
 def tridiv(n):
-    pf, f = [], 2
+    pf, f = dict(), 2
     while f*f<=n:
         if n%f == 0 :
-            pf.append(f)
+            if f not in pf : pf[f]=0
+            pf[f]+=1
             n//=f
         else : f = f+2 if f>2 else 3
-    if n>1 : pf.append(n)
+    if n>1 : 
+        if n not in pf : pf[n]=0
+        pf[n]+=1
     return pf
 # 複数回実行する場合は事前に素数列挙
 # PL=eratos(int(n**0.5))
