@@ -10,6 +10,7 @@
 |ABC141|[F](https://atcoder.jp/contests/abc141/tasks/abc141_f)|XORの最大値は掃き出し法|
 |ABC143|[E](https://atcoder.jp/contests/abc143/tasks/abc143_e)|N^3で許されるならワーシャルフロイド|
 |ABC148|[E](https://atcoder.jp/contests/abc148/tasks/abc148_e)|末尾のゼロの個数はmin(因数2の個数,因数5の個数)|
+|ABC154|[F](https://atcoder.jp/contests/abc154/tasks/abc154_f)|二次元累積和|
 |ABC239|[E](https://atcoder.jp/contests/abc239/tasks/abc239_e)|根付き木dfs(240Eも)|
 |ABC239|[F](https://atcoder.jp/contests/abc239/tasks/abc239_f)|辺数管理しながらマージ|
 |ABC240|[F](https://atcoder.jp/contests/abc240/tasks/abc240_f)|２層の階差数列は微分のイメージ(極大極小)|
