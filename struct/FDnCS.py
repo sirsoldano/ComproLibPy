@@ -9,4 +9,14 @@ def cs(A):
     for n in range(1,N) : CS[n] = CS[n-1] + A[n]
     return CS
 
+# CS2d
+for l in range(1,N+1):
+    for r in range(1,N+1):
+        lr[l][r]+=lr[l][r-1]
+for l in range(1,N+1):
+    for r in range(1,N+1):
+        lr[l][r]+=lr[l-1][r]
+cssum = lr[r1][r2]-lr[r1][l2-1]-lr[l1-1][r2]+lr[l1-1][l2-1]
+# https://atcoder.jp/contests/abc106/tasks/abc106_d
+
 # 領域追加は二次元いもす法 https://github.com/E869120/kyopro_educational_90/blob/main/editorial/028.jpg
