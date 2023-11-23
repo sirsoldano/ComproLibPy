@@ -5,9 +5,9 @@ def fd(A):
 # Cumulative Sum
 def cs(A):
     N = len(A)
-    CS = [A[0]]+[0]*(N-1)
-    for n in range(1,N) : CS[n] = CS[n-1] + A[n]
-    return CS
+    csum = [A[0]]+[0]*(N-1)
+    for n in range(1,N) : csum[n] = csum[n-1] + A[n]
+    return csum
 
 # CS2d
 for l in range(1,N+1):
