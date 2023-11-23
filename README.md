@@ -64,6 +64,17 @@ permutations(list,subnum)
 from bisect import bisect_left as bl
 min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
 ~~~
+#### 多重集合
+~~~
+# add,pop,clear,remove,discard,bisect_left,bisect_right,count,index
+from sortedcontainers import SortedList
+sl = SortedList()
+~~~
+#### 累積和
+~~~
+asum = A[0]%m
+for n in range(1,len(A)) : asum.append(A[-1]+A[n])
+~~~
 #### キュー
 ~~~
 from collections import deque
@@ -89,15 +100,6 @@ cc = { v: i for i, v in enumerate(sa) }
 #### 小数点以下切り上げ
 ~~~
 (A+div-1) // div
-~~~
-#### 多重集合
-~~~
-# add,pop,clear,remove,discard,bisect_left,bisect_right,count,index
-from sortedcontainers import SortedList
-sl = SortedList()
-# 簡易版
-from collections import defaultdict as dd
-multiset = dd(int)
 ~~~
 #### グラフ入力
 ~~~
