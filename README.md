@@ -72,7 +72,7 @@ sl = SortedList()
 ~~~
 #### 累積和
 ~~~
-asum = A[0]
+asum = [A[0]]
 for n in range(1,len(A)) : asum.append(asum[-1]+A[n])
 ~~~
 #### キュー
