@@ -21,3 +21,15 @@ while r-l>1:
     else : r = m
 print(r)
 # ABC270E https://atcoder.jp/contests/abc270/submissions/35162976
+
+# 高精度sqrt
+def sqrt(x):
+    l = -1
+    r = 10000000000
+    while r - 1 > l:
+        m = l + (r - l) // 2
+        if m * m > x:
+            r = m
+        else:
+            l = m
+    return l
