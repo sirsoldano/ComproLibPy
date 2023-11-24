@@ -47,6 +47,7 @@
 |ABC256|[F](https://atcoder.jp/contests/abc256/tasks/abc256_f)|数列の累積和の累積和はある項の寄与度を計算し展開|
 |ABC257|[E](https://atcoder.jp/contests/abc257/tasks/abc257_e)|dpでTLEの時は桁に着目が有効なことも|
 |ABC258|[E](https://atcoder.jp/contests/abc258/tasks/abc258_e)|鳩の巣原理でループへ帰着する問題|
+|ABC258|[G](https://atcoder.jp/contests/abc258/tasks/abc258_g)|pythonでbitset|
 |ABC259|[F](https://atcoder.jp/contests/abc259/tasks/abc259_f)|木の取捨選択はdfsで木dp|
 |ABC260|[E](https://atcoder.jp/contests/abc260/tasks/abc260_e)|条件を満たす連続部分列の数は尺取法(たまに除法定理やdp)|
 |ABC260|[F](https://atcoder.jp/contests/abc260/tasks/abc260_f)|TLEしそうなN数でも最小数着目で鳩の巣原理で解ける|
