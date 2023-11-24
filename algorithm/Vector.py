@@ -51,7 +51,7 @@ def convex_hull(xys):
         cfs.append(xy)
     return cfs
 # 多角形面積
-def polygon_area(xys) : return abs(sum(xys[i][0]*xys[i+1][1] - xys[i][1]*xys[i+1][0] for i in range(len(xys)-1))) / 2
+def polygon_area(xys) : return abs(sum(xys[i-1][0]*xys[i-1][1] - xys[i][1]*xys[i][0] for i in range(len(xys)))) / 2
 
 # 最近点対問題(分割統治法)
 # ボロノイ図(Fortuneのアルゴリズム)
