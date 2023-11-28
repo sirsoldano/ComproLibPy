@@ -1,6 +1,7 @@
 ## 過去問
 |Contest|Q|Point|
 |:----|:----|:----|
+|ABC107|[D](https://atcoder.jp/contests/abc107/tasks/abc107_d)|中央値は二分探索＋[転倒数](https://qiita.com/wisteria0410ss/items/296e0daa9e967ca71ed6)でいけるかも|
 |ABC127|[E](https://atcoder.jp/contests/abc127/tasks/abc127_e)|その組み合わせが何回数えられるか＋マンハッタンは縦横分解可|
 |ABC130|[E](https://atcoder.jp/contests/abc130/tasks/abc130_e)|最長共通部分列(LCS)のDP＋二次元累積和|
 |ABC136|[E](https://atcoder.jp/contests/abc136/tasks/abc136_e)|約数でループ|
