@@ -29,11 +29,11 @@ class MOD:
 class MOD:
     def __init__(self,mod):
         self.mod = mod
-        self.fac = [0]*100000
-        self.finv = [0]*100000
-        self.inv = [0]*100000
+        self.fac = [0]*400001
+        self.finv = [0]*400001
+        self.inv = [0]*400001
         self.fac[0] = self.fac[1] = self.finv[0] = self.finv[1] = self.inv[1] = 1
-        for i in range(2,100000):
+        for i in range(2,400001):
             self.fac[i] = self.fac[i-1]*i%mod
             self.inv[i] = mod-self.inv[mod%i]*(mod//i)%mod
             self.finv[i] = self.finv[i-1]*self.inv[i]%mod
