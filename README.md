@@ -36,21 +36,16 @@ sys.exit() # return 0
 ~~~
 #### 入力系
 ~~~
-f=lambda:map(int,input().split())
 N=int(input())
 N,M = map(int,input().split())
 A = [*map(int,input().split())]
 XY = [[*map(int,input().split())] for n in range(N)]
-INF = 1<<60
 ~~~
 #### 文字入出力
 ~~~
 S = [*map(lambda x:ord(x)-97,input().rstrip())
-print("".join(map(lambda i:chr(i+97),ans)))
-# 大文字はord(c)-65
-#ランレングス圧縮
-from itertools import groupby
-compressed = [(k, len(list(g))) for k,g in groupby(s)]
+print("".join(map(lambda i:chr(i+97),ans))) # 大文字はord(c)-65
+compressed = [(k, len(list(g))) for k,g in itertools.groupby(s)] # ランレングス圧縮
 ~~~
 #### 順列、部分集合
 ~~~
