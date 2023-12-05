@@ -117,7 +117,10 @@ class SegT:
         self.slen = 1
         self.p = 1000000007
         self.x = [998244353,100000007]
-        self.xpow = [[pow(self.x[0],n,self.p) for n in range(N+1)],[pow(self.x[1],n,self.p) for n in range(N+1)]]
+        self.xpow = [[1 for n in range(N+1)],[1 for n in range(N+1)]]
+        for n in range(N) : 
+            self.xpow[0][n+1] = (self.xpow[0][n]*self.x[0])%self.p
+            self.xpow[1][n+1] = (self.xpow[1][n]*self.x[1])%self.p
         while(self.slen<N) : self.slen<<=1
         self.st = [[0] * (self.slen*2), [0] * (self.slen*2)]
     def update(self,i,s):
