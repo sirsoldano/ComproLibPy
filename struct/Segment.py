@@ -110,3 +110,31 @@ from atcoder.lazysegtree import LazySegTree
 lst = LazySegTree(max, 0, lambda f, x: f + x, lambda f, g: f + g, 0, [0] * mx )
 lst.apply(l,r,1)
 ans = max(ans,lst.all_prod())
+
+# セグメント木＋ローリングハッシュ
+class SegT:
+    def __init__(self,N):
+        self.slen = 1
+        self.p = 1000000007
+        self.x = [998244353,100000007]
+        self.xpow = [[pow(self.x[0],n,self.p) for n in range(N+1)],[pow(self.x[1],n,self.p) for n in range(N+1)]]
+        while(self.slen<N) : self.slen<<=1
+        self.st = [[0] * (self.slen*2), [0] * (self.slen*2)]
+    def update(self,i,s):
+        i += self.slen
+        self.st[0][i],self.st[1][i] = s,s
+        l=1
+        while i>=2 :
+            i>>=1
+            self.st[0][i] = (self.st[0][i*2]*self.xpow[0][l]+self.st[0][i*2+1])%self.p
+            self.st[1][i] = (self.st[1][i*2]*self.xpow[1][l]+self.st[1][i*2+1])%self.p
+            l<<=1
+    def gethash(self,l,r) : return self._gethash(l,r,1,0,self.slen)
+    def _gethash(self,l,r,k,tl,tr):
+        if l<=tl and tr<=r : return [self.st[0][k],self.st[1][k]]
+        elif tr<=l or r<=tl : return [0,0]
+        else :
+            lc = self._gethash(l,r,k*2,tl,(tl+tr)//2)
+            rc = self._gethash(l,r,k*2+1,(tl+tr)//2,tr)
+            return [(lc[0]*self.xpow[0][max(0,min(r,tr)-(tl+tr)//2)]+rc[0])%self.p,(lc[1]*self.xpow[1][max(0,min(r,tr)-(tl+tr)//2)]+rc[1])%self.p]
+ft.SegT(N+1); for n in range(N) : ft.update(n+1,s[n]); ft.gethash(l,r+1)
