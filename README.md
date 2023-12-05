@@ -125,6 +125,7 @@ def dfs(pos):
 [ABC241E](https://atcoder.jp/contests/abc241/submissions/39758881)
 #### ローリングハッシュ
 [ABC141E](https://atcoder.jp/contests/abc141/submissions/46893571)
+[基数表](https://gist.github.com/privet-kitty/295ac9202b7abb3039b493f8238bf40f#file-modulus-random-base-pair64-txt)
 ~~~
 mod = 1000000007
 h1,h2 = [0]*(N+1),[0]*(N+1)
