@@ -110,6 +110,7 @@ from atcoder.lazysegtree import LazySegTree
 lst = LazySegTree(max, 0, lambda f, x: f + x, lambda f, g: f + g, 0, [0] * mx )
 lst.apply(l,r,1)
 ans = max(ans,lst.all_prod())
+# 漸化式を伴うもの https://atcoder.jp/contests/abc332/submissions/48482067
 
 # セグメント木＋ローリングハッシュ
 class SegT:
