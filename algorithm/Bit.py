@@ -29,3 +29,11 @@ for q in range(0,Q,50):
     for i in range(q,min(Q,q+50)) : dp[ab[i][0]] += 1<<(i-q)
     for m in xy : dp[m[1]] |= dp[m[0]]
     for i in range(q,min(Q,q+50)): print("Yes") if dp[ab[i][1]]&1<<(i-q) else print("No")
+
+# 部分集合列挙 tc:3^N
+bit=[[i] for i in range(1<<N)]
+for i in range(1<<N):
+    subbit = i
+    while subbit>0:
+        subbit = (subbit-1) & i
+        bit[i].append(subbit)
