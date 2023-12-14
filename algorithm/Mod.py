@@ -2,6 +2,7 @@
 # b*modular ≡ 1 (mod M) ≡ b^(M-1)
 # modular = b^(M-2) % M
 # pythonではb^pの%Mはpow(b,p,M)でも可。つまりmodular=pow(b,M-2,M)でよい(繰り返し二乗法)
+# modular=pow(b,-1,M)も可
 
 class MOD:
     def __init__(self,mod):
