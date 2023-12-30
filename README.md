@@ -118,18 +118,10 @@ def dfs(pos):
 ~~~
 </details>
 <details>
-<summary>dfs</summary>
+<summary>bfs</summary>
 
 ~~~
 from collections import deque
-q,node[0] = deque(),0
-q.append(0)
-while q:
-    pos = q.popleft()
-    for p in edge[pos]:
-        if node[p]==-1:
-            q.append(p)
-            node[p]=node[pos]+1
 def bfs(s,i):
     q,node[s] = deque(),i
     q.append(s)
