@@ -96,15 +96,31 @@ cc = { v: i for i, v in enumerate(sa) }
 ~~~
 (A+div-1) // div
 ~~~
-#### グラフ入力
+#### グラフ
 ~~~
-import sys
 N,M = map(int,input().split())
 edge,node=[[] for n in range(N)],[-1]*N
 for m in range(M):
     a,b = map(int,input().split())
     edge[a-1].append(b-1)
     edge[b-1].append(a-1)
+~~~
+<details>
+<summary>dfs</summary>
+
+~~~
+import sys
+sys.setrecursionlimit(10**6)
+def dfs(pos):
+    node[pos] = 1
+    for p in edge[pos]:
+        if node[p]==-1 : dfs(p)
+~~~
+</details>
+<details>
+<summary>dfs</summary>
+
+~~~
 from collections import deque
 q,node[0] = deque(),0
 q.append(0)
@@ -114,12 +130,22 @@ while q:
         if node[p]==-1:
             q.append(p)
             node[p]=node[pos]+1
-sys.setrecursionlimit(10**6)
-def dfs(pos):
-    node[pos] = 1
-    for p in edge[pos]:
-        if node[p]==-1 : dfs(p)
+def bfs(s,i):
+    q,node[s] = deque(),i
+    q.append(s)
+    while q:
+        pos = q.popleft()
+        for p in edge[pos]:
+            if node[p]==-1:
+                q.append(p)
+                node[p]=i
+i=0
+for n in range(N):
+    if node[n]==-1:
+        bfs(n,i)
 ~~~
+</details>
+
 #### 周期性利用
 [競典58](https://atcoder.jp/contests/typical90/submissions/36319380)
 [ABC241E](https://atcoder.jp/contests/abc241/submissions/39758881)
