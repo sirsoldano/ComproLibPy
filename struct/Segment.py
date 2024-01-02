@@ -47,14 +47,14 @@ class SegT:
         while i>=2 :
             i>>=1
             self.st[i] = max(self.st[i*2],self.st[i*2+1])
-    def getmax(self,l,r) : return self._getmax(l,r,1,0,self.slen)
+"""    def getmax(self,l,r) : return self._getmax(l,r,1,0,self.slen)
     def _getmax(self,l,r,k,tl,tr):
         if l<=tl and tr<=r : return self.st[k]
         elif tr<=l or r<=tl : return -1
         else :
             lc = self._getmax(l,r,k*2,tl,(tl+tr)//2)
             rc = self._getmax(l,r,k*2+1,(tl+tr)//2,tr)
-            return max(lc,rc)
+            return max(lc,rc)"""
     def getmax(self,l,r):
         l += self.slen; r += self.slen
         res = 0
