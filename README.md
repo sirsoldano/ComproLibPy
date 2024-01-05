@@ -135,6 +135,7 @@ i=0
 for n in range(N):
     if node[n]==-1:
         bfs(n,i)
+        i+=1
 ~~~
 </details>
 
