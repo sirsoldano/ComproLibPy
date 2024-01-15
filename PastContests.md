@@ -82,6 +82,7 @@
 |ABC326|[F](https://atcoder.jp/contests/abc326/tasks/abc326_f)|N=40は半分全列挙|
 |ABC330|[F](https://atcoder.jp/contests/abc330/tasks/abc330_f)|微分で極小を求めたい時は代わりに中央値的な考え方を。左右ずらしいずれも損をする位置。[slope trickも可](https://maspypy.com/slope-trick-1-%E8%A7%A3%E8%AA%AC%E7%B7%A8)|
 |ABC331|[F](https://atcoder.jp/contests/abc331/tasks/abc331_f)|更新ありの回文判定はローリングハッシュ＋セグ木で|
+|ABC336|[E](https://atcoder.jp/contests/abc336/tasks/abc336_e)|ハーシャッド数は総和リミット決め打ちで和、余り、上限張付を別管理する桁DP|
 
 ## 典型90問
 - [最少数え上げ要素を選択#25](https://atcoder.jp/contests/typical90/submissions/35225706)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/025.jpg)）
