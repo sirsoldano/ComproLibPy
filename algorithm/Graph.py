@@ -69,7 +69,7 @@ for n in range(N):
         d[b] = d[a] + c
         update.append(b)
   if len(update)==0 : break
-# トポロジカルソート
+# トポロジカルソート (有向グラフの閉路検出にも)
 q = deque()
 for n in range(N):
     if node[n]==0:
