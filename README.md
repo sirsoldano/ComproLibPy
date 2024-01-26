@@ -95,6 +95,7 @@ cc = { v: i for i, v in enumerate(sa) }
 #### 小数点以下切り上げ
 ~~~
 (A+div-1) // div
+-(-A//div)
 ~~~
 #### グラフ
 ~~~
