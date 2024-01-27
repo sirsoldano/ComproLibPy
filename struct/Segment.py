@@ -41,22 +41,28 @@ class SegT:
         self.slen = 1
         while(self.slen<N) : self.slen<<=1
         self.st = [-1] * (self.slen*2)
+#        self.st = [0] * (self.slen*2)
     def update(self,i,x):
         i += self.slen
         self.st[i] = x
         while i>=2 :
             i>>=1
             self.st[i] = max(self.st[i*2],self.st[i*2+1])
+#            self.st[i] = self.st[i*2]+self.st[i*2+1]
     def getmax(self,l,r):
+#    def getsum(self,l,r):
         l += self.slen; r += self.slen
         res = -1
+#        res = 0
         while l < r:
             if l & 1 : 
                 res = max(res, self.st[l])
+#                res += self.st[l]
                 l += 1
             if r & 1: 
                 r -= 1 
                 res = max(res, self.st[r])
+#                res += self.st[r]
             l >>= 1; r >>= 1
         return res
 # 遅延セグメント木
