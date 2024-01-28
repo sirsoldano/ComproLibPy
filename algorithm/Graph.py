@@ -266,6 +266,16 @@ for b in range(2,(1<<len(wei))-1):
             if (1<<to)&b==0 and dp[b][fr]+wei[fr][to] < dp[b|(1<<to)][to]:
                 dp[b|(1<<to)][to] = dp[b][fr]+wei[fr][to]
 print(dp[1<<len(wei)-1][0])
+# 負の辺あり & notConnectedの可能性あり　ABC338F https://atcoder.jp/contests/abc338/tasks/abc338_f
+dp=[[1<<60]*N for b in range(1<<N)]
+for n in range(N) : dp[1<<n][n] = 0
+for b in range(1,(1<<N)-1):
+    for fr in range(N):
+        if (1<<fr)&b==0 or dp[b][fr]==1<<60 : continue
+        for to in range(N):
+            if (1<<to)&b==0 and d[fr][to]<1<<60 and dp[b][fr]+d[fr][to] < dp[b|(1<<to)][to]:
+                dp[b|(1<<to)][to] = dp[b][fr]+d[fr][to]
+print(min(dp[(1<<N)-1])) if min(dp[(1<<N)-1])<1<<60 else print("No")
 
 # 単一始点最短経路問題、全点対間最短経路問題(Warshall-Floyd:N^3)
 # 二部マッチング(Hopcroft-Karp:M√N)
