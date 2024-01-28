@@ -255,7 +255,7 @@ for b in range(1<<(len(wei)-1)):
             if (1<<fr)&b==0 : continue
             if (1<<to)&b==0 and dp[b][fr]+wei[fr][to] < dp[b|(1<<to)][to]:
                 dp[b|(1<<to)][to] = dp[b][fr]+wei[fr][to]
-print(dp[1<<len(wei)][0])
+print(dp[1<<len(wei)-1][0])
 # 原点から出発するパターン https://atcoder.jp/contests/abc274/submissions/47607269
 dp=[[1<<60]*len(wei) for b in range(1<<len(wei))]
 for n in range(1,len(wei)) : dp[1<<n][n]=wei[0][n]
@@ -265,7 +265,7 @@ for b in range(2,(1<<len(wei))-1):
             if (1<<fr)&b==0 : continue
             if (1<<to)&b==0 and dp[b][fr]+wei[fr][to] < dp[b|(1<<to)][to]:
                 dp[b|(1<<to)][to] = dp[b][fr]+wei[fr][to]
-print(dp[1<<len(wei)][0])
+print(dp[1<<len(wei)-1][0])
 
 # 単一始点最短経路問題、全点対間最短経路問題(Warshall-Floyd:N^3)
 # 二部マッチング(Hopcroft-Karp:M√N)
