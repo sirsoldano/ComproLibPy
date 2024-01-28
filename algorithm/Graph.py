@@ -245,27 +245,18 @@ class Dinic:
 # 燃やす埋める問題(https://atcoder.jp/contests/typical90/tasks/typical90_an)
 # 解説 https://zenn.dev/kiwamachan/articles/37a2c646f82c7d
 
-# 巡回セールスマン問題(bitDP) N=20まで ABC301E https://qiita.com/Ll_e_ki/items/fa475f5bb224ada9be97
+# 巡回セールスマン問題(bitDP) N=20まで https://qiita.com/Ll_e_ki/items/fa475f5bb224ada9be97
+# ABC301E https://atcoder.jp/contests/abc301/submissions/41428508
+# ABC274E https://atcoder.jp/contests/abc274/submissions/47607269
 dp=[[1<<60]*N for b in range(1<<N)]
-for n in range(N) : dp[1<<n][n]=wei[0][n]
-for b in range(1<<(N-1)):
-    b = b<<1 | 1
-    for fr in range(N):
-        for to in range(N):
-            if (1<<fr)&b==0 : continue
-            if (1<<to)&b==0 and dp[b][fr]+wei[fr][to] < dp[b|(1<<to)][to]:
-                dp[b|(1<<to)][to] = dp[b][fr]+wei[fr][to]
-print(dp[1<<N-1][0])
-# 原点から出発するパターン https://atcoder.jp/contests/abc274/submissions/47607269
-dp=[[1<<60]*N for b in range(1<<N)]
-for n in range(1,N) : dp[1<<n][n]=wei[0][n]
+for n in range(1,N) : dp[1<<n][n] = d[0][n]
 for b in range(2,(1<<N)-1):
     for fr in range(1,N):
         for to in range(N):
             if (1<<fr)&b==0 : continue
-            if (1<<to)&b==0 and dp[b][fr]+wei[fr][to] < dp[b|(1<<to)][to]:
-                dp[b|(1<<to)][to] = dp[b][fr]+wei[fr][to]
-print(dp[1<<N-1][0])
+            if (1<<to)&b==0 and dp[b][fr]+d[fr][to] < dp[b|(1<<to)][to]:
+                dp[b|(1<<to)][to] = dp[b][fr]+d[fr][to]
+print(dp[(1<<N)-1][0])
 # 負の辺あり & notConnectedの可能性あり　ABC338F https://atcoder.jp/contests/abc338/tasks/abc338_f
 dp=[[1<<60]*N for b in range(1<<N)]
 for n in range(N) : dp[1<<n][n] = 0
