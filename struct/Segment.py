@@ -40,8 +40,7 @@ class SegT:
     def __init__(self,N):
         self.slen = 1
         while(self.slen<N) : self.slen<<=1
-        self.st = [-1] * (self.slen*2)
-#        self.st = [0] * (self.slen*2)
+        self.st = [0] * (self.slen*2)
     def update(self,i,x):
         i += self.slen
         self.st[i] = x
@@ -52,8 +51,7 @@ class SegT:
     def getmax(self,l,r):
 #    def getsum(self,l,r):
         l += self.slen; r += self.slen
-        res = -1
-#        res = 0
+        res = 0
         while l < r:
             if l & 1 : 
                 res = max(res, self.st[l])
@@ -74,33 +72,40 @@ class SegT:
         while(self.slen<N) : self.slen<<=1
         self.st = [0] * (self.slen*2)
         self.lz = [0] * (self.slen*2)
+    def eval(self,k):
+        while k>0:
+            self.st[k] = max(self.st[k*2],self.st[k*2+1])
+            k>>=1
     def deval(self,i):
         k, d = 1, 1
         while d*4<=i:d*=2
         while k <= i :
             if k < self.slen:
                 self.lz[k*2] = max(self.lz[k*2],self.lz[k])
+#                self.lz[k*2] += self.lz[k]
                 self.lz[k*2+1] = max(self.lz[k*2+1],self.lz[k])
+#                self.lz[k*2+1] += self.lz[k]
             self.st[k] = max(self.st[k],self.lz[k])
+#            self.st[k] += self.lz[k]
             self.lz[k] = 0
             if i&d : k = k*2+1
             else : k = k*2
             d >>= 1
-    def eval(self,k):
-        while k>0:
-            self.st[k] = max(self.st[k*2],self.st[k*2+1])
-            k>>=1
     def update(self,l,r,h):
         l += self.slen; r += self.slen
         while l < r:
             if l & 1 : 
+                self.deval(l)
                 self.lz[l] = max(self.lz[l],h)
+#                self.lz[l] += h
                 self.st[l] = max(self.st[l],h)
                 self.eval(l>>1)
                 l += 1
             if r & 1: 
                 r -= 1 
+                self.deval(r)
                 self.lz[r] = max(self.lz[r],h)
+#                self.lz[r] += h
                 self.st[r] = max(self.st[r],h)
                 self.eval(r>>1)
             l >>= 1; r >>= 1
@@ -116,44 +121,6 @@ class SegT:
                 r -= 1 
                 self.deval(r)
                 res = max(res,self.st[r])
-            l >>= 1; r >>= 1
-        return res
-class SegT:
-    def __init__(self,N):
-        self.slen = 1
-        while(self.slen<N) : self.slen<<=1
-        self.st = [0] * (self.slen*2)
-        self.lz = [0] * (self.slen*2)
-    def deval(self,k):
-        if k>1 : 
-            self.deval(k>>1)
-        if k < self.slen:
-            self.lz[k*2] += self.lz[k]
-            self.lz[k*2+1] += self.lz[k]
-        self.st[k] = self.st[k]+self.lz[k]
-        self.lz[k] = 0
-    def update(self,l,r,h):
-        l += self.slen; r += self.slen
-        while l < r:
-            if l & 1 : 
-                self.lz[l] += h
-                l += 1
-            if r & 1: 
-                r -= 1 
-                self.lz[r] += h
-            l >>= 1; r >>= 1
-    def getsum(self,l,r):
-        l += self.slen; r += self.slen
-        res = 0
-        while l < r:
-            if l & 1 : 
-                self.deval(l)
-                res += self.st[l]
-                l += 1
-            if r & 1: 
-                r -= 1 
-                self.deval(r)
-                res += self.st[r]
             l >>= 1; r >>= 1
         return res
 # atcoder library
