@@ -101,6 +101,44 @@ class SegT:
             lc = self._getmax(l,r,k*2,tl,(tl+tr)//2)
             rc = self._getmax(l,r,k*2+1,(tl+tr)//2,tr)
             return max(lc,rc)
+class SegT:
+    def __init__(self,N):
+        self.slen = 1
+        while(self.slen<N) : self.slen<<=1
+        self.st = [0] * (self.slen*2)
+        self.lz = [0] * (self.slen*2)
+    def deval(self,k):
+        if k>1 : 
+            self.deval(k>>1)
+        if k < self.slen:
+            self.lz[k*2] += self.lz[k]
+            self.lz[k*2+1] += self.lz[k]
+        self.st[k] = self.st[k]+self.lz[k]
+        self.lz[k] = 0
+    def update(self,l,r,h):
+        l += self.slen; r += self.slen
+        while l < r:
+            if l & 1 : 
+                self.lz[l] += h
+                l += 1
+            if r & 1: 
+                r -= 1 
+                self.lz[r] += h
+            l >>= 1; r >>= 1
+    def getsum(self,l,r):
+        l += self.slen; r += self.slen
+        res = 0
+        while l < r:
+            if l & 1 : 
+                self.deval(l)
+                res += self.st[l]
+                l += 1
+            if r & 1: 
+                r -= 1 
+                self.deval(r)
+                res += self.st[r]
+            l >>= 1; r >>= 1
+        return res
 # atcoder library
 # 解説 https://qiita.com/hyouchun/items/1748bd320d2188a999f2
 # 例題 https://atcoder.jp/contests/abc327/submissions/47323870
