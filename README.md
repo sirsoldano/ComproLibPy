@@ -100,7 +100,7 @@ cc = { v: i for i, v in enumerate(sa) }
 #### グラフ
 ~~~
 N,M = map(int,input().split())
-edge,node=[[] for n in range(N)],[-1]*N
+edge,node=[[] for n in range(N)],[None]*N
 for m in range(M):
     a,b = map(int,input().split())
     edge[a-1].append(b-1)
@@ -112,10 +112,12 @@ for m in range(M):
 ~~~
 import sys
 sys.setrecursionlimit(10**6)
+import pypyjit
+pypyjit.set_param('max_unroll_recursion=-1')
 def dfs(pos):
     node[pos] = 1
     for p in edge[pos]:
-        if node[p]==-1 : dfs(p)
+        if node[p] is None : dfs(p)
 ~~~
 </details>
 <details>
@@ -129,7 +131,7 @@ def bfs(s,i):
     while q:
         pos = q.popleft()
         for p in edge[pos]:
-            if node[p]==-1:
+            if node[p] is None:
                 q.append(p)
                 node[p]=i
 i=0
