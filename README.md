@@ -136,7 +136,7 @@ def bfs(s,i):
                 node[p]=i
 i=0
 for n in range(N):
-    if node[n]==-1:
+    if node[n] == None:
         bfs(n,i)
         i+=1
 ~~~
