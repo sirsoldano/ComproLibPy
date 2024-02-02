@@ -84,3 +84,19 @@ for b in range(1,(1<<K)):
     for k in range(K) : 
         if b&(1<<k) : cnt, lcm = cnt+1, lcm*A[k]//math.gcd(lcm,A[k])
     ans = ans + N//lcm if cnt%2 else ans - N//lcm
+
+# 拡張ユークリッドの互助法
+def extgcd(a, b):
+    if b:
+        d, y, x = extgcd(b, a % b)
+        y -= (a // b) * x
+        return d, x, y
+    return a, 1, 0
+# 中国剰余定理
+def remainder(V):
+    x = 0; d = 1
+    for X, Y in V:
+        g, a, b = extgcd(d, Y)
+        x, d = (Y*b*x + d*a*X) // g, d*(Y // g)
+        x %= d
+    return x, d
