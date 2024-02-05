@@ -162,3 +162,35 @@ class SegT:
             rc = self._gethash(l,r,k*2+1,(tl+tr)//2,tr)
             return [(lc[0]*self.xpow[0][max(0,min(r,tr)-(tl+tr)//2)]+rc[0])%self.p,(lc[1]*self.xpow[1][max(0,min(r,tr)-(tl+tr)//2)]+rc[1])%self.p]
 ft.SegT(N+1); for n in range(N) : ft.update(n+1,s[n]); ft.gethash(l,r+1)
+
+# マージソート木
+from heapq import merge
+from bisect import bisect as br
+class MergeT:
+    def __init__(self,N,A):
+        self.slen = 1
+        while(self.slen<N) : self.slen<<=1
+        self.st = [[] for i in range(self.slen*2)]
+        self.scs = [[] for i in range(self.slen*2)]
+        for n in range(N):
+            self.st[self.slen+n] = [A[n]]
+            self.scs[self.slen+n] = [0,A[n]]
+        for i in range(self.slen-1,0,-1):
+            *self.st[i], = merge(self.st[i*2],self.st[i*2+1])
+            self.scs[i] = self.cs(self.st[i])
+    def cs(self,l):
+        lsum = [0]
+        for n in range(len(l)) : lsum.append(lsum[-1]+l[n])
+        return lsum
+    def getsum(self,l,r,hi,lo=0):
+        l += self.slen; r += self.slen
+        res = 0
+        while l < r:
+            if l & 1 : 
+                res += self.scs[l][br(self.st[l],hi)]
+                l += 1
+            if r & 1: 
+                r -= 1 
+                res += self.scs[r][br(self.st[r],hi)]
+            l >>= 1; r >>= 1
+        return res
