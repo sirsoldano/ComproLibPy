@@ -144,6 +144,7 @@ for n in range(N):
 
 #### 周期性利用
 [競典58](https://atcoder.jp/contests/typical90/submissions/36319380)
+[ABC167D](https://atcoder.jp/contests/abc167/submissions/50051923)
 [ABC241E](https://atcoder.jp/contests/abc241/submissions/39758881)
 #### ローリングハッシュ
 [ABC141E](https://atcoder.jp/contests/abc141/submissions/46893571)
