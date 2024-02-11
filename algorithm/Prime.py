@@ -85,7 +85,7 @@ for b in range(1,(1<<K)):
         if b&(1<<k) : cnt, lcm = cnt+1, lcm*A[k]//math.gcd(lcm,A[k])
     ans = ans + N//lcm if cnt%2 else ans - N//lcm
 
-# 拡張ユークリッドの互助法
+# 拡張ユークリッドの互助法　https://qiita.com/luuguas/items/1c0bc4fb7a5d8c7f3c07
 def extgcd(a, b):
     if b:
         d, y, x = extgcd(b, a % b)
@@ -100,7 +100,7 @@ def remainder(V):
         x, d = (Y*b*x + d*a*X) // g, d*(Y // g)
         x %= d
     return x, d
-# 一次不定方程式
+# 一次不定方程式　https://qiita.com/DaikiSuyama/items/3687e9f2fa3ed097e2fc
 class LDE:
     def __init__(self,a,b,c):
         self.a,self.b,self.c=a,b,c
