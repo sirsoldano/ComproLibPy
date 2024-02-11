@@ -70,6 +70,7 @@
 |ABC282|[E](https://atcoder.jp/contests/abc282/tasks/abc282_e)|最大全域木はunionfind+クラスカル法(グラフ不要)|
 |ABC283|[F](https://atcoder.jp/contests/abc283/tasks/abc283_f)|絶対値は可能ならば場合分けして外す|
 |ABC286|[F](https://atcoder.jp/contests/abc286/tasks/abc286_f)|(中国剰余定理)互いに素な数で除した余が与えられる場合、最小公倍数以下では解が一意|
+|ABC288|[D](https://atcoder.jp/contests/abc288/tasks/abc288_d)|不変量を見極めて条件を単純化|
 |ABC301|[E](https://atcoder.jp/contests/abc301/tasks/abc301_e)|N=20で最短経路長bit全探索は巡回セールスマン|
 |ABC302|[B](https://atcoder.jp/contests/abc302/tasks/abc302_b)|計算量が許すなら愚直に8方向探索を|
 |ABC302|[F](https://atcoder.jp/contests/abc302/tasks/abc302_f)|辺も頂点とみなしてみる超頂点|
@@ -86,7 +87,7 @@
 |ABC331|[F](https://atcoder.jp/contests/abc331/tasks/abc331_f)|更新ありの回文判定はローリングハッシュ＋セグ木で|
 |ABC336|[E](https://atcoder.jp/contests/abc336/tasks/abc336_e)|ハーシャッド数は総和リミット決め打ちで和、余り、上限張付を別管理する桁DP|
 |ABC339|[F](https://atcoder.jp/contests/abc339/tasks/abc339_f)|長大な数字も扱えはするが桁数だけの計算時間がかかるのでmodなどでシーリング|
-
+|ABC340|[F](https://atcoder.jp/contests/abc340/tasks/abc340_f)|一次不定方程式は拡張ユークリッド|
 ## 典型90問
 - [最少数え上げ要素を選択#25](https://atcoder.jp/contests/typical90/submissions/35225706)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/025.jpg)）
 - [答え側を2分探索#1](https://atcoder.jp/contests/typical90/submissions/34487062)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/001.jpg)）
