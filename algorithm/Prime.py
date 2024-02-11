@@ -100,3 +100,32 @@ def remainder(V):
         x, d = (Y*b*x + d*a*X) // g, d*(Y // g)
         x %= d
     return x, d
+# 一次不定方程式
+class LDE:
+    def __init__(self,a,b,c):
+        self.a,self.b,self.c=a,b,c
+        self.m,self.x,self.y=0,0,0
+        g,self.x,self.y = self.extgcd(abs(self.a),abs(self.b))
+        if c%g!=0:
+            self.check=False
+        else:
+            self.check=True
+            if a<0:self.x=-self.x
+            if b<0:self.y=-self.y
+            self.x = self.x*c//g
+            self.y = self.y*c//g
+            self.a //= g
+            self.b //= g
+    def extgcd(self,a, b):
+        if b:
+            d, y, x = self.extgcd(b, a % b)
+            y -= (a // b) * x
+            return d, x, y
+        return a, 1, 0
+    def get(self):
+        if self.check==False : return None
+        else : return self.x,self.y
+    def m_update(self,m):
+        self.x+=(m-self.m)*self.b
+        self.y-=(m-self.m)*self.a
+        self.m=m
