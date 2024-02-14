@@ -41,11 +41,15 @@ N,M = map(int,input().split())
 A = [*map(int,input().split())]
 XY = [[*map(int,input().split())] for n in range(N)]
 ~~~
-#### 文字入出力
+#### 文字列
 ~~~
 S = [*map(lambda x:ord(x)-97,input().rstrip())
 print("".join(map(lambda i:chr(i+97),ans))) # 大文字はord(c)-65
 compressed = [(k, len(list(g))) for k,g in itertools.groupby(s)] # ランレングス圧縮
+def palind(s):
+    for n in range(len(s)//2):
+        if s[n]!=s[-n-1] : return False
+    return True
 ~~~
 #### 順列、部分集合
 ~~~
