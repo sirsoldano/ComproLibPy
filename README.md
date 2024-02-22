@@ -163,14 +163,14 @@ def judge(l,r) : return (h1[r]-r1[r-l]*h1[l])%mod==(rh1[N-l]-r1[r-l]*rh1[N-r])%m
 #### 行列回転
 ~~~
 # 90deg right
-a = [x for x in zip(*a[::-1])] # a[::-1]で上下逆、zip(*a)で転置
+a = [[*x] for x in zip(*a[::-1])] # a[::-1]で上下逆、zip(*a)で転置
 # 90deg left
-a = [x for x in [*zip(*a)][::-1]] # rightの逆順序
+a = [[*x] for x in [*zip(*a)][::-1]] # rightの逆順序
 # 180deg
 a = [a[n][::-1] for n in range(N)]
 a = [x for x in a[::-1]]
 # 転置
-a = [x for x in zip(*a)]
+a = [[*x] for x in zip(*a)]
 ~~~
 ## 計算量表
 |logN|√N|**N**|NlogN|N<sup>2</sup>|N<sup>3</sup>|2<sup>N</sup>|N!|
