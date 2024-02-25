@@ -48,7 +48,7 @@ def tridiv(n):
     return pf
 # 複数回実行する場合は事前に素数列挙
 # PL=eratos(int(n**0.5))
-def tridivPL(n,PL):
+def tridiv(n):
     pf, ind = [], 0
     while ind<len(PL) and PL[ind]*PL[ind]<=n:
         if n%PL[ind] == 0 :
