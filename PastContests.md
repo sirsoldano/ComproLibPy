@@ -22,7 +22,7 @@
 |ABC242|[C](https://atcoder.jp/contests/abc242/tasks/abc242_c)|辿り着ける通り数はDP、漸化式はDPか行列|
 |ABC242|[D](https://atcoder.jp/contests/abc242/tasks/abc242_d)|膨大な繰り返しは10\*\*7以下のパターンへの収束を見出す|
 |ABC242|[F](https://atcoder.jp/contests/abc242/tasks/abc242_f)|二項定理で計算量削減|
-|ABC242|[G](https://atcoder.jp/contests/abc242/tasks/abc242_g)|クエリ毎に区間種類数問うはMo's Algorithm[(解説)](https://strangerxxx.hateblo.jp/entry/20230314/1678795200)、[(類題ABC293G)](https://atcoder.jp/contests/abc293/submissions/50656044)|
+|ABC242|[G](https://atcoder.jp/contests/abc242/tasks/abc242_g)|クエリ毎に区間種類数問うはMo's Algorithm[(解説)](https://strangerxxx.hateblo.jp/entry/20230314/1678795200) [(ABC293Gも)](https://atcoder.jp/contests/abc293/submissions/50656044)尺取で解ける大量のオフラインクエリはこれ|
 |ABC243|[E](https://atcoder.jp/contests/abc243/tasks/abc243_e)|300程まではWF法|
 |ABC244|[D](https://atcoder.jp/contests/abc244/tasks/abc244_d)|転倒数、偶置換奇置換|
 |ABC244|[E](https://atcoder.jp/contests/abc244/tasks/abc244_e)|辿り着く通り数はDP|
