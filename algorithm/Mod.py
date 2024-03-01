@@ -4,37 +4,27 @@
 # pythonではb^pの%Mはpow(b,p,M)でも可。つまりmodular=pow(b,M-2,M)でよい(繰り返し二乗法)
 # modular=pow(b,-1,M)も可
 
-class MOD:
+class MOD: # for single use
     def __init__(self,mod):
         self.mod = mod
         self.F = []
         self.Finv = []
     def modC(self,X,Y):
-        if self.F:
-            return self.F[X+Y]*self.Finv[X]%self.mod*self.Finv[Y]%self.mod
-        else:
-            fx,fy,fxy = 1,1,1
-            for x in range(1,X+1) : fx = fx*x%self.mod
-            for y in range(1,Y+1) : fy = fy*y%self.mod
-            for xy in range(1,X+Y+1) : fxy = fxy*xy%self.mod
-            deno = pow(fx*fy%self.mod,self.mod-2,self.mod)
-            return fxy*deno%self.mod
-    def modF(self,N):
-        self.F = [1]*(N+1)
-        for n in range(1,N+1) : self.F[n] = self.F[n-1] * n % self.mod
-        self.Finv = [0]*(N+1)
-        for n in range(0,N+1) : self.Finv[n] = pow(self.F[n], self.mod-2,self.mod)
-
-
+        fx,fy,fxy = 1,1,1
+        for x in range(1,X+1) : fx = fx*x%self.mod
+        for y in range(1,Y+1) : fy = fy*y%self.mod
+        for xy in range(1,X+Y+1) : fxy = fxy*xy%self.mod
+        deno = pow(fx*fy%self.mod,self.mod-2,self.mod)
+        return fxy*deno%self.mod
 
 class MOD:
-    def __init__(self,mod):
+    def __init__(self,mod,N=400001):
         self.mod = mod
-        self.fac = [0]*400001
-        self.finv = [0]*400001
-        self.inv = [0]*400001
+        self.fac = [0]*N
+        self.finv = [0]*N
+        self.inv = [0]*N
         self.fac[0] = self.fac[1] = self.finv[0] = self.finv[1] = self.inv[1] = 1
-        for i in range(2,400001):
+        for i in range(2,N):
             self.fac[i] = self.fac[i-1]*i%mod
             self.inv[i] = mod-self.inv[mod%i]*(mod//i)%mod
             self.finv[i] = self.finv[i-1]*self.inv[i]%mod
