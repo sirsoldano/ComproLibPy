@@ -76,7 +76,7 @@ class DubTree:
                 self.parent[0][p] = pos
                 self._dfs(p)
                 self.euler.append(pos)
-        self.eufl[pos][1] = len(self.euler)
+        self.eufl[pos][1] = len(self.euler)+1
     def _doubling(self):
         for k in range(self.K-1):
             for n in range(self.N):
@@ -101,7 +101,7 @@ class DubTree:
         while n<=len(self.fent)-1:
             self.fent[n]+=i
             n += n&-n
-        n = self.eufl[a][1]+1
+        n = self.eufl[a][1]
         while n<=len(self.fent)-1:
             self.fent[n]-=i
             n += n&-n
