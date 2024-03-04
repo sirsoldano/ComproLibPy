@@ -47,7 +47,7 @@ class DubTree:
         lca = self.lca(a,b)
         return self.wei[a] + self.wei[b] - 2*self.wei[lca]
 
-# オイラーツアー
+# オイラーツアー https://atcoder.jp/contests/abc294/submissions/50893914
 class DubTree:
     def __init__(self,N):
         self.N, self.K = N, 1
