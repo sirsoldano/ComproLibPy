@@ -48,7 +48,7 @@ class DubTree:
         return self.wei[a] + self.wei[b] - 2*self.wei[lca]
 
 # オイラーツアー https://atcoder.jp/contests/abc294/submissions/50893914
-# import sys; sys.setrecursionlimit(10**6); import pypyjit; pypyjit.set_param('max_unroll_recursion=-1')
+import sys; sys.setrecursionlimit(10**6); import pypyjit; pypyjit.set_param('max_unroll_recursion=-1')
 class DubTree:
     def __init__(self,N):
         self.N, self.K = N, 1
