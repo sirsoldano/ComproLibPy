@@ -110,6 +110,7 @@ def dfs(dep):
     return True
 dfs(0)
 # 閉路検出
+# ループ内マーキング方式も可 https://atcoder.jp/contests/abc296/submissions/40271239
 def dfsloop(pos,bef):
     node[pos] = 1
     for p in edge[pos]:
