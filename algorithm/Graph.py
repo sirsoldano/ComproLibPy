@@ -114,17 +114,21 @@ def dfsloop(pos,bef):
     node[pos] = 1
     for p in edge[pos]:
         if node[p]==0 : 
-            flag = dfsloop(p,pos)
-            if len(loop)>0 and flag==True : 
+            if dfsloop(p,pos):
                 loop.append(p)
                 if pos==loop[0]:
                     loop.append(pos)
-        elif node[p]==1 and p != bef:
+        else:
             loop.append(p)
+            if p==pos and len(loop)==1 : loop.append(p)
             return True
         if len(loop)>0 : 
-            return False if loop[0]==loop[-1] else True
+            return loop[0]!=loop[-1]
     return False
+for n in range(N):
+    loop = []
+    if node[n]==0 : dfsloop(n,-1)
+    if len(loop)<=1 or loop[0]!=loop[-1] : continue
 # DSmaze
 H,W = map(int,input().split())
 edge = [list() for n in range(H*W)]
