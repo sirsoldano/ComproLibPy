@@ -76,6 +76,7 @@
 |ABC294|[G](https://atcoder.jp/contests/abc294/tasks/abc294_g)|更新入る木の距離はダブリング＋オイラーツアー|
 |ABC295|[E](https://atcoder.jp/contests/abc295/tasks/abc295_e)|1以上M以下の確率変数Xの期待値合計∑i*p(X==i) => ∑p(X>=i)|
 |ABC296|[F](https://atcoder.jp/contests/abc296/tasks/abc296_f)|順番入れ替えで数列を一致させられるかは転倒数の奇遇一致次第|
+|ABC297|[G](https://atcoder.jp/contests/abc297/tasks/abc297_g)|多山NimはGrundy数のXORでゼロのみ後手勝ち|
 |ABC301|[E](https://atcoder.jp/contests/abc301/tasks/abc301_e)|N=20で最短経路長bit全探索は巡回セールスマン|
 |ABC302|[B](https://atcoder.jp/contests/abc302/tasks/abc302_b)|計算量が許すなら愚直に8方向探索を|
 |ABC302|[F](https://atcoder.jp/contests/abc302/tasks/abc302_f)|辺も頂点とみなしてみる超頂点|
