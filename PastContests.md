@@ -96,6 +96,8 @@
 |ABC339|[F](https://atcoder.jp/contests/abc339/tasks/abc339_f)|長大な数字も扱えはするが桁数だけの計算時間がかかるのでmodなどでシーリング|
 |ABC339|[G](https://atcoder.jp/contests/abc339/tasks/abc339_g)|更新の入らないオンラインクエリ区間の種類数問題はマージソート木|
 |ABC340|[F](https://atcoder.jp/contests/abc340/tasks/abc340_f)|一次不定方程式は拡張ユークリッド|
+|ABC348|[F](https://atcoder.jp/contests/abc348/tasks/abc348_f)|2000^3でどれかbit演算可能そうならbitsetで通せる|
+
 ## 典型90問
 - [最少数え上げ要素を選択#25](https://atcoder.jp/contests/typical90/submissions/35225706)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/025.jpg)）
 - [答え側を2分探索#1](https://atcoder.jp/contests/typical90/submissions/34487062)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/001.jpg)）
