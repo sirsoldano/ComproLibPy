@@ -161,6 +161,25 @@ r1,r2 = [pow(998244353,n,mod) for n in range(1,N+1)],[pow(100000007,n,mod) for n
 (h1[l1+strlen]-r1*h1[l1])%mod==(h1[l2+strlen]-r1*h1[l2])%mod
 def judge(l,r) : return (h1[r]-r1[r-l]*h1[l])%mod==(rh1[N-l]-r1[r-l]*rh1[N-r])%mod and (h2[r]-r2[r-l]*h2[l])%mod==(rh2[N-l]-r2[r-l]*rh2[N-r])%mod
 ~~~
+
+<details>
+<summary>
+    #### ローリングハッシュ
+</summary>
+
+~~~
+mod = 1000000007
+h1,h2 = [0]*(N+1),[0]*(N+1)
+for n in range(N) : 
+  h1[n+1] = (h1[n]*998244353+s[n])%mod
+  h2[n+1] = (h2[n]*100000007+s[n])%mod
+r1,r2 = [pow(998244353,n,mod) for n in range(1,N+1)],[pow(100000007,n,mod) for n in range(1,N+1)]
+(h1[l1+strlen]-r1*h1[l1])%mod==(h1[l2+strlen]-r1*h1[l2])%mod
+def judge(l,r) : return (h1[r]-r1[r-l]*h1[l])%mod==(rh1[N-l]-r1[r-l]*rh1[N-r])%mod and (h2[r]-r2[r-l]*h2[l])%mod==(rh2[N-l]-r2[r-l]*rh2[N-r])%mod
+~~~
+</details>
+
+
 #### 行列回転
 ~~~
 # 90deg right
