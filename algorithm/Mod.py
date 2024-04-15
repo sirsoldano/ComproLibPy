@@ -18,7 +18,7 @@ class MOD: # for single use
         return fxy*deno%self.mod
 
 class MOD:
-    def __init__(self,mod,N=400001):
+    def __init__(self,mod,N=4000001):
         self.mod = mod
         self.fac = [0]*N
         self.finv = [0]*N
