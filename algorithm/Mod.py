@@ -28,5 +28,6 @@ class MOD:
             self.fac[i] = self.fac[i-1]*i%mod
             self.inv[i] = mod-self.inv[mod%i]*(mod//i)%mod
             self.finv[i] = self.finv[i-1]*self.inv[i]%mod
-    def modC(self,X,Y):
-        return self.fac[X+Y]*self.finv[X]%self.mod*self.finv[Y]%self.mod
+#    def modC(self,X,Y) : return self.fac[X+Y]*self.finv[X]%self.mod*self.finv[Y]%self.mod
+    def C(self,n,k) : return self.fac[n]*self.finv[n-k]%self.mod*self.finv[k]%self.mod
+    def P(self,n,k) : return self.fac[n]*self.finv[n-k]%self.mod
