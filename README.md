@@ -44,6 +44,7 @@ XY = [[*map(int,input().split())] for n in range(N)]
 ~~~
 #### 文字列
 ~~~
+alp,ALP = "abcdefghijklmnopqrstuvwxyz","ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 S = [*map(lambda x:ord(x)-97,input().rstrip())]
 print("".join(map(lambda i:chr(i+97),ans))) # 大文字はord(c)-65
 compressed = [(k, len(list(g))) for k,g in itertools.groupby(s)] # ランレングス圧縮
