@@ -37,18 +37,17 @@ while q:
             node[p]=node[pos]+1
 # Dijkstra法
 # https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_ap, https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_bl
-import heapq
-edge = [(nn,dist) for n in range(N)]
+import heapq as hq
 def dijkstra(s):
     q = []
-    heapq.heappush(q,(0,s))
+    hq.heappush(q,(0,s))
     node[s] = 0
     while len(q)>0 :
-        pos = heapq.heappop(q)
+        pos = hq.heappop(q)
         for p,dist in edge[pos[1]]:
             if node[p] is None or node[p]>pos[0]+dist:
                 node[p] = pos[0]+dist
-                heapq.heappush(q,(node[p],p))
+                hq.heappush(q,(node[p],p))
 # Warshall-Floyd(tc:N^3)
 abc,d=[],[[1<<60]*N for n in range(N)]
 for m in range(M):
