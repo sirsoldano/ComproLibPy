@@ -194,3 +194,89 @@ class MergeT:
                 res += self.scs[r][br(self.st[r],hi)]
             l >>= 1; r >>= 1
         return res
+
+
+# (編集途中)
+class SegT:
+    def __init__(self,H,W):
+        self.hlen,self.wlen = 1,1
+        while(self.hlen<H) : self.hlen<<=1
+        while(self.wlen<W) : self.wlen<<=1
+        self.st = [[1<<60]*(self.wlen*2) for _ in range(self.hlen*2)]
+        self.lz = [[1<<60]*(self.wlen*2) for _ in range(self.hlen*2)]
+    def eval(self,h,w):
+        while True:
+            tw = w
+            while tw>1:
+                tw >>= 1
+                self.st[h][tw] = min(self.st[h][tw*2],self.st[h][tw*2+1])
+            h >>= 1
+            if h==0 : break
+            self.st[h][w] = min(self.st[h*2][w],self.st[h*2+1][w])
+    def deval(self,h,w):
+        th, dh = 1, 1
+        tw, dw = 1, 1
+        while dh*4<=h : dh*=2
+        while dw*4<=w : dw*=2
+        while th <= h :
+            while tw <= w:
+                
+            if k < self.slen:
+                self.lz[k*2] = max(self.lz[k*2],self.lz[k])
+                self.lz[k*2+1] = max(self.lz[k*2+1],self.lz[k])
+            self.st[k] = max(self.st[k],self.lz[k])
+            self.lz[k] = 0
+            if i&d : k = k*2+1
+            else : k = k*2
+            d >>= 1
+    def update(self,hl,hr,wl,wr,h):
+        hl += self.hlen; hr += self.hlen
+        wl += self.wlen; wr += self.wlen
+        while hl < hr:
+            if hl & 1 : 
+                twl,twr = wl,wr
+                while twl<twr:
+                    if twl&1:
+                        self.deval(hl,twl)
+                        self.lz[hl][twl] = min(self.lz[hl][twl],h)
+                        self.st[hl][twl] = min(self.st[hl][twl],h)
+                        self.eval(hl,twl)
+                        twl+=1
+                    if twr&1:
+                        twr-=1
+                        self.deval(hl,twr)
+                        self.lz[hl][twr] = min(self.lz[hl][twr],h)
+                        self.st[hl][twr] = min(self.st[hl][twr],h)
+                        self.eval(hl,twr)
+                    twl>>=1 ; twr>>=1
+                hl += 1
+            if hr & 1: 
+                hr -= 1
+                twl,twr = wl,wr
+                while twl<twr:
+                    if twl&1:
+                        self.deval(hr,twl)
+                        self.lz[hr][twl] = min(self.lz[hr][twl],h)
+                        self.st[hr][twl] = min(self.st[hr][twl],h)
+                        self.eval(hr,twl)
+                        twl+=1
+                    if twr&1:
+                        twr-=1
+                        self.deval(hr,twr)
+                        self.lz[hr][twr] = min(self.lz[hr][twr],h)
+                        self.st[hr][twr] = min(self.st[hr][twr],h)
+                        self.eval(hr,twr)
+                    twl>>=1 ; twr>>=1
+            hl >>= 1; hr >>= 1
+    def getmin(self,l,r):
+        l += self.slen; r += self.slen
+        res = 1<<60
+        while l < r:
+            if l & 1 : 
+                res = min(res,self.st[l])
+                l += 1
+            if r & 1: 
+                r -= 1 
+                res = min(res,self.st[r])
+            l >>= 1; r >>= 1
+        return res
