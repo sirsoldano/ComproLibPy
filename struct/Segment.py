@@ -35,59 +35,106 @@ class FenT:
             else:
                 l=m
         return r
+
 # セグメント木
+from math import gcd
 class SegT:
-    def __init__(self,N):
+    DEFAULT = {
+        'min': 1 << 60,
+        'max': -(1 << 60),
+        'sum': 0,
+        'prd': 1,
+        'gcd': 0,
+        'lmc': 1,
+        '^': 0,
+        '&': (1 << 60) - 1,
+        '|': 0,
+    }
+    FUNC = {
+        'min': min,
+        'max': max,
+        'sum': (lambda x, y: x + y),
+        'prd': (lambda x, y: x * y),
+        'gcd': gcd,
+        'lmc': (lambda x, y: (x * y) // gcd(x, y)),
+        '^': (lambda x, y: x ^ y),
+        '&': (lambda x, y: x & y),
+        '|': (lambda x, y: x | y),
+    }
+    def __init__(self,N,mode="max",func=None,default=None):
+        self.default = self.DEFAULT[mode] if default == None else default
+        self.func = self.FUNC[mode] if func == None else func
         self.slen = 1
         while(self.slen<N) : self.slen<<=1
-        self.st = [0] * (self.slen*2)
+        self.st = [self.default] * (self.slen*2)
     def update(self,i,x):
         i += self.slen
         self.st[i] = x
         while i>=2 :
             i>>=1
-            self.st[i] = max(self.st[i*2],self.st[i*2+1])
-#            self.st[i] = self.st[i*2]+self.st[i*2+1]
-    def getmax(self,l,r):
-#    def getsum(self,l,r):
+            self.st[i] = self.func(self.st[i*2],self.st[i*2+1])
+    def get(self,l,r):
         l += self.slen; r += self.slen
-        res = 0
+        res = self.default
         while l < r:
             if l & 1 : 
-                res = max(res, self.st[l])
-#                res += self.st[l]
+                res = self.func(res, self.st[l])
                 l += 1
             if r & 1: 
                 r -= 1 
-                res = max(res, self.st[r])
-#                res += self.st[r]
+                res = self.func(res, self.st[r])
             l >>= 1; r >>= 1
         return res
 # 遅延セグメント木
 # 解説 https://qiita.com/Kept1994/items/a3435f50951e6b46709e
 # 競プロ典型 https://github.com/E869120/kyopro_educational_90/blob/main/editorial/029-02.jpg
-class SegT:
-    def __init__(self,N):
+from math import gcd
+class LST:
+    DEFAULT = {
+        'min': 1 << 60,
+        'max': -(1 << 60),
+        'sum': 0,
+        'prd': 1,
+        'gcd': 0,
+        'lmc': 1,
+        '^': 0,
+        '&': (1 << 60) - 1,
+        '|': 0,
+    }
+
+    FUNC = {
+        'min': min,
+        'max': max,
+        'sum': (lambda x, y: x + y),
+        'prd': (lambda x, y: x * y),
+        'gcd': gcd,
+        'lmc': (lambda x, y: (x * y) // gcd(x, y)),
+        '^': (lambda x, y: x ^ y),
+        '&': (lambda x, y: x & y),
+        '|': (lambda x, y: x | y),
+    }
+    def __init__(self,N,mode="max",upfunc=None,dnfunc=None,getfunc=None,default=None):
+        self.default = self.DEFAULT[mode] if default == None else default
+        self.upfunc = self.FUNC[mode] if upfunc == None else self.FUNC[upfunc]
+        self.dnfunc = self.FUNC[mode] if dnfunc == None else self.FUNC[dnfunc]
+        self.getfunc = self.FUNC[mode] if getfunc == None else self.FUNC[getfunc]
         self.slen = 1
         while(self.slen<N) : self.slen<<=1
-        self.st = [0] * (self.slen*2)
-        self.lz = [0] * (self.slen*2)
+        self.st = [self.default] * (self.slen*2)
+        self.lz = [self.default] * (self.slen*2)
     def eval(self,k):
         while k>0:
-            self.st[k] = max(self.st[k*2],self.st[k*2+1])
+            self.st[k] = self.upfunc(self.st[k*2],self.st[k*2+1])
             k>>=1
     def deval(self,i):
         k, d = 1, 1
         while d*4<=i:d*=2
         while k <= i :
             if k < self.slen:
-                self.lz[k*2] = max(self.lz[k*2],self.lz[k])
-#                self.lz[k*2] += self.lz[k]
-                self.lz[k*2+1] = max(self.lz[k*2+1],self.lz[k])
-#                self.lz[k*2+1] += self.lz[k]
-            self.st[k] = max(self.st[k],self.lz[k])
-#            self.st[k] += self.lz[k]
-            self.lz[k] = 0
+                self.lz[k*2] = self.dnfunc(self.lz[k*2],self.lz[k])
+                self.lz[k*2+1] = self.dnfunc(self.lz[k*2+1],self.lz[k])
+            self.st[k] = self.dnfunc(self.st[k],self.lz[k])
+            self.lz[k] = self.default
             if i&d : k = k*2+1
             else : k = k*2
             d >>= 1
@@ -96,31 +143,29 @@ class SegT:
         while l < r:
             if l & 1 : 
                 self.deval(l)
-                self.lz[l] = max(self.lz[l],h)
-#                self.lz[l] += h
-                self.st[l] = max(self.st[l],h)
+                self.lz[l] = self.dnfunc(self.lz[l],h)
+                self.st[l] = self.dnfunc(self.st[l],h)
                 self.eval(l>>1)
                 l += 1
             if r & 1: 
                 r -= 1 
                 self.deval(r)
-                self.lz[r] = max(self.lz[r],h)
-#                self.lz[r] += h
-                self.st[r] = max(self.st[r],h)
+                self.lz[r] = self.dnfunc(self.lz[r],h)
+                self.st[r] = self.dnfunc(self.st[r],h)
                 self.eval(r>>1)
             l >>= 1; r >>= 1
-    def getmax(self,l,r):
+    def get(self,l,r):
         l += self.slen; r += self.slen
-        res = 0
+        res = self.default
         while l < r:
             if l & 1 : 
                 self.deval(l)
-                res = max(res,self.st[l])
+                res = self.getfunc(res,self.st[l])
                 l += 1
             if r & 1: 
                 r -= 1 
                 self.deval(r)
-                res = max(res,self.st[r])
+                res = self.getfunc(res,self.st[r])
             l >>= 1; r >>= 1
         return res
 # atcoder library
