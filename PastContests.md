@@ -3,7 +3,7 @@
 |:----|:----|:----|
 |ABC078|[D](https://atcoder.jp/contests/abc078/tasks/arc085_b)|N^2までいけるなら[メモ化ミニマックス](https://blog.hamayanhamayan.com/entry/2017/11/11/225532)かも|
 |ABC082|[D](https://atcoder.jp/contests/abc082/tasks/arc087_b)|爆発しそうな座標問題もx,y別々で処理可能なら間に合う|
-|ABC091|[D](https://atcoder.jp/contests/abc091/tasks/arc092_b)|XORは桁ごとに。mod2^(k+1)シーリングが有効かも|
+|ABC091|[D](https://atcoder.jp/contests/abc091/tasks/arc092_b)|XORは桁ごとに和の奇遇を計算。sumが絡むならmod2^(k+1)シーリングが有効かも|
 |ABC107|[D](https://atcoder.jp/contests/arc101/tasks/arc101_b)|中央値は二分探索＋[転倒数](https://qiita.com/wisteria0410ss/items/296e0daa9e967ca71ed6)でいけるかも|
 |ABC127|[E](https://atcoder.jp/contests/abc127/tasks/abc127_e)|その組み合わせが何回数えられるか＋マンハッタンは縦横分解可|
 |ABC130|[E](https://atcoder.jp/contests/abc130/tasks/abc130_e)|最長共通部分列(LCS)のDP＋二次元累積和|
