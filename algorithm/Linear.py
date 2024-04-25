@@ -16,7 +16,7 @@ class Linear:
                     c[i][j] = (c[i][j]+a[i][k]*b[k][j])%self.mod
         return c
 
-def matexp(a,r,b,mod): a^r * b
+def matexp(a,r,b,mod): # a^r * b
     n = len(a); m = r.bit_length()
     res = [a]+[[[0]*n for _ in range(n)] for _ in range(m-1)]
     for h in range(m-1):
