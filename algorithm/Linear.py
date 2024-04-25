@@ -9,12 +9,15 @@ class Linear:
             a = self.mulmodL(a,a)
         return ans
     def mulmodL(self,a,b):
-        c = [[0 for m in range(len(b))] for n in range(len(a))]
+        c = [[0 for m in range(len(b[0]))] for n in range(len(a))]
         for i in range(len(a)):
             for k in range(len(a)):
-                for j in range(len(a)):
+                for j in range(len(b[0])):
                     c[i][j] = (c[i][j]+a[i][k]*b[k][j])%self.mod
         return c
+    def sumL(self,a):
+        return sum(sum(a[r][c]for c in range(len(a[0])) )%self.mod for r in range(len(a)))%self.mod
+lin.sumL( lin.mulmodL( lin.modpowL(coef,N) , [*zip(A)] ) )
 
 def matexp(a,r,b,mod): # a^r * b
     n = len(a); m = r.bit_length()
