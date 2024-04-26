@@ -18,6 +18,7 @@
 |ABC160|[F](https://atcoder.jp/contests/abc160/tasks/abc160_f)|木パターン列挙は木DP＋全方位木DP|
 |ABC164|[D](https://atcoder.jp/contests/abc164/tasks/abc164_d)|区間に関する問題において、累積和的なものを考える(158Eで既出)|
 |ABC171|[F](https://atcoder.jp/contests/abc171/tasks/abc171_f)|文字列操作後のパターン数問題は「操作によって文字列Tを作ることができるか」で考察|
+|ABC173|[F](https://atcoder.jp/contests/abc173/tasks/abc173_f)|木の性質(木の頂点数=辺+1から木の個数=頂点数-辺数、根付きなら一次元管理可能)など利用することを考える|
 |ABC239|[E](https://atcoder.jp/contests/abc239/tasks/abc239_e)|根付き木dfs(240Eも)|
 |ABC239|[F](https://atcoder.jp/contests/abc239/tasks/abc239_f)|辺数管理しながらマージ|
 |ABC240|[F](https://atcoder.jp/contests/abc240/tasks/abc240_f)|２層の階差数列は微分のイメージ(極大極小)|
