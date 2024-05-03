@@ -204,57 +204,43 @@ from collections import deque
 class Dinic:
     def __init__(self, N):
         self.N = N
-        self.e = [[] for i in range(N)]
-
+        self.flolas = [[0]*N for n in range(N)]
+        self.e = [[] for n in range(N)]
     def add_edge(self, fr, to, cap):
-        forward = [to, cap, None]
-        forward[2] = backward = [fr, 0, forward]
-        self.e[fr].append(forward)
-        self.e[to].append(backward)
-
-    def add_multi_edge(self, v1, v2, cap1, cap2):
-        edge1 = [v2, cap1, None]
-        edge1[2] = edge2 = [v1, cap2, edge1]
-        self.e[v1].append(edge1)
-        self.e[v2].append(edge2)
-
+        self.flolas[fr][to] = cap
+        self.flolas[to][fr] = 0
+        self.e[fr].append(to)
+        self.e[to].append(fr)
     def bfs(self, s, t):
-        self.level = level = [None]*self.N
+        self.level = [None]*self.N
         deq = deque([s])
-        level[s] = 0
-        e = self.e
+        self.level[s] = 0
         while deq:
-            v = deq.popleft()
-            lv = level[v] + 1
-            for w, cap, _ in e[v]:
-                if cap and level[w] is None:
-                    level[w] = lv
-                    deq.append(w)
-        return level[t] is not None
-
-    def dfs(self, v, t, f):
-        if v == t:
-            return f
-        level = self.level
-        for e in self.it[v]:
-            w, cap, rev = e
-            if cap and level[v] < level[w]:
-                d = self.dfs(w, t, min(f, cap))
+            pos = deq.popleft()
+            for p in self.e[pos]:
+                cap = self.flolas[pos][p]
+                if cap>0 and self.level[p] is None:
+                    self.level[p] = self.level[pos] + 1
+                    deq.append(p)
+        return self.level[t] is not None
+    def dfs(self, pos, t, f):
+        if pos == t : return f
+        for p in self.it[pos]:
+            cap = self.flolas[pos][p]
+            if cap>0 and self.level[pos] < self.level[p]:
+                d = self.dfs(p, t, min(f, cap))
                 if d:
-                    e[1] -= d
-                    rev[1] += d
+                    self.flolas[pos][p] -= d
+                    self.flolas[p][pos] += d
                     return d
         return 0
-
     def flow(self, s, t):
         flow = 0
-        INF = 10000000000000000000
-        e = self.e
         while self.bfs(s, t):
             *self.it, = map(iter, self.e)
-            f = INF
-            while f:
-                f = self.dfs(s, t, INF)
+            while True:
+                f = self.dfs(s, t, 1<<60)
+                if f==0 : break
                 flow += f
         return flow
 # 燃やす埋める問題(https://atcoder.jp/contests/typical90/tasks/typical90_an)
