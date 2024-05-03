@@ -243,6 +243,18 @@ class Dinic:
                 if f==0 : break
                 flow += f
         return flow
+    def cut(self,s):
+        deq = deque([s])
+        sside = {s}
+        while deq:
+            pos = deq.popleft()
+            flag = True
+            for p in self.e[pos]:
+                if self.flolas[pos][p]>0 and p not in sside:
+                    flag = False
+                    sside.add(p)
+                    deq.append(p)
+        return sside
 # 燃やす埋める問題(https://atcoder.jp/contests/typical90/tasks/typical90_an)
 # 解説 https://zenn.dev/kiwamachan/articles/37a2c646f82c7d
 
