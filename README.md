@@ -28,13 +28,6 @@
 - [行標準形](/struct/RowCanonicalForm.py)
 
 ## 頻出記述
-#### sys系
-~~~
-import sys
-input = sys.stdin.readline # 文字列には使用不可
-sys.setrecursionlimit(10**6)
-sys.exit() # return 0
-~~~
 #### 入力系
 ~~~
 N=int(input())
@@ -113,10 +106,7 @@ for m in range(M):
 <summary>dfs</summary>
 
 ~~~
-import sys
-sys.setrecursionlimit(10**6)
-import pypyjit
-pypyjit.set_param('max_unroll_recursion=-1')
+#import sys; sys.setrecursionlimit(10**6); import pypyjit; pypyjit.set_param('max_unroll_recursion=-1')
 def dfs(pos):
     node[pos] = 1
     for p in edge[pos]:
