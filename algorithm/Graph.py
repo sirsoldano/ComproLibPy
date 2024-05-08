@@ -1,7 +1,3 @@
-# https://hcpc-hokudai.github.io/archive/graph_shortest_path_mst_001.pdf
-import sys
-input = sys.stdin.readline
-sys.setrecursionlimit(10**6)
 N,M = map(int,input().split())
 edge,node=[[] for n in range(N)],[-1]*N
 for m in range(M):
@@ -10,7 +6,6 @@ for m in range(M):
     edge[b-1].append(a-1)
 
 # tc : N+M
-# PyPyだとたまにTLEするのでその場合はPythonで提出
 def dfs(pos):
     node[pos] = 1
     for p in edge[pos]:
