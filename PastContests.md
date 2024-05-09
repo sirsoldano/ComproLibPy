@@ -13,6 +13,7 @@
 |ABC139|[F](https://atcoder.jp/contests/abc139/tasks/abc139_f)|偏角ソート後に探索|
 |ABC141|[F](https://atcoder.jp/contests/abc141/tasks/abc141_f)|XORの最大値は掃き出し法|
 |ABC143|[E](https://atcoder.jp/contests/abc143/tasks/abc143_e)|N^3で許されるならワーシャルフロイド|
+|ABC144|[F](https://atcoder.jp/contests/abc144/tasks/abc144_f)|N到達までの行動回数期待値問題はゴール側から計算(到達可能領域の回数期待値の和/選択肢数 + 1回)|
 |ABC148|[E](https://atcoder.jp/contests/abc148/tasks/abc148_e)|末尾のゼロの個数はmin(因数2の個数,因数5の個数)|
 |ABC154|[F](https://atcoder.jp/contests/abc154/tasks/abc154_f)|二次元累積和|
 |ABC160|[F](https://atcoder.jp/contests/abc160/tasks/abc160_f)|木パターン列挙は木DP＋全方位木DP|
