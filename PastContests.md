@@ -86,6 +86,8 @@
 |ABC302|[F](https://atcoder.jp/contests/abc302/tasks/abc302_f)|辺も頂点とみなしてみる超頂点|
 |ABC308|[G](https://atcoder.jp/contests/abc308/tasks/abc308_g)|集合内のXORは隣り合う数字同士が最小候補（min(x^y,y^z)<x^z）|
 |ABC309|[F](https://atcoder.jp/contests/abc309/tasks/abc309_f)|3要素の比較にソート+セグ木(圧座後)|
+|ABC310|[D](https://atcoder.jp/contests/abc310/tasks/abc310_d)|N=10で全探索は再帰で階乗かも|
+|ABC310|[F](https://atcoder.jp/contests/abc310/tasks/abc310_f)|20以下の集合のパターン数(確率)はbitDP|
 |ABC314|[E](https://atcoder.jp/contests/abc314/tasks/abc314_e)|到達期待値は末尾から計算|
 |ABC315|[F](https://atcoder.jp/contests/abc315/tasks/abc315_f)|制約から最低限必要な状態数を見積もる|
 |ABC317|[E](https://atcoder.jp/contests/abc317/tasks/abc317_e)|マップ探索はグラフ作成不要、毎クエリ4方向見るだけ|
