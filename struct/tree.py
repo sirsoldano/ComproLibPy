@@ -111,3 +111,16 @@ class DubTree:
             ans += self.fent[n]
             n -= n&-n
         return ans
+
+# Trie木
+tree,ans = {},0
+for n in range(N):
+  temp = tree
+  for c in s[n]:
+    if c in temp:
+      ans+=temp[c][0]
+      temp[c][0]+=1
+    else:
+      temp[c] = [1,{}]
+    temp = temp[c][1]
+print(ans)
