@@ -26,6 +26,7 @@
 - [Bitset](/struct/Bitset.py)
 - [MultiSet(重複セット)](/struct/Multiset.py)
 - [行標準形](/struct/RowCanonicalForm.py)
+- [スライド](/struct/Slide.py)
 
 ## 頻出記述
 #### 入力系
