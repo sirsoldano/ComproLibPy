@@ -105,6 +105,7 @@
 |ABC340|[F](https://atcoder.jp/contests/abc340/tasks/abc340_f)|一次不定方程式は拡張ユークリッド|
 |ABC348|[F](https://atcoder.jp/contests/abc348/tasks/abc348_f)|2000^3でどれかbit演算可能そうならbitsetで通せる|
 |ABC350|[G](https://atcoder.jp/contests/abc350/tasks/abc350_g)|オンラインクエリは平方分割やマージテクなど|
+|ABC353|[E](https://atcoder.jp/contests/abc353/tasks/abc353_e)|最長共通接頭辞の数はTrie木。[ヒストグラム内の長方形も]（http://algorithms.blog55.fc2.com/blog-entry-132.html）|
 
 ## 典型90問
 - [最少数え上げ要素を選択#25](https://atcoder.jp/contests/typical90/submissions/35225706)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/025.jpg)）
