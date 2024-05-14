@@ -104,6 +104,7 @@
 |ABC339|[G](https://atcoder.jp/contests/abc339/tasks/abc339_g)|更新の入らないオンラインクエリ区間の種類数問題はマージソート木|
 |ABC340|[F](https://atcoder.jp/contests/abc340/tasks/abc340_f)|一次不定方程式は拡張ユークリッド|
 |ABC348|[F](https://atcoder.jp/contests/abc348/tasks/abc348_f)|2000^3でどれかbit演算可能そうならbitsetで通せる|
+|ABC349|[F](https://atcoder.jp/contests/abc349/tasks/abc349_f)|bitwise orのパターン数はゼータメビウス変換使えるかも|
 |ABC350|[G](https://atcoder.jp/contests/abc350/tasks/abc350_g)|オンラインクエリは平方分割やマージテクなど|
 |ABC353|[E](https://atcoder.jp/contests/abc353/tasks/abc353_e)|最長共通接頭辞の数はTrie木。[ヒストグラム内の長方形も]（http://algorithms.blog55.fc2.com/blog-entry-132.html）|
 
