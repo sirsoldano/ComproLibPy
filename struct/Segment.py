@@ -240,6 +240,53 @@ class MergeT:
             l >>= 1; r >>= 1
         return res
 
+# 2Dセグメント木
+class SegT2d:
+    def __init__(self,H,W):
+        self.hlen,self.wlen = 1,1
+        while(self.hlen<H) : self.hlen<<=1
+        while(self.wlen<W) : self.wlen<<=1
+        self.st = [[-1<<60]*(self.wlen*2) for _ in range(self.hlen*2)]
+    def update(self,h,w,x):
+        h += self.hlen; w += self.wlen
+        self.st[h][w] = x
+        while True:
+            tw = w
+            while tw>1:
+                tw >>= 1
+                self.st[h][tw] = max(self.st[h][tw*2],self.st[h][tw*2+1])
+            h>>=1
+            if h==0 : break
+            self.st[h][w] = max(self.st[h*2][w],self.st[h*2+1][w])
+    def getmax(self,hl,hr,wl,wr):
+        hl += self.hlen; hr += self.hlen
+        wl += self.wlen; wr += self.wlen
+        res = -1<<60
+        while hl < hr:
+            if hl & 1 :
+                twl,twr = wl,wr
+                while twl<twr:
+                    if twl&1:
+                        res = max(res,self.st[hl][twl])
+                        twl+=1
+                    if twr&1:
+                        twr-=1
+                        res = max(res,self.st[hl][twr])
+                    twl>>=1;twr>>=1
+                hl += 1
+            if hr & 1: 
+                hr -= 1 
+                twl,twr = wl,wr
+                while twl<twr:
+                    if twl&1:
+                        res = max(res,self.st[hr][twl])
+                        twl+=1
+                    if twr&1:
+                        twr-=1
+                        res = max(res,self.st[hr][twr])
+                    twl>>=1;twr>>=1
+            hl >>= 1; hr >>= 1
+        return res
 
 # (編集途中)
 class SegT:
