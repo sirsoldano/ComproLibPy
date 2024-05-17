@@ -39,6 +39,7 @@
 |ABC246|[F](https://atcoder.jp/contests/abc246/tasks/abc246_f)|N=18の場合の数は除法原理かも|
 |ABC247|[E](https://atcoder.jp/contests/abc247/tasks/abc247_e)|満たす区間の個数は尺取法か包除原理。coreの無い判定は別 [ABC295D](https://atcoder.jp/contests/abc295/tasks/abc295_d)|
 |ABC247|[F](https://atcoder.jp/contests/abc247/tasks/abc247_f)|カードの表裏に数字分散はグラフかも|
+|ABC247|[G](https://atcoder.jp/contests/abc247/tasks/abc247_g)|任意の数のマッチングは最小費用流問題へ|
 |ABC248|[C](https://atcoder.jp/contests/abc248/tasks/abc248_c)|**場合の数に見えてdpで解ける事も**。ある項までの合計数で管理|
 |ABC248|[F](https://atcoder.jp/contests/abc248/tasks/abc248_f)|漸化式で表せる状態変化は状態dp|
 |ABC249|[E](https://atcoder.jp/contests/abc249/tasks/abc249_e)|ランレングスは圧縮前と圧縮後でdp|
