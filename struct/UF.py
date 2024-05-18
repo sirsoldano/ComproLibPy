@@ -20,7 +20,7 @@ class UnionFind:
     def same(self,a,b):
         return self.root(a)==self.root(b)
 
-# 最少全域木
+# 最少全域木 (クラスカル法)
 items.sort()
 ans,cnt=0,0
 for c,l,r in items :
@@ -28,3 +28,15 @@ for c,l,r in items :
         uf.union(l,r)
         ans, cnt = ans+c, cnt+1
 if cnt==N : print(ans)
+
+# heapq ver
+import heapq as hq
+ans,cnt=0,1
+uf = UnionFind(N)
+while e:
+    c,l,r=hq.heappop(e)
+    if uf.same(l,r)==False:
+        uf.union(l,r)
+        ans, cnt = ans+c, cnt+1
+if cnt==N : print(ans)
+else : print(-1)
