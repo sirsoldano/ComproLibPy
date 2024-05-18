@@ -1,6 +1,5 @@
 # 競プロPythonLibrary自分用
-提出しすぎてAtCoder提出歴から探すのが困難になってきたため作成  
-　テスト環境：[[paiza]](https://paiza.io/ja/projects/new) [[atcoder]](https://atcoder.jp/contests/typical90/custom_test)  
+提出しすぎてAtCoder提出歴から探すのが困難になってきたため作成
 - [アル数](https://atcoder.jp/contests/math-and-algorithm)（[解説](https://github.com/E869120/math-algorithm-book)）  
 - [典型90](https://atcoder.jp/contests/typical90)（[解説](https://github.com/E869120/kyopro_educational_90)）
 - [アル構](https://github.com/drken1215/book_algorithm_solution)
