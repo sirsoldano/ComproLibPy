@@ -108,6 +108,7 @@
 |ABC349|[F](https://atcoder.jp/contests/abc349/tasks/abc349_f)|bitwise orのパターン数はゼータメビウス変換使えるかも|
 |ABC350|[G](https://atcoder.jp/contests/abc350/tasks/abc350_g)|オンラインクエリは平方分割やマージテクなど|
 |ABC353|[E](https://atcoder.jp/contests/abc353/tasks/abc353_e)|最長共通接頭辞の数はTrie木。[ヒストグラム内の長方形も]（http://algorithms.blog55.fc2.com/blog-entry-132.html）|
+|ABC354|[E](https://atcoder.jp/contests/abc354/tasks/abc354_e)|ゲームにおけるbitDPの肝は、その状態から始めて勝てるなら1、必ず負けるなら0|
 
 ## 典型90問
 - [最少数え上げ要素を選択#25](https://atcoder.jp/contests/typical90/submissions/35225706)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/025.jpg)）
