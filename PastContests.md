@@ -78,6 +78,7 @@
 |ABC283|[F](https://atcoder.jp/contests/abc283/tasks/abc283_f)|絶対値は可能ならば場合分けして外す|
 |ABC286|[F](https://atcoder.jp/contests/abc286/tasks/abc286_f)|(中国剰余定理)互いに素な数で除した余が与えられる場合、最小公倍数以下では解が一意|
 |ABC288|[D](https://atcoder.jp/contests/abc288/tasks/abc288_d)|不変量を見極めて条件を単純化|
+|ABC289|[G](https://atcoder.jp/contests/abc289/tasks/abc289_g)|いくつかの直線から構成される最大値(最小値)はconvex_hull|
 |ABC294|[G](https://atcoder.jp/contests/abc294/tasks/abc294_g)|更新入る木の距離はダブリング＋オイラーツアー|
 |ABC295|[E](https://atcoder.jp/contests/abc295/tasks/abc295_e)|1以上M以下の確率変数Xの期待値合計∑i*p(X==i) => ∑p(X>=i)|
 |ABC296|[F](https://atcoder.jp/contests/abc296/tasks/abc296_f)|順番入れ替えで数列を一致させられるかは転倒数の奇遇一致次第|
