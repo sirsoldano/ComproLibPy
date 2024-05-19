@@ -38,7 +38,8 @@ def circumcircle(P1, P2, P3):
     if det>0 : x /= det; y /= det
     r = ((x - x1)**2 + (y - y1)**2)**.5
     return x, y, r
-# いくつかの直線から構成される最大値(最小値)convex_hull
+# いくつかの直線から構成される最大値(最小値) convex_hull
+# https://atcoder.jp/contests/abc289/tasks/abc289_g
 slopes = [] # (minX,a,b) y = ax+b
 for n in range(N):
   x,a,b = -1<<60,A[n],B[n]
