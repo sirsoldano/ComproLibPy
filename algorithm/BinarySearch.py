@@ -33,3 +33,12 @@ def sqrt(x):
         else:
             l = m
     return l
+
+# 最長増加部分列(LIS)
+A = [*map(int,input().split())]
+p,P = [],[0]*N
+for n in range(N):
+    pi = bl(p,A[n])
+    if pi==len(p) : p.append(A[n])
+    else : p[pi] = A[n]
+    P[n] = pi+1
