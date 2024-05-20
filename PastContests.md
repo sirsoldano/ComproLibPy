@@ -76,6 +76,7 @@
 |ABC278|[F](https://atcoder.jp/contests/abc278/tasks/abc278_f)|N=16程度の並び替えは状態DPでいけるかも|
 |ABC282|[E](https://atcoder.jp/contests/abc282/tasks/abc282_e)|最大全域木はunionfind+クラスカル法(グラフ不要)|
 |ABC283|[F](https://atcoder.jp/contests/abc283/tasks/abc283_f)|絶対値は可能ならば場合分けして外す|
+|ABC283|[G](https://atcoder.jp/contests/abc283/tasks/abc283_g)|xorの昇順列挙はxor基底列挙して順序を0-indexとして算出|
 |ABC286|[F](https://atcoder.jp/contests/abc286/tasks/abc286_f)|(中国剰余定理)互いに素な数で除した余が与えられる場合、最小公倍数以下では解が一意|
 |ABC288|[D](https://atcoder.jp/contests/abc288/tasks/abc288_d)|不変量を見極めて条件を単純化|
 |ABC289|[G](https://atcoder.jp/contests/abc289/tasks/abc289_g)|いくつかの直線から構成される最大値(最小値)はconvex_hull|
