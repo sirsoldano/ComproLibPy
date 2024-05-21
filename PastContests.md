@@ -72,6 +72,7 @@
 |ABC268|[F](https://atcoder.jp/contests/abc268/tasks/abc268_f)|並べ替えの最適解はcmp関数で|
 |ABC270|[D](https://atcoder.jp/contests/abc270/tasks/abc270_d)|交互ターンゲームは残り石数をnと置いてdp|
 |ABC270|[F](https://atcoder.jp/contests/abc270/tasks/abc270_f)|多点ワープはnodeと見做す。最小全域木はクラスカル法かプラム法(ダイクストラ)|
+|ABC272|[G](https://atcoder.jp/contests/abc272/tasks/abc272_g)|条件満たすものを一つでも挙げるは乱択か|
 |ABC273|[E](https://atcoder.jp/contests/abc273/tasks/abc273_e)|リストの複数回記録と呼び出しは木構造で可能|
 |ABC278|[F](https://atcoder.jp/contests/abc278/tasks/abc278_f)|N=16程度の並び替えは状態DPでいけるかも|
 |ABC282|[E](https://atcoder.jp/contests/abc282/tasks/abc282_e)|最大全域木はunionfind+クラスカル法(グラフ不要)|
