@@ -37,8 +37,8 @@ for i in range(1,2**N):
     else : ans+=2**free
 
 # そのマス目にとまる確率 https://atcoder.jp/contests/abc263/submissions/44607887
-dp = [1]+[0]*N
-dps = [1]+[0]*N
-for n in range(N):
-  dp[n+1] = (dps[n]-dps[n-d]*(n-d>=0))*(1/d)
-  dps[n+1] = dps[n]+dp[n+1]
+dp = [1]+[0]*(N)
+dps = [0]+[1]+[0]*(N+1)
+for n in range(1,N+1):
+  dp[n] = max(0,dps[n]-dps[max(0,n-d)])*(1/d)
+  dps[n+1] = dps[n]+dp[n]
