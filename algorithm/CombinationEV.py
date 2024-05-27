@@ -35,3 +35,10 @@ for i in range(1,2**N):
             free+=1
     if con%2==1 : ans-=2**free
     else : ans+=2**free
+
+# そのマス目にとまる確率 https://atcoder.jp/contests/abc263/submissions/44607887
+dp = [1]+[0]*N
+dps = [1]+[0]*N
+for n in range(N):
+  dp[n+1] = (dps[n]-dps[n-d]*(n-d>=0))*(1/d)
+  dps[n+1] = dps[n]+dp[n+1]
