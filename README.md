@@ -43,6 +43,57 @@ print("".join(map(lambda i:chr(i+97),ans))) # 大文字はord(c)-65
 compressed = [(k, len(list(g))) for k,g in itertools.groupby(s)] # ランレングス圧縮
 def palind(s): return sum(1 for n in range(len(s)//2) if s[n]!=s[-n-1])==0
 ~~~
+
+<details>
+<summary>
+    
+##### Z-algorithm
+</summary>
+[ABC257G](https://atcoder.jp/contests/abc257/tasks/abc257_g)
+~~~
+def z_algo(S):
+    N = len(S)
+    res = [0]*N
+    i = 1; j = 0
+    res[0] = l = len(S)
+    while i < l:
+        while i+j < l and S[j] == S[i+j]:
+            j += 1
+        if j == 0:
+            i += 1
+            continue
+        res[i] = j
+        k = 1
+        while l > k+i and j > k + res[k]:
+            res[i+k] = res[k]
+            k += 1
+        i += k; j -= k
+    return res
+~~~
+</details>
+
+<details>
+<summary>
+    
+##### ローリングハッシュ
+</summary>
+
+[ABC141E](https://atcoder.jp/contests/abc141/submissions/46893571)
+[基数表](https://gist.github.com/privet-kitty/295ac9202b7abb3039b493f8238bf40f#file-modulus-random-base-pair32-txt)
+~~~
+class RollingHash:
+    def __init__(self,N,s,b1=998244353,b2=100000007,mod=1000000007):
+        self.mod,self.b1,self.b2 = mod,b1,b2
+        self.h1,self.h2 = [0]*(N+1),[0]*(N+1)
+        self.r1,self.r2 = [pow(b1,n,mod) for n in range(1,N+1)],[pow(b2,n,mod) for n in range(1,N+1)]
+        for n in range(N) : 
+            self.h1[n+1] = (self.h1[n]*self.b1+s[n])%mod
+            self.h2[n+1] = (self.h2[n]*self.b2+s[n])%mod
+#(h1[l1+strlen]-r1*h1[l1])%mod==(h1[l2+strlen]-r1*h1[l2])%mod
+def judge(l,r) : return (h1[r]-r1[r-l]*h1[l])%mod==(rh1[N-l]-r1[r-l]*rh1[N-r])%mod and (h2[r]-r2[r-l]*h2[l])%mod==(rh2[N-l]-r2[r-l]*rh2[N-r])%mod
+~~~
+</details>
+
 #### 順列、部分集合
 ~~~
 from itertools import permutations,combinations
@@ -139,58 +190,6 @@ for n in range(N):
 [競典58](https://atcoder.jp/contests/typical90/submissions/36319380)
 [ABC167D](https://atcoder.jp/contests/abc167/submissions/50051923)
 [ABC241E](https://atcoder.jp/contests/abc241/submissions/39758881)
-
-
-<details>
-<summary>
-    
-#### ローリングハッシュ
-</summary>
-
-[ABC141E](https://atcoder.jp/contests/abc141/submissions/46893571)
-[基数表](https://gist.github.com/privet-kitty/295ac9202b7abb3039b493f8238bf40f#file-modulus-random-base-pair32-txt)
-~~~
-class RollingHash:
-    def __init__(self,N,s,b1=998244353,b2=100000007,mod=1000000007):
-        self.mod,self.b1,self.b2 = mod,b1,b2
-        self.h1,self.h2 = [0]*(N+1),[0]*(N+1)
-        self.r1,self.r2 = [pow(b1,n,mod) for n in range(1,N+1)],[pow(b2,n,mod) for n in range(1,N+1)]
-        for n in range(N) : 
-            self.h1[n+1] = (self.h1[n]*self.b1+s[n])%mod
-            self.h2[n+1] = (self.h2[n]*self.b2+s[n])%mod
-#(h1[l1+strlen]-r1*h1[l1])%mod==(h1[l2+strlen]-r1*h1[l2])%mod
-def judge(l,r) : return (h1[r]-r1[r-l]*h1[l])%mod==(rh1[N-l]-r1[r-l]*rh1[N-r])%mod and (h2[r]-r2[r-l]*h2[l])%mod==(rh2[N-l]-r2[r-l]*rh2[N-r])%mod
-~~~
-</details>
-
-<details>
-<summary>
-    
-#### Z-algorithm
-</summary>
-
-[ABC257G](https://atcoder.jp/contests/abc257/tasks/abc257_g)
-~~~
-def z_algo(S):
-    N,A = len(S),[0]*N
-    i,j = 1,0
-    A[0] = l = len(S)
-    while i < l:
-        while i+j < l and S[j] == S[i+j]:
-            j += 1
-        if not j:
-            i += 1
-            continue
-        A[i] = j
-        k = 1
-        while l-i > k < j - A[k]:
-            A[i+k] = A[k]
-            k += 1
-        i += k; j -= k
-    return A
-~~~
-</details>
-
 
 #### 行列回転
 ~~~
