@@ -150,13 +150,15 @@ for n in range(N):
 [ABC141E](https://atcoder.jp/contests/abc141/submissions/46893571)
 [基数表](https://gist.github.com/privet-kitty/295ac9202b7abb3039b493f8238bf40f#file-modulus-random-base-pair32-txt)
 ~~~
-mod = 1000000007
-h1,h2 = [0]*(N+1),[0]*(N+1)
-for n in range(N) : 
-  h1[n+1] = (h1[n]*998244353+s[n])%mod
-  h2[n+1] = (h2[n]*100000007+s[n])%mod
-r1,r2 = [pow(998244353,n,mod) for n in range(1,N+1)],[pow(100000007,n,mod) for n in range(1,N+1)]
-(h1[l1+strlen]-r1*h1[l1])%mod==(h1[l2+strlen]-r1*h1[l2])%mod
+class RollingHash:
+    def __init__(self,N,s,b1=998244353,b2=100000007,mod=1000000007):
+        self.mod,self.b1,self.b2 = mod,b1,b2
+        self.h1,self.h2 = [0]*(N+1),[0]*(N+1)
+        self.r1,self.r2 = [pow(b1,n,mod) for n in range(1,N+1)],[pow(b2,n,mod) for n in range(1,N+1)]
+        for n in range(N) : 
+            self.h1[n+1] = (self.h1[n]*self.b1+s[n])%mod
+            self.h2[n+1] = (self.h2[n]*self.b2+s[n])%mod
+#(h1[l1+strlen]-r1*h1[l1])%mod==(h1[l2+strlen]-r1*h1[l2])%mod
 def judge(l,r) : return (h1[r]-r1[r-l]*h1[l])%mod==(rh1[N-l]-r1[r-l]*rh1[N-r])%mod and (h2[r]-r2[r-l]*h2[l])%mod==(rh2[N-l]-r2[r-l]*rh2[N-r])%mod
 ~~~
 </details>
