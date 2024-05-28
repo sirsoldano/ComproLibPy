@@ -43,12 +43,13 @@ print("".join(map(lambda i:chr(i+97),ans))) # 大文字はord(c)-65
 compressed = [(k, len(list(g))) for k,g in itertools.groupby(s)] # ランレングス圧縮
 def palind(s): return sum(1 for n in range(len(s)//2) if s[n]!=s[-n-1])==0
 ~~~
-
 <details>
 <summary>
-    
-##### Z-algorithm
+
+##### 一致区間探索
 </summary>
+
+##### Z-algorithm
 [ABC257G](https://atcoder.jp/contests/abc257/tasks/abc257_g)
 ~~~
 def z_algo(S):
@@ -70,14 +71,7 @@ def z_algo(S):
         i += k; j -= k
     return res
 ~~~
-</details>
-
-<details>
-<summary>
-    
 ##### ローリングハッシュ
-</summary>
-
 [ABC141E](https://atcoder.jp/contests/abc141/submissions/46893571)
 [基数表](https://gist.github.com/privet-kitty/295ac9202b7abb3039b493f8238bf40f#file-modulus-random-base-pair32-txt)
 ~~~
@@ -92,6 +86,7 @@ class RollingHash:
 #(h1[l1+strlen]-r1*h1[l1])%mod==(h1[l2+strlen]-r1*h1[l2])%mod
 def judge(l,r) : return (h1[r]-r1[r-l]*h1[l])%mod==(rh1[N-l]-r1[r-l]*rh1[N-r])%mod and (h2[r]-r2[r-l]*h2[l])%mod==(rh2[N-l]-r2[r-l]*rh2[N-r])%mod
 ~~~
+
 </details>
 
 #### 順列、部分集合
