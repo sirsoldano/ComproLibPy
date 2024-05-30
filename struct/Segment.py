@@ -89,29 +89,16 @@ class SegT:
 # 解説 https://qiita.com/Kept1994/items/a3435f50951e6b46709e
 # 競プロ典型 https://github.com/E869120/kyopro_educational_90/blob/main/editorial/029-02.jpg
 from math import gcd
-class LST:
+class SegT:
     DEFAULT = {
-        'min': 1 << 60,
-        'max': -(1 << 60),
-        'sum': 0,
-        'prd': 1,
-        'gcd': 0,
-        'lmc': 1,
-        '^': 0,
-        '&': (1 << 60) - 1,
-        '|': 0,
+        'min': 1 << 60, 'max': -(1 << 60), 'sum': 0,
+        'prd': 1, 'gcd': 0, 'lmc': 1,
+        '^': 0, '&': (1 << 60) - 1, '|': 0,
     }
-
     FUNC = {
-        'min': min,
-        'max': max,
-        'sum': (lambda x, y: x + y),
-        'prd': (lambda x, y: x * y),
-        'gcd': gcd,
-        'lmc': (lambda x, y: (x * y) // gcd(x, y)),
-        '^': (lambda x, y: x ^ y),
-        '&': (lambda x, y: x & y),
-        '|': (lambda x, y: x | y),
+        'min': min, 'max': max, 'sum': (lambda x, y: x + y),
+        'prd': (lambda x, y: x * y), 'gcd': gcd, 'lmc': (lambda x, y: (x * y) // gcd(x, y)),
+        '^': (lambda x, y: x ^ y), '&': (lambda x, y: x & y), '|': (lambda x, y: x | y),
     }
     def __init__(self,N,mode="max",upfunc=None,dnfunc=None,getfunc=None,default=None):
         self.default = self.DEFAULT[mode] if default == None else default
@@ -123,48 +110,44 @@ class LST:
         self.st = [self.default] * (self.slen*2)
         self.lz = [self.default] * (self.slen*2)
     def eval(self,k):
-        while k>0:
-            self.st[k] = self.upfunc(self.st[k*2],self.st[k*2+1])
+        while k>1:
             k>>=1
+            self.st[k] = self.upfunc(self.st[k*2],self.st[k*2+1])
+            self.st[k] = self.upfunc(self.st[k],self.lz[k])
     def deval(self,i):
-        k, d = 1, 1
-        while d*4<=i:d*=2
-        while k <= i :
+        for b in reversed(range(i.bit_length())):
+            k = i>>b
+            if self.lz[k] == self.default:continue
             if k < self.slen:
                 self.lz[k*2] = self.dnfunc(self.lz[k*2],self.lz[k])
                 self.lz[k*2+1] = self.dnfunc(self.lz[k*2+1],self.lz[k])
             self.st[k] = self.dnfunc(self.st[k],self.lz[k])
             self.lz[k] = self.default
-            if i&d : k = k*2+1
-            else : k = k*2
-            d >>= 1
     def update(self,l,r,h):
         l += self.slen; r += self.slen
+        l0,r0 = l,r-1
+        self.deval(l0); self.deval(r0)
         while l < r:
             if l & 1 : 
-                self.deval(l)
-                self.lz[l] = self.dnfunc(self.lz[l],h)
                 self.st[l] = self.dnfunc(self.st[l],h)
-                self.eval(l>>1)
+                if l<self.slen : self.lz[l] = self.dnfunc(self.lz[l],h)
                 l += 1
             if r & 1: 
                 r -= 1 
-                self.deval(r)
-                self.lz[r] = self.dnfunc(self.lz[r],h)
                 self.st[r] = self.dnfunc(self.st[r],h)
-                self.eval(r>>1)
+                if r<self.slen : self.lz[r] = self.dnfunc(self.lz[r],h)
             l >>= 1; r >>= 1
+        self.eval(l0); self.eval(r0)
     def get(self,l,r):
         l += self.slen; r += self.slen
         res = self.default
+        self.deval(l); self.deval(r-1)
         while l < r:
             if l & 1 : 
-                self.deval(l)
                 res = self.getfunc(res,self.st[l])
                 l += 1
             if r & 1: 
                 r -= 1 
-                self.deval(r)
                 res = self.getfunc(res,self.st[r])
             l >>= 1; r >>= 1
         return res
