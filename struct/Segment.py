@@ -77,11 +77,11 @@ class SegT:
 # 解説 https://qiita.com/Kept1994/items/a3435f50951e6b46709e
 # 競プロ典型 https://github.com/E869120/kyopro_educational_90/blob/main/editorial/029-02.jpg
 from math import gcd
-class SegT:
+class LST:
     DEFAULT = {
         'min': 1 << 60, 'max': -(1 << 60), 'sum': 0,
         'prd': 1, 'gcd': 0, 'lmc': 1,
-        '^': 0, '&': (1 << 60) - 1, '|': 0,
+        '^': 0, '&': (1 << 60) - 1, '|': 0, None: None
     }
     FUNC = {
         'min': min, 'max': max, 'sum': (lambda x, y: x + y),
@@ -90,18 +90,18 @@ class SegT:
     }
     def __init__(self,N,mode="max",upfunc=None,dnfunc=None,getfunc=None,default=None):
         self.default = self.DEFAULT[mode] if default == None else default
-        self.upfunc = self.FUNC[mode] if upfunc == None else self.FUNC[upfunc]
-        self.dnfunc = self.FUNC[mode] if dnfunc == None else self.FUNC[dnfunc]
-        self.getfunc = self.FUNC[mode] if getfunc == None else self.FUNC[getfunc]
+        self.upfunc = self.FUNC[mode] if upfunc == None else self.FUNC[upfunc] if type(upfunc) is str else upfunc
+        self.dnfunc = self.FUNC[mode] if dnfunc == None else self.FUNC[dnfunc] if type(dnfunc) is str else dnfunc
+        self.getfunc = self.FUNC[mode] if getfunc == None else self.FUNC[getfunc] if type(getfunc) is str else getfunc
         self.slen = 1
         while(self.slen<N) : self.slen<<=1
-        self.st = [self.default] * (self.slen*2)
-        self.lz = [self.default] * (self.slen*2)
+        self.st = [self.default for _ in range(self.slen*2)]
+        self.lz = [self.default for _ in range(self.slen*2)]
     def eval(self,k):
         while k>1:
             k>>=1
-            self.st[k] = self.upfunc(self.st[k*2],self.st[k*2+1])
-            self.st[k] = self.upfunc(self.st[k],self.lz[k])
+            self.st[k] = self.getfunc(self.st[k*2],self.st[k*2+1])
+            if self.lz[k] != self.default : self.st[k] = self.upfunc(self.st[k],self.lz[k])
     def deval(self,i):
         for b in reversed(range(i.bit_length())):
             k = i>>b
