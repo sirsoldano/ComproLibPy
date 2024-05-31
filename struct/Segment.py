@@ -88,54 +88,52 @@ class LST:
         'prd': (lambda x, y: x * y), 'gcd': gcd, 'lmc': (lambda x, y: (x * y) // gcd(x, y)),
         '^': (lambda x, y: x ^ y), '&': (lambda x, y: x & y), '|': (lambda x, y: x | y),
     }
-    def __init__(self,N,mode="max",upfunc=None,dnfunc=None,getfunc=None,default=None):
+    def __init__(self,N,mode="max",upfunc=None,dnfunc=None,default=None):
         self.default = self.DEFAULT[mode] if default == None else default
         self.upfunc = self.FUNC[mode] if upfunc == None else self.FUNC[upfunc] if type(upfunc) is str else upfunc
         self.dnfunc = self.FUNC[mode] if dnfunc == None else self.FUNC[dnfunc] if type(dnfunc) is str else dnfunc
-        self.getfunc = self.FUNC[mode] if getfunc == None else self.FUNC[getfunc] if type(getfunc) is str else getfunc
-        self.slen = 1
-        while(self.slen<N) : self.slen<<=1
-        self.st = [self.default for _ in range(self.slen*2)]
-        self.lz = [self.default for _ in range(self.slen*2)]
-    def eval(self,k):
+        self.st = [default for _ in range(1<<(N.bit_length()+1))]
+        self.base = len(self.st)>>1
+        self.lz = [default for _ in range(self.base)]
+    def _apply(self,k,h):
+        self.st[k] = self.dnfunc(self.st[k],h)
+        if k<self.base : self.lz[k] = self.dnfunc(self.lz[k],h)
+    def _eval(self,k):
         while k>1:
             k>>=1
-            self.st[k] = self.getfunc(self.st[k*2],self.st[k*2+1])
-    def deval(self,i):
-        for b in reversed(range(i.bit_length())):
+            self.st[k] = self.upfunc(self.st[k*2],self.st[k*2+1])
+            if self.lz[k] != self.default : self.st[k] = self.dnfunc(self.st[k],self.lz[k])
+    def _deval(self,i):
+        for b in reversed(range(1,i.bit_length())):
             k = i>>b
             if self.lz[k] == self.default:continue
-            if k < self.slen:
-                self.lz[k*2] = self.dnfunc(self.lz[k*2],self.lz[k])
-                self.lz[k*2+1] = self.dnfunc(self.lz[k*2+1],self.lz[k])
-            self.st[k] = self.dnfunc(self.st[k],self.lz[k])
+            self._apply(k*2,self.lz[k])
+            self._apply(k*2+1,self.lz[k])
             self.lz[k] = self.default
     def update(self,l,r,h):
-        l += self.slen; r += self.slen
+        l += self.base; r += self.base
         l0,r0 = l,r-1
-        self.deval(l0); self.deval(r0)
+        self._deval(l0); self._deval(r0)
         while l < r:
             if l & 1 : 
-                self.st[l] = self.dnfunc(self.st[l],h)
-                if l<self.slen : self.lz[l] = self.dnfunc(self.lz[l],h)
+                self._apply(l,h)
                 l += 1
             if r & 1: 
                 r -= 1 
-                self.st[r] = self.dnfunc(self.st[r],h)
-                if r<self.slen : self.lz[r] = self.dnfunc(self.lz[r],h)
+                self._apply(r,h)
             l >>= 1; r >>= 1
-        self.eval(l0); self.eval(r0)
+        self._eval(l0); self._eval(r0)
     def get(self,l,r):
-        l += self.slen; r += self.slen
+        l += self.base; r += self.base
         res = self.default
-        self.deval(l); self.deval(r-1)
+        self._deval(l); self._deval(r-1)
         while l < r:
             if l & 1 : 
-                res = self.getfunc(res,self.st[l])
+                res = self.upfunc(res,self.st[l])
                 l += 1
             if r & 1: 
                 r -= 1 
-                res = self.getfunc(res,self.st[r])
+                res = self.upfunc(res,self.st[r])
             l >>= 1; r >>= 1
         return res
 # atcoder library
