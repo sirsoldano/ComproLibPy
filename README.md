@@ -111,6 +111,16 @@ def cs(l):
     lsum = [l[0]]
     for n in range(1,len(l)) : lsum.append(lsum[-1]+l[n])
     return lsum
+def imos(A):
+    N = max(r for l,r,h in A)+1
+    updn = [0]*(N+1)
+    for l,r,h in A:
+        updn[l]+=h
+        updn[r+1]-=h
+    cs = [updn[0]]+[0]*(N-1)
+    for n in range(1,N):
+        cs[n]=cs[n-1]+updn[n]
+    return cs
 ~~~
 #### キュー
 ~~~
