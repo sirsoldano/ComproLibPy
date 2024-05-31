@@ -54,23 +54,22 @@ def palind(s): return sum(1 for n in range(len(s)//2) if s[n]!=s[-n-1])==0
 [解説](https://qiita.com/Pro_ktmr/items/16904c9570aa0953bf05)
 ~~~
 def z_algo(S):
-  N = len(S)
-  res = [0]*N
-  i=1;j=0
-  res[0] = N
-  while i<N:
-    while i+j<N and S[j]==S[i+j]:
-      j+=1
-    if j==0:
-      i+=1
-      continue
-    res[i]=j
-    k = 1
-    while i+k < N and res[k]+k < j:
-      res[i+k] = res[k]
-      k += 1
-    i += k; j -= k
-  return res
+    N = len(S)
+    res = [N]+[0]*(N-1)
+    i=1;j=0
+    while i<N:
+        while i+j<N and S[j]==S[i+j]:
+            j+=1
+        if j==0:
+            i+=1
+            continue
+        res[i]=j
+        k = 1
+        while i+k < N and res[k]+k < j:
+            res[i+k] = res[k]
+            k += 1
+        i += k; j -= k
+    return res
 ~~~
 ##### ローリングハッシュ
 [ABC141E](https://atcoder.jp/contests/abc141/submissions/46893571)
