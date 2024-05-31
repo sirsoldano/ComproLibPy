@@ -51,6 +51,7 @@ def palind(s): return sum(1 for n in range(len(s)//2) if s[n]!=s[-n-1])==0
 
 ##### Z-algorithm
 [ABC257G](https://atcoder.jp/contests/abc257/tasks/abc257_g)
+[解説](https://qiita.com/Pro_ktmr/items/16904c9570aa0953bf05)
 ~~~
 def z_algo(S):
     N = len(S)
