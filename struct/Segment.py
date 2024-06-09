@@ -92,9 +92,9 @@ class LST:
         self.default = self.DEFAULT[mode] if default == None else default
         self.upfunc = self.FUNC[mode] if upfunc == None else self.FUNC[upfunc] if type(upfunc) is str else upfunc
         self.dnfunc = self.FUNC[mode] if dnfunc == None else self.FUNC[dnfunc] if type(dnfunc) is str else dnfunc
-        self.st = [default for _ in range(1<<(N.bit_length()+1))]
+        self.st = [self.default for _ in range(1<<(N.bit_length()+1))]
         self.base = len(self.st)>>1
-        self.lz = [default for _ in range(self.base)]
+        self.lz = [self.default for _ in range(self.base)]
     def _apply(self,k,h):
         self.st[k] = self.dnfunc(self.st[k],h)
         if k<self.base : self.lz[k] = self.dnfunc(self.lz[k],h)
