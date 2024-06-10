@@ -102,7 +102,7 @@ class LST:
         while k>1:
             k>>=1
             self.st[k] = self.upfunc(self.st[k*2],self.st[k*2+1])
-            if self.lz[k] != self.default : self.st[k] = self.dnfunc(self.st[k],self.lz[k])
+#            if self.lz[k] != self.default : self.st[k] = self.dnfunc(self.st[k],self.lz[k])
     def _deval(self,i):
         for b in reversed(range(1,i.bit_length())):
             k = i>>b
