@@ -145,6 +145,24 @@ lst.apply(l,r,1)
 ans = max(ans,lst.all_prod())
 # 漸化式を伴うもの https://atcoder.jp/contests/abc332/submissions/48482067
 
+# 長方形の和集合の面積
+def op(mon1,mon2) : 
+  if mon1[0]<mon2[0] : return mon1
+  elif mon1[0]>mon2[0] : return mon2
+  else : return mon1[0],mon1[1]+mon2[1]
+def mp(act,mon) : return mon[0]+act,mon[1]
+def comp(act1,act2) : return act1+act2
+lst = LazySegTree(op,(0,0),mp,comp,0,[(0,1) for n in range(N+1)])
+ans = 0
+for n in range(N+1):
+  for und,ovr in lef[n]:
+    lst.apply(und,ovr+1,1)
+  mn,con = lst.prod(0,N+1)
+  ans += N+1-con*(mn==0)
+  for und,ovr in rig[n]:
+    lst.apply(und,ovr+1,-1)
+print(ans)
+
 # セグメント木＋ローリングハッシュ
 class SegT:
     def __init__(self,N):
