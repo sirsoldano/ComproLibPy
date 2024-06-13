@@ -166,7 +166,7 @@ print(ans)
 # 長方形の一番厚く重なっている点の高さ https://atcoder.jp/contests/abc327/tasks/abc327_f
 def op(s1,s2) : return max(s1,s2)
 def mp(f,s) : return s+f
-def comp(f1,f2) : return f1+f2
+def comp(f2,f1) : return f1+f2
 lst = LazySegTree(op,0,mp,comp,0,[0 for n in range(200001)])
 ans = 0
 for n in range(200001):
