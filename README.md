@@ -196,6 +196,23 @@ for n in range(N):
 [ABC167D](https://atcoder.jp/contests/abc167/submissions/50051923)
 [ABC241E](https://atcoder.jp/contests/abc241/submissions/39758881)
 
+<details>
+<summary>bfs</summary>
+~~~
+N,K = map(int,input().split())
+A = [*map(lambda x:int(x)-1,input().split())]
+dub = [A]+[[None]*N for d in range(59)]
+for d in range(1,60):
+    for n in range(N):
+        dub[d][n] = dub[d-1][dub[d-1][n]]
+for n in range(N):
+    v = n
+    for d in range(60):
+        if K&(1<<d) : 
+            v=dub[d][v]
+~~~
+</details>
+
 #### 行列回転
 ~~~
 # 90deg right
