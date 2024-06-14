@@ -191,13 +191,15 @@ for n in range(N):
 ~~~
 </details>
 
+<details>
+<summary>
+
 #### 周期性利用
+</summary>
+
 [競典58](https://atcoder.jp/contests/typical90/submissions/36319380)
 [ABC167D](https://atcoder.jp/contests/abc167/submissions/50051923)
 [ABC241E](https://atcoder.jp/contests/abc241/submissions/39758881)
-
-<details>
-<summary>bfs</summary>
 ~~~
 N,K = map(int,input().split())
 A = [*map(lambda x:int(x)-1,input().split())]
