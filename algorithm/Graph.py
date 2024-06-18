@@ -56,14 +56,17 @@ for a in range(N):
             d[b][c] = min(d[b][c],d[b][a]+d[a][c])
 # Bellman-Ford
 d = [0]+[1<<60]*(N-1)
-for n in range(N):
-  update = []
+for n in range(N-1):
+#  update = False
   for a in range(N):
     for b,c in edge[a]:
       if d[a]<1<<60 and d[b] > d[a] + c:
         d[b] = d[a] + c
-        update.append(b)
-  if len(update)==0 : break
+#        update = True
+#  if update==False : break
+# 負閉路を見つける場合は再更新。1つでも見つければ良いのならば1回。N-1などある頂点が影響を受ける負閉路かを判断するにはN回更新
+# https://atcoder.jp/contests/abc061/tasks/abc061_d
+
 # トポロジカルソート (有向グラフの閉路検出にも)
 q = deque()
 for n in range(N):
