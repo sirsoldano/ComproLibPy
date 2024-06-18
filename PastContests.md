@@ -1,6 +1,9 @@
 ## 過去問
 |Contest|Q|Point|
 |:----|:----|:----|
+# 負閉路を見つける場合は再更新。1つでも見つければ良いのならば1回。N-1などある頂点が影響を受ける負閉路かを判断するにはN回更新
+# https://atcoder.jp/contests/abc061/tasks/
+|ABC061|[D](https://atcoder.jp/contests/abc061/tasks/abc061_d)|経路の最大スコア(最長経路)は重みを負にしたベルマンフォード。頂点Nが負閉路の影響を受けるか判断するにはN回更新して頂点Nの変化の有無を見る|
 |ABC078|[D](https://atcoder.jp/contests/abc078/tasks/arc085_b)|N^2までいけるなら[メモ化ミニマックス](https://blog.hamayanhamayan.com/entry/2017/11/11/225532)かも|
 |ABC082|[D](https://atcoder.jp/contests/abc082/tasks/arc087_b)|爆発しそうな座標問題もx,y別々で処理可能なら間に合う|
 |ABC091|[D](https://atcoder.jp/contests/abc091/tasks/arc092_b)|XORは桁ごとに和の奇遇を計算。sumが絡むならmod2^(k+1)シーリングが有効かも|
