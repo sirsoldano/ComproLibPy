@@ -149,6 +149,20 @@ cc = { v: i for i, v in enumerate(sa) }
 (A+div-1) // div
 -(-A//div)
 ~~~
+#### モジュラ
+~~~
+class MOD:
+    def __init__(self,mod,N=4000001):
+        self.mod,self.fac,self.finv,self.inv = mod,[0]*N,[0]*N,[0]*N
+        self.fac[0] = self.fac[1] = self.finv[0] = self.finv[1] = self.inv[1] = 1
+        for i in range(2,N):
+            self.fac[i] = self.fac[i-1]*i%mod
+            self.inv[i] = mod-self.inv[mod%i]*(mod//i)%mod
+            self.finv[i] = self.finv[i-1]*self.inv[i]%mod
+#    def modC(self,X,Y) : return self.fac[X+Y]*self.finv[X]%self.mod*self.finv[Y]%self.mod
+    def C(self,n,k) : return self.fac[n]*self.finv[n-k]%self.mod*self.finv[k]%self.mod
+    def P(self,n,k) : return self.fac[n]*self.finv[n-k]%self.mod
+~~~
 #### グラフ
 ~~~
 N,M = map(int,input().split())
