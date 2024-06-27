@@ -45,6 +45,7 @@ def tridiv(n):
         pf[n]+=1
     return pf
 # 複数回実行する場合は事前に素数列挙
+# tc : 素数の数はlogN
 # PL=eratos(int(n**0.5))
 def tridiv(n):
     pf, ind = [], 0
