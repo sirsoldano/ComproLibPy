@@ -72,6 +72,7 @@
 |ABC264|[E](https://atcoder.jp/contests/abc264/tasks/abc264_e)|辺は切る処理より繋ぐ処理が楽|
 |ABC265|[F](https://atcoder.jp/contests/abc265/tasks/abc265_f)|累積和で計算量1オーダーダウン（**未完**）|
 |ABC267|[F](https://atcoder.jp/contests/abc267/tasks/abc267_f)|木の距離管理は直径の両端から|
+|ABC268|[D](https://atcoder.jp/contests/abc268/tasks/abc268_d)|同じものを含む順列の列挙は再帰関数で|
 |ABC268|[F](https://atcoder.jp/contests/abc268/tasks/abc268_f)|並べ替えの最適解はcmp関数で|
 |ABC270|[D](https://atcoder.jp/contests/abc270/tasks/abc270_d)|交互ターンゲームは残り石数をnと置いてdp|
 |ABC270|[F](https://atcoder.jp/contests/abc270/tasks/abc270_f)|多点ワープはnodeと見做す。最小全域木はクラスカル法かプラム法(ダイクストラ)|
