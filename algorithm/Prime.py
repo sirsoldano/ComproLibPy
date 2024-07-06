@@ -34,8 +34,9 @@ def divs(n):
     return ldiv + udiv[::-1]
 # tc : √N
 # ul : 10^12
+from collections import deque,Counter
 def tridiv(n):
-    pf, f = Counter, 2
+    pf, f = Counter(), 2
     while f*f<=n:
         if n%f == 0 :
             pf[f]+=1
