@@ -37,21 +37,10 @@ class FenT:
         return r
 
 # セグメント木
-from math import gcd
 class SegT:
-    DEFAULT = {
-        'min': 1 << 60, 'max': -(1 << 60), 'sum': 0,
-        'prd': 1, 'gcd': 0, 'lmc': 1,
-        '^': 0, '&': (1 << 60) - 1, '|': 0,
-    }
-    FUNC = {
-        'min': min, 'max': max, 'sum': (lambda x, y: x + y),
-        'prd': (lambda x, y: x * y), 'gcd': gcd, 'lmc': (lambda x, y: (x * y) // gcd(x, y)),
-        '^': (lambda x, y: x ^ y), '&': (lambda x, y: x & y), '|': (lambda x, y: x | y),
-    }
-    def __init__(self,N,mode="max",func=None,default=None):
-        self.default = self.DEFAULT[mode] if default == None else default
-        self.func = self.FUNC[mode] if func == None else func
+    def __init__(self,N,func,default):
+        self.default = default
+        self.func = func
         self.slen = 1
         while(self.slen<N) : self.slen<<=1
         self.st = [self.default] * (self.slen*2)
