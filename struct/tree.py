@@ -124,3 +124,30 @@ for n in range(N):
       temp[c] = [1,{}]
     temp = temp[c][1]
 print(ans)
+
+# 重心分解
+N = int(input())
+edge,parent,nodenum = [set() for n in range(N)],[None]*N,[None]*N
+for m in range(N-1):
+    a,b = map(int,input().split())
+    edge[a-1].add(b-1)
+    edge[b-1].add(a-1)
+def dfs(pos):
+    nodenum[pos] = 1
+    for p in edge[pos]:
+        if nodenum[p] is None : 
+            nodenum[pos] += dfs(p)
+    return nodenum[pos]
+def getroot(r):
+    while True:
+        for p in edge[r]:
+            if nodenum[p]*2 > nodenum[r]:
+                nodenum[r], nodenum[p] = nodenum[r]-nodenum[p], nodenum[r]
+                r = p
+                break
+        else:
+            for p in edge[r]:
+                edge[p].remove(r)
+                ans[getroot(p)] = r+1
+            break
+    return r
