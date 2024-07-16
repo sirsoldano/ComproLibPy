@@ -146,8 +146,5 @@ def getroot(r):
                 r = p
                 break
         else:
-            for p in edge[r]:
-                edge[p].remove(r)
-                ans[getroot(p)] = r+1
             break
     return r
