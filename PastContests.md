@@ -23,6 +23,7 @@
 |ABC171|[F](https://atcoder.jp/contests/abc171/tasks/abc171_f)|文字列操作後のパターン数問題は「操作によって文字列Tを作ることができるか」で考察|
 |ABC173|[F](https://atcoder.jp/contests/abc173/tasks/abc173_f)|木の性質(木の頂点数=辺+1から木の個数=頂点数-辺数、根付きなら一次元管理可能)など利用することを考える|
 |ABC174|[F](https://atcoder.jp/contests/abc174/tasks/abc174_f)|クエリ毎に区間種類数問うはMo's Algorithmだが、右端でソートして、数えるべき各数の最近位置をフェニック木に載せても解ける|
+|ABC236|[E](https://atcoder.jp/contests/abc236/tasks/abc236_e)|平均値、中央値の最大化は解の二分探索|
 |ABC237|[F](https://atcoder.jp/contests/abc237/tasks/abc237_f)|LISの進捗(パターン数)はキー管理も可能|
 |ABC239|[E](https://atcoder.jp/contests/abc239/tasks/abc239_e)|根付き木dfs(240Eも)|
 |ABC239|[F](https://atcoder.jp/contests/abc239/tasks/abc239_f)|辺数管理しながらマージ|
