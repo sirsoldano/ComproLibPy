@@ -19,7 +19,7 @@
 |ABC154|[F](https://atcoder.jp/contests/abc154/tasks/abc154_f)|二次元累積和|
 |ABC160|[F](https://atcoder.jp/contests/abc160/tasks/abc160_f)|木パターン列挙は木DP＋全方位木DP|
 |ABC164|[D](https://atcoder.jp/contests/abc164/tasks/abc164_d)|区間に関する問題において、累積和的なものを考える(158Eで既出)|
-|ABC167|[D](https://atcoder.jp/contests/abc167/tasks/abc167_d)|ループはダブリングでいける([解説](https://drken1215.hatenablog.com/entry/2020/06/20/190700))175Dも|
+|ABC167|[D](https://atcoder.jp/contests/abc167/tasks/abc167_d)|ループはダブリングでいける([解説](https://drken1215.hatenablog.com/entry/2020/06/20/190700))175D,241Eも|
 |ABC171|[F](https://atcoder.jp/contests/abc171/tasks/abc171_f)|文字列操作後のパターン数問題は「操作によって文字列Tを作ることができるか」で考察|
 |ABC173|[F](https://atcoder.jp/contests/abc173/tasks/abc173_f)|木の性質(木の頂点数=辺+1から木の個数=頂点数-辺数、根付きなら一次元管理可能)など利用することを考える|
 |ABC174|[F](https://atcoder.jp/contests/abc174/tasks/abc174_f)|クエリ毎に区間種類数問うはMo's Algorithmだが、右端でソートして、数えるべき各数の最近位置をフェニック木に載せても解ける|
