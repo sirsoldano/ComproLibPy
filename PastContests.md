@@ -112,7 +112,7 @@
 |ABC339|[D](https://atcoder.jp/contests/abc339/tasks/abc339_d)|2人の位置関係を扱う問題は組み合わせの遷移を考えることでグラフ的に解ける([ABC289E](https://atcoder.jp/contests/abc289/tasks/abc289_e))|
 |ABC339|[F](https://atcoder.jp/contests/abc339/tasks/abc339_f)|長大な数字も扱えはするが桁数だけの計算時間がかかるのでmodなどでシーリング|
 |ABC339|[G](https://atcoder.jp/contests/abc339/tasks/abc339_g)|更新の入らないオンラインクエリ区間の種類数問題はマージソート木|
-|ABC340|[F](https://atcoder.jp/contests/abc340/tasks/abc340_f)|一次不定方程式は拡張ユークリッド|
+|ABC340|[F](https://atcoder.jp/contests/abc340/tasks/abc340_f)|一次不定方程式は拡張ユークリッド([ABC186E](https://atcoder.jp/contests/abc186/tasks/abc186_e)も)|
 |ABC346|[G](https://atcoder.jp/contests/abc346/tasks/abc346_g)|長方形の和集合の面積を求める|
 |ABC348|[F](https://atcoder.jp/contests/abc348/tasks/abc348_f)|2000^3でどれかbit演算可能そうならbitsetで通せる|
 |ABC349|[F](https://atcoder.jp/contests/abc349/tasks/abc349_f)|bitwise orのパターン数はゼータメビウス変換使えるかも|
