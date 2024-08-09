@@ -1,6 +1,7 @@
 ## 過去問
 |Contest|Q|Point|
 |:----|:----|:----|
+|ABC041|[D](https://atcoder.jp/contests/abc041/tasks/abc041_d)|N=15~20のパターン数はまずbitDP|
 |ABC061|[D](https://atcoder.jp/contests/abc061/tasks/abc061_d)|経路の最大スコア(最長経路)は重みを負にしたベルマンフォード。頂点Nが負閉路の影響を受けるか判断するにはN回更新して頂点Nの変化の有無を見る|
 |ABC078|[D](https://atcoder.jp/contests/abc078/tasks/arc085_b)|N^2までいけるなら[メモ化ミニマックス](https://blog.hamayanhamayan.com/entry/2017/11/11/225532)かも|
 |ABC082|[D](https://atcoder.jp/contests/abc082/tasks/arc087_b)|爆発しそうな座標問題もx,y別々で処理可能なら間に合う|
