@@ -35,6 +35,7 @@
 |ABC242|[F](https://atcoder.jp/contests/abc242/tasks/abc242_f)|二項定理で計算量削減|
 |ABC242|[G](https://atcoder.jp/contests/abc242/tasks/abc242_g)|クエリ毎に区間種類数問うはMo's Algorithm[(解説)](https://strangerxxx.hateblo.jp/entry/20230314/1678795200) [(ABC293Gも)](https://atcoder.jp/contests/abc293/submissions/50656044)尺取で解ける大量のオフラインクエリはこれ|
 |ABC243|[E](https://atcoder.jp/contests/abc243/tasks/abc243_e)|300程まではWF法|
+|ABC243|[G](https://atcoder.jp/contests/abc243/tasks/abc243_g)|数列パターン数は小さい方から付け足し遷移。二個飛ばしにできるなら計算量をさらに削減|
 |ABC244|[D](https://atcoder.jp/contests/abc244/tasks/abc244_d)|転倒数、偶置換奇置換|
 |ABC244|[E](https://atcoder.jp/contests/abc244/tasks/abc244_e)|辿り着く通り数はDP|
 |ABC245|[E](https://atcoder.jp/contests/abc245/tasks/abc245_e)|箱選びは箱と中身を混ぜて並べる|
