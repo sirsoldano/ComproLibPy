@@ -25,6 +25,7 @@
 |ABC173|[F](https://atcoder.jp/contests/abc173/tasks/abc173_f)|木の性質(木の頂点数=辺+1から木の個数=頂点数-辺数、根付きなら一次元管理可能)など利用することを考える|
 |ABC174|[F](https://atcoder.jp/contests/abc174/tasks/abc174_f)|クエリ毎に区間種類数問うはMo's Algorithmだが、右端でソートして、数えるべき各数の最近位置をフェニック木に載せても解ける|
 |ABC187|[F](https://atcoder.jp/contests/abc187/tasks/abc187_f)|部分集合の部分集合、o(3^N)のbitDP|
+|ABC189|[C](https://atcoder.jp/contests/abc189/tasks/abc189_c)|ヒストグラム内の最大長方形([ABC359も](https://atcoder.jp/contests/abc359/tasks/abc359_e))|
 |ABC189|[E](https://atcoder.jp/contests/abc189/tasks/abc189_e)|関数の合成はその関数が行列として取扱可能かまず考える。座標変換など線形な操作は行列表示可能|
 |ABC236|[E](https://atcoder.jp/contests/abc236/tasks/abc236_e)|平均値、中央値の最大化は解の二分探索|
 |ABC237|[F](https://atcoder.jp/contests/abc237/tasks/abc237_f)|LISの進捗(パターン数)はキー管理も可能|
