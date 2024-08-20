@@ -183,6 +183,7 @@ def dfs(pos):
         if node[p] is None : dfs(p)
 ~~~
 </details>
+
 <details>
 <summary>bfs</summary>
 
@@ -204,9 +205,6 @@ for n in range(N):
         i+=1
 ~~~
 </details>
-
-<details>
-<summary>
 
 <details>
 <summary>dijkstra</summary>
