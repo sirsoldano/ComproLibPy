@@ -208,6 +208,30 @@ for n in range(N):
 <details>
 <summary>
 
+<details>
+<summary>dijkstra</summary>
+
+~~~
+N,M = map(int,input().split())
+edge,node=[[] for n in range(N)],[1<<60]*N
+for m in range(M):
+    a,b,c = map(int,input().split())
+    edge[a-1].append((b-1,c))
+    edge[b-1].append((a-1,c))
+import heapq as hq
+def dijkstra(s):
+    q = []
+    hq.heappush(q,(0,s))
+    while len(q)>0 :
+        dist,pos = hq.heappop(q)
+        if node[pos] < 1<<60 : continue
+        node[pos] = dist
+        for p,d in edge[pos]:
+            if node[p] > dist+d:
+                hq.heappush(q,(dist+d,p))
+~~~
+</details>
+
 #### 周期性利用
 </summary>
 
