@@ -27,6 +27,7 @@
 |ABC187|[F](https://atcoder.jp/contests/abc187/tasks/abc187_f)|部分集合の部分集合、o(3^N)のbitDP|
 |ABC189|[C](https://atcoder.jp/contests/abc189/tasks/abc189_c)|ヒストグラム内の最大長方形([ABC359も](https://atcoder.jp/contests/abc359/tasks/abc359_e))|
 |ABC189|[E](https://atcoder.jp/contests/abc189/tasks/abc189_e)|関数の合成はその関数が行列として取扱可能かまず考える。座標変換など線形な操作は行列表示可能|
+|ABC189|[F](https://atcoder.jp/contests/abc189/tasks/abc189_f)|漸化式が循環する場合、解をXと置いて一次方程式として表現可能かも。次数1の係数aと次数0の係数bを並行してDP|
 |ABC236|[E](https://atcoder.jp/contests/abc236/tasks/abc236_e)|平均値、中央値の最大化は解の二分探索|
 |ABC237|[F](https://atcoder.jp/contests/abc237/tasks/abc237_f)|LISの進捗(パターン数)はキー管理も可能|
 |ABC239|[E](https://atcoder.jp/contests/abc239/tasks/abc239_e)|根付き木dfs(240Eも)|
