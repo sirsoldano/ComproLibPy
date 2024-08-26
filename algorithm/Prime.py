@@ -129,3 +129,12 @@ class LDE:
         self.x+=(m-self.m)*self.b
         self.y-=(m-self.m)*self.a
         self.m=m
+# ax+by=cの最小の自然数回答
+lde = LDE(a,b,c)
+ans = lde.get()
+if ans is None : print(-1)
+else:
+  x,y = ans
+  a,b = lde.a,-lde.b
+  lde.m_update(min((x-1)//a,(y-1)//b)) # 非負整数であればx-1,y-1 → x,y
+  ans = lde.get()
