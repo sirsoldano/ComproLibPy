@@ -166,3 +166,13 @@
 - [クエリ先読み#68](https://atcoder.jp/contests/typical90/submissions/37317678)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/068.jpg)）
 - [一方通行のルート探索はトポロジカルソート(閉路検出も)#71](https://atcoder.jp/contests/typical90/submissions/38447554)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/071-03.jpg)）
 - [余事象の組み合わせは包除原理#80](https://atcoder.jp/contests/typical90/submissions/38682064)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/080.jpg)）
+
+## 間違いと一言
+- ABC367F 集合の一致はHashで判定
+- ABC366E マンハッタン距離は XY別々で片側ループ or 45°回転
+- ABC364F 隣との非結合を1と置けばsegTで集合の個数を求められる
+- ABC363F 限りなく全探索に近い生成系は再帰＋枝刈りが勝負
+- ABC362E DPの次数を削減する時は、ループの方向に気をつけて。
+- ABC362G 文字列部分一致個数をO(logN)で繰り返し判定はSuffix Array
+- ABC361D 状態数が20以下のパズルの最適手はbitDPかBFS
+- ABC361F 約数包除原理
