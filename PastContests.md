@@ -176,3 +176,4 @@
 - ABC362G 文字列部分一致個数をO(logN)で繰り返し判定はSuffix Array
 - ABC361D 状態数が20以下のパズルの最適手はbitDPかBFS
 - ABC361F 約数包除原理
+- ABC360E 期待値問題は確率dpも期待値dpも可能なので、楽な方で
