@@ -168,6 +168,8 @@
 - [余事象の組み合わせは包除原理#80](https://atcoder.jp/contests/typical90/submissions/38682064)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/080.jpg)）
 
 ## 間違いと一言
+- ABC368E 時系列はグラフで解けなそうならイベント(ソート)で
+- ABC368G 無理に見えるアルゴリズムも制約の関係から愚直でOKな場合が
 - ABC367F 集合の一致はHashで判定
 - ABC366E マンハッタン距離は XY別々で片側ループ or 45°回転
 - ABC364F 隣との非結合を1と置けばsegTで集合の個数を求められる
@@ -177,3 +179,5 @@
 - ABC361D 状態数が20以下のパズルの最適手はbitDPかBFS
 - ABC361F 約数包除原理
 - ABC360E 期待値問題は確率dpも期待値dpも可能なので、楽な方で
+- ABC359D 部分文字列の満たすパターン数は状態DPで一字づつ遷移
+- ABC359E ヒストグラム内の最大長方形はsegTreeでなくstackで
