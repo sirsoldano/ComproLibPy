@@ -230,10 +230,11 @@ def dijkstra(s):
 ~~~
 </details>
 
-####セグ木
+#### セグ木
 
 <details>
 <summary>セグ木</summary>
+
 ~~~
 class SegT:
     def __init__(self,N,func,default):
@@ -265,6 +266,7 @@ class SegT:
 
 <details>
 <summary>遅延セグ木</summary>
+
 ~~~
 from atcoder.lazysegtree import LazySegTree
 def op(s1,s2) : return max(s1,s2)
