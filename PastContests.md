@@ -181,3 +181,6 @@
 - ABC360E 期待値問題は確率dpも期待値dpも可能なので、楽な方で
 - ABC359D 部分文字列の満たすパターン数は状態DPで一字づつ遷移
 - ABC359E ヒストグラム内の最大長方形はsegTreeでなくstackで
+- ABC359G 木のdfsにマージテクでパターンごとの総和計算
+- ABC357E functional graphはループ内から考える
+- ABC357F segTに載せるモノイド
