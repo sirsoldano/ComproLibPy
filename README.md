@@ -230,8 +230,44 @@ def dijkstra(s):
 ~~~
 </details>
 
-#### 周期性利用
+<details>
+<summary>
+####セグ木
 </summary>
+class SegT:
+    def __init__(self,N,func,default):
+        self.default = default
+        self.func = func
+        self.slen = 1
+        while(self.slen<N) : self.slen<<=1
+        self.st = [self.default] * (self.slen*2)
+    def update(self,i,x):
+        i += self.slen
+        self.st[i] = x
+        while i>=2 :
+            i>>=1
+            self.st[i] = self.func(self.st[i*2],self.st[i*2+1])
+    def get(self,l,r):
+        l += self.slen; r += self.slen
+        res = self.default
+        while l < r:
+            if l & 1 : 
+                res = self.func(res, self.st[l])
+                l += 1
+            if r & 1: 
+                r -= 1 
+                res = self.func(res, self.st[r])
+            l >>= 1; r >>= 1
+        return res
+from atcoder.lazysegtree import LazySegTree
+def op(s1,s2) : return max(s1,s2)
+def mp(f,s) : return s+f
+def comp(f2,f1) : return f1+f2
+lst = LazySegTree(op,0,mp,comp,0,[0 for n in range(200001)])
+
+</details>
+
+#### 周期性利用、ダブリング
 
 [競典58](https://atcoder.jp/contests/typical90/submissions/36319380)
 [ABC167D](https://atcoder.jp/contests/abc167/submissions/50051923)
@@ -249,7 +285,6 @@ for n in range(N):
         if K&(1<<d) : 
             v=dub[d][v]
 ~~~
-</details>
 
 #### 行列回転
 ~~~
