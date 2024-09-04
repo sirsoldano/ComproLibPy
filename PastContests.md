@@ -130,6 +130,7 @@
 |ABC360|[E](https://atcoder.jp/contests/abc360/tasks/abc360_e)|期待値遷移できないなら最終の確率を求めに行く|
 |ABC360|[G](https://atcoder.jp/contests/abc360/tasks/abc360_g)|LIS問題。[(ABC354Fも)](https://atcoder.jp/contests/abc354/tasks/abc354_f)|
 |ABC362|[G](https://atcoder.jp/contests/abc362/tasks/abc362_g)|部分文字列のパターン一致数はSuffixArrayでいけるかも|
+|ABC364|[F](https://atcoder.jp/contests/abc364/tasks/abc364_f)|隣との非結合を1と置けばsegTで集合の個数を求められる。[(ABC356Fも)](https://atcoder.jp/contests/abc356/tasks/abc356_f)|
 
 ## 典型90問
 - [最少数え上げ要素を選択#25](https://atcoder.jp/contests/typical90/submissions/35225706)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/025.jpg)）
