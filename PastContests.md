@@ -29,6 +29,7 @@
 |[ABC189E](https://atcoder.jp/contests/abc189/tasks/abc189_e)|関数の合成はその関数が行列として取扱可能かまず考える。座標変換など線形な操作は行列表示可能|
 |[ABC189F](https://atcoder.jp/contests/abc189/tasks/abc189_f)|漸化式が循環する場合、解をXと置いて一次方程式として表現可能かも。次数1の係数aと次数0の係数bを並行してDP|
 |[ABC194E](https://atcoder.jp/contests/abc194/tasks/abc194_e)|MEXは候補側をSortedListかheapQ+Counterで保持。[ABC330Eも](https://atcoder.jp/contests/abc330/tasks/abc330_e)|
+|[ABC232F](https://atcoder.jp/contests/abc232/tasks/abc232_f)|順列全探索をbitDPに落とし込む典型。遷移先をN通りとすることで乗り切るタイプ|
 |[ABC236E](https://atcoder.jp/contests/abc236/tasks/abc236_e)|平均値、中央値の最大化は解の二分探索|
 |[ABC237F](https://atcoder.jp/contests/abc237/tasks/abc237_f)|LISの進捗(パターン数)はキー管理も可能|
 |[ABC239E](https://atcoder.jp/contests/abc239/tasks/abc239_e)|根付き木dfs(240Eも)|
@@ -124,13 +125,28 @@
 |[ABC348F](https://atcoder.jp/contests/abc348/tasks/abc348_f)|2000^3でどれかbit演算可能そうならbitsetで通せる|
 |[ABC349F](https://atcoder.jp/contests/abc349/tasks/abc349_f)|bitwise orのパターン数はゼータメビウス変換使えるかも|
 |[ABC350G](https://atcoder.jp/contests/abc350/tasks/abc350_g)|オンラインクエリは平方分割やマージテクなど|
-|[ABC353E](https://atcoder.jp/contests/abc353/tasks/abc353_e)|最長共通接頭辞の数はTrie木。[ヒストグラム内の長方形も]（http://algorithms.blog55.fc2.com/blog-entry-132.html）|
-|[ABC354E](https://atcoder.jp/contests/abc354/tasks/abc354_e)|ゲームにおけるbitDPの肝は、その状態から始めて勝てるなら1、必ず負けるなら0|
-|[ABC357E](https://atcoder.jp/contests/abc357/tasks/abc357_f)|モノイドセグ木ついに理解([ABC346G](https://atcoder.jp/contests/abc346/tasks/abc346_g)も併せて)|
-|[ABC360E](https://atcoder.jp/contests/abc360/tasks/abc360_e)|期待値遷移できないなら最終の確率を求めに行く|
+|[ABC352D](https://atcoder.jp/contests/abc352/tasks/abc352_d)|ループする側を別の等差数列に変えてみる|
+|[ABC352F](https://atcoder.jp/contests/abc352/tasks/abc352_f)|N=16は各点ループ＋bitDPくらい|
+|[ABC353E](https://atcoder.jp/contests/abc353/tasks/abc353_e)|複数文字列の最小共通接辞頭のパターン数はTrie木。[ヒストグラム内の長方形も]（http://algorithms.blog55.fc2.com/blog-entry-132.html）|
+|[ABC354E](https://atcoder.jp/contests/abc354/tasks/abc354_e)|交互ゲームでパターン数が2**20程度なら必勝を1と置いてbitDPも可能。勿論メモ化再帰でも解ける。|
+|[ABC355F](https://atcoder.jp/contests/abc355/tasks/abc355_f)|重みあり最小全域木の更新は重み上限ごとのUnionFindで減算していく|
+|[ABC357E](https://atcoder.jp/contests/abc357/tasks/abc357_e)|functional graphはループ内から逆算していく|
+|[ABC357F](https://atcoder.jp/contests/abc357/tasks/abc357_f)|モノイドセグ木ついに理解([ABC346G](https://atcoder.jp/contests/abc346/tasks/abc346_g)も併せて)|
+|[ABC359D](https://atcoder.jp/contests/abc359/tasks/abc359_d)|部分文字列の満たすパターン数は状態DPで一字づつ遷移|
+|[ABC359E](https://atcoder.jp/contests/abc359/tasks/abc359_e)|ヒストグラム内の最大長方形はsegTreeでなくstackで|
+|[ABC359G](https://atcoder.jp/contests/abc359/tasks/abc359_g)|木のdfsにマージテクで状態ごとの総和計算|
+|[ABC360E](https://atcoder.jp/contests/abc360/tasks/abc360_e)|期待値問題は確率dpも期待値dpも可能なので、楽な方で|
 |[ABC360G](https://atcoder.jp/contests/abc360/tasks/abc360_g)|LIS問題。[(ABC354Fも)](https://atcoder.jp/contests/abc354/tasks/abc354_f)|
-|[ABC362G](https://atcoder.jp/contests/abc362/tasks/abc362_g)|部分文字列のパターン一致数はSuffixArrayでいけるかも|
+|[ABC361D](https://atcoder.jp/contests/abc361/tasks/abc361_d)|状態数が20以下のパズルの最適手はbitDPかBFS|
+|[ABC361F](https://atcoder.jp/contests/abc361/tasks/abc361_f)|べき乗パターン数問題で約数包除原理|
+|[ABC362E](https://atcoder.jp/contests/abc362/tasks/abc362_e)|DPの次数を削減する時は捜査の方向に気をつけて|
+|[ABC362G](https://atcoder.jp/contests/abc362/tasks/abc362_g)|文字列部分一致の個数をO(logN)で繰り返し判定はSuffix Array|
+|[ABC363F](https://atcoder.jp/contests/abc363/tasks/abc363_f)|限りなく全探索に近い生成系は再帰＋枝刈りが勝負|
 |[ABC364F](https://atcoder.jp/contests/abc364/tasks/abc364_f)|隣との非結合を1と置けばsegTで集合の個数を求められる。[(ABC356Fも)](https://atcoder.jp/contests/abc356/tasks/abc356_f)|
+|[ABC366E](https://atcoder.jp/contests/abc366/tasks/abc366_e)|マンハッタン距離は XY別々で片側ループ or 45°回転|
+|[ABC367F](https://atcoder.jp/contests/abc367/tasks/abc367_f)|集合の一致はHashで判定(Zobrist hash)|
+|[ABC368E](https://atcoder.jp/contests/abc368/tasks/abc368_e)|時系列はグラフで無理そうならイベント(ソート)で|
+|[ABC368G](https://atcoder.jp/contests/abc368/tasks/abc368_g)|無理に見えるアルゴリズムも制約の関係から愚直でOKな場合がある|
 
 ## 典型90問
 - [最少数え上げ要素を選択#25](https://atcoder.jp/contests/typical90/submissions/35225706)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/025.jpg)）
@@ -167,26 +183,3 @@
 - [クエリ先読み#68](https://atcoder.jp/contests/typical90/submissions/37317678)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/068.jpg)）
 - [一方通行のルート探索はトポロジカルソート(閉路検出も)#71](https://atcoder.jp/contests/typical90/submissions/38447554)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/071-03.jpg)）
 - [余事象の組み合わせは包除原理#80](https://atcoder.jp/contests/typical90/submissions/38682064)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/080.jpg)）
-
-## 間違いと一言
-- ABC368E 時系列はグラフで無理そうならイベント(ソート)で
-- ABC368G 無理に見えるアルゴリズムも制約の関係から愚直でOKな場合が
-- ABC367F 集合の一致はHashで判定
-- ABC366E マンハッタン距離は XY別々で片側ループ or 45°回転
-- ABC364F 隣との非結合を1と置けばsegTで集合の個数を求められる
-- ABC363F 限りなく全探索に近い生成系は再帰＋枝刈りが勝負
-- ABC362E DPの次数を削減する時は、ループの方向に気をつけて。
-- ABC362G 文字列部分一致個数をO(logN)で繰り返し判定はSuffix Array
-- ABC361D 状態数が20以下のパズルの最適手はbitDPかBFS
-- ABC361F 約数包除原理
-- ABC360E 期待値問題は確率dpも期待値dpも可能なので、楽な方で
-- ABC359D 部分文字列の満たすパターン数は状態DPで一字づつ遷移
-- ABC359E ヒストグラム内の最大長方形はsegTreeでなくstackで
-- ABC359G 木のdfsにマージテクでパターンごとの総和計算
-- ABC357E functional graphはループ内から考える
-- ABC357F segTに載せるモノイド
-- ABC355F 重みあり最小全域木の更新は重み上限ごとのUnionFindで減算していく
-- ABC354E 交互ゲームでパターン数が2**20程度なら勝ちを1と置いてbitDPも可能。勿論メモ化再帰でも解ける。
-- ABC353E 複数文字列の最小共通接辞頭のパターン数はTrie木使えるかも
-- ABC352D ループする側を別の等差数列に変えてみる
-- ABC352F N=16は各点ループ＋bitDPくらい
