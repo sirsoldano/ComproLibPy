@@ -148,6 +148,7 @@
 |[ABC367F](https://atcoder.jp/contests/abc367/tasks/abc367_f)|集合の一致はHashで判定(Zobrist hash)|
 |[ABC368E](https://atcoder.jp/contests/abc368/tasks/abc368_e)|時系列はグラフで無理そうならイベント(ソート)で|
 |[ABC368G](https://atcoder.jp/contests/abc368/tasks/abc368_g)|無理に見えるアルゴリズムも制約の関係から愚直でOKな場合がある|
+|[ABC370E](https://atcoder.jp/contests/abc370/tasks/abc370_e)|dpは式表記したうえで計算量改善のため変形|
 
 ## 典型90問
 - [最少数え上げ要素を選択#25](https://atcoder.jp/contests/typical90/submissions/35225706)（[解説](https://github.com/E869120/kyopro_educational_90/blob/main/editorial/025.jpg)）
