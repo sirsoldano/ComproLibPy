@@ -147,7 +147,7 @@
 |[ABC366E](https://atcoder.jp/contests/abc366/tasks/abc366_e)|1515|マンハッタン距離は XY別々で片側ループ or 45°回転|
 |[ABC367F](https://atcoder.jp/contests/abc367/tasks/abc367_f)|1540|集合の一致はHashで判定(Zobrist hash)|
 |[ABC368E](https://atcoder.jp/contests/abc368/tasks/abc368_e)|2140|時系列はグラフで無理そうならイベント(ソート)で|
-|[ABC368G](https://atcoder.jp/contests/abc368/tasks/abc368_g)|1841|無理に見えるアルゴリズムも制約の関係から愚直でOKな場合がある|
+|[ABC368G](https://atcoder.jp/contests/abc368/tasks/abc368_g)|<span style="color:blue;">1841</span>|無理に見えるアルゴリズムも制約の関係から愚直でOKな場合がある|
 |[ABC370E](https://atcoder.jp/contests/abc370/tasks/abc370_e)||dpは式表記したうえで計算量改善のため変形|
 
 ## 典型90問
