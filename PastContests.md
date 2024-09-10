@@ -31,7 +31,8 @@
 |[ABC194E](https://atcoder.jp/contests/abc194/tasks/abc194_e)||MEXは候補側をSortedListかheapQ+Counterで保持。[ABC330Eも](https://atcoder.jp/contests/abc330/tasks/abc330_e)|
 |[ABC232F](https://atcoder.jp/contests/abc232/tasks/abc232_f)||順列全探索をbitDPに落とし込む典型。遷移先をN通りとすることで乗り切るタイプ|
 |[ABC236E](https://atcoder.jp/contests/abc236/tasks/abc236_e)||平均値、中央値の最大化は解の二分探索|
-|[ABC237F](https://atcoder.jp/contests/abc237/tasks/abc237_f)||LISの進捗(パターン数)はキー管理も可能。（その他LIS：[ABC354F](https://atcoder.jp/contests/abc354/tasks/abc354_f),[ABC360G](https://atcoder.jp/contests/abc360/tasks/abc360_g)）|
+|[ABC237E](https://atcoder.jp/contests/abc237/tasks/abc237_e)|1208|負の辺あってもポテンシャル用いてDijkstra利用可能かも|
+|[ABC237F](https://atcoder.jp/contests/abc237/tasks/abc237_f)|1857|LISの進捗(パターン数)はキー管理も可能。（その他LIS：[ABC354F](https://atcoder.jp/contests/abc354/tasks/abc354_f),[ABC360G](https://atcoder.jp/contests/abc360/tasks/abc360_g)）|
 |[ABC238E](https://atcoder.jp/contests/abc238/tasks/abc238_e)|1577|問題の適切な置き換えでグラフへ|
 |[ABC239F](https://atcoder.jp/contests/abc239/tasks/abc239_f)|1959|木の連結はUnionFind+マージテク|
 |[ABC239G](https://atcoder.jp/contests/abc239/tasks/abc239_g)|2215|最小カットのパターン提示はカット後に残フロー計算でなく色分け|
