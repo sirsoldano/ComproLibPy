@@ -33,9 +33,9 @@
 |[ABC236E](https://atcoder.jp/contests/abc236/tasks/abc236_e)||平均値、中央値の最大化は解の二分探索|
 |[ABC237F](https://atcoder.jp/contests/abc237/tasks/abc237_f)||LISの進捗(パターン数)はキー管理も可能。（その他LIS：[ABC354F](https://atcoder.jp/contests/abc354/tasks/abc354_f),[ABC360G](https://atcoder.jp/contests/abc360/tasks/abc360_g)）|
 |[ABC238E](https://atcoder.jp/contests/abc238/tasks/abc238_e)|1577|問題の適切な置き換えでグラフへ|
-|[ABC239F](https://atcoder.jp/contests/abc239/tasks/abc239_f)||辺数管理しながらマージ|
+|[ABC239F](https://atcoder.jp/contests/abc239/tasks/abc239_f)|1959|木の連結はUnionFind+マージテク|
 |[ABC239G](https://atcoder.jp/contests/abc239/tasks/abc239_g)|2215|最小カットのパターン提示はカット後に残フロー計算でなく色分け|
-|[ABC240F](https://atcoder.jp/contests/abc240/tasks/abc240_f)||２層の階差数列は微分のイメージ(極大極小)|
+|[ABC240F](https://atcoder.jp/contests/abc240/tasks/abc240_f)|1589|２層の階差数列は微分のイメージ(極大極小)つまり三分探索|
 |[ABC241E](https://atcoder.jp/contests/abc241/tasks/abc241_e)||周期性利用問題の典型|
 |[ABC241F](https://atcoder.jp/contests/abc241/tasks/abc241_f)||滑る床、無理にグラフに落とし込む必要無くBFSは可能|
 |[ABC242C](https://atcoder.jp/contests/abc242/tasks/abc242_c)||辿り着ける通り数はDP、漸化式はDPか行列|
@@ -147,7 +147,7 @@
 |[ABC366E](https://atcoder.jp/contests/abc366/tasks/abc366_e)|1515|マンハッタン距離は XY別々で片側ループ or 45°回転|
 |[ABC367F](https://atcoder.jp/contests/abc367/tasks/abc367_f)|1540|集合の一致はHashで判定(Zobrist hash)|
 |[ABC368E](https://atcoder.jp/contests/abc368/tasks/abc368_e)|2140|時系列はグラフで無理そうならイベント(ソート)で|
-|[ABC368G](https://atcoder.jp/contests/abc368/tasks/abc368_g)|<span style="color:blue;">1841</span>|無理に見えるアルゴリズムも制約の関係から愚直でOKな場合がある|
+|[ABC368G](https://atcoder.jp/contests/abc368/tasks/abc368_g)|1841|無理に見えるアルゴリズムも制約の関係から愚直でOKな場合がある|
 |[ABC370E](https://atcoder.jp/contests/abc370/tasks/abc370_e)||dpは式表記したうえで計算量改善のため変形|
 
 ## 典型90問
