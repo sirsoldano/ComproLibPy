@@ -32,8 +32,9 @@
 |[ABC232F](https://atcoder.jp/contests/abc232/tasks/abc232_f)||順列全探索をbitDPに落とし込む典型。遷移先をN通りとすることで乗り切るタイプ|
 |[ABC236E](https://atcoder.jp/contests/abc236/tasks/abc236_e)||平均値、中央値の最大化は解の二分探索|
 |[ABC237F](https://atcoder.jp/contests/abc237/tasks/abc237_f)||LISの進捗(パターン数)はキー管理も可能。（その他LIS：[ABC354F](https://atcoder.jp/contests/abc354/tasks/abc354_f),[ABC360G](https://atcoder.jp/contests/abc360/tasks/abc360_g)）|
-|[ABC239E](https://atcoder.jp/contests/abc239/tasks/abc239_e)||根付き木dfs(240Eも)|
+|[ABC238E](https://atcoder.jp/contests/abc238/tasks/abc238_e)|1577|問題の適切な置き換えでグラフへ|
 |[ABC239F](https://atcoder.jp/contests/abc239/tasks/abc239_f)||辺数管理しながらマージ|
+|[ABC239G](https://atcoder.jp/contests/abc239/tasks/abc239_g)|2215|最小カットのパターン提示はカット後に残フロー計算でなく色分け|
 |[ABC240F](https://atcoder.jp/contests/abc240/tasks/abc240_f)||２層の階差数列は微分のイメージ(極大極小)|
 |[ABC241E](https://atcoder.jp/contests/abc241/tasks/abc241_e)||周期性利用問題の典型|
 |[ABC241F](https://atcoder.jp/contests/abc241/tasks/abc241_f)||滑る床、無理にグラフに落とし込む必要無くBFSは可能|
@@ -124,20 +125,20 @@
 |[ABC346G](https://atcoder.jp/contests/abc346/tasks/abc346_g)||長方形の和集合の面積を求める|
 |[ABC348F](https://atcoder.jp/contests/abc348/tasks/abc348_f)||2000^3でどれかbit演算可能そうならbitsetで通せる|
 |[ABC349F](https://atcoder.jp/contests/abc349/tasks/abc349_f)||bitwise orのパターン数はゼータメビウス変換使えるかも|
-|[ABC350E](https://atcoder.jp/contests/abc350/tasks/abc350_e)||終わりに向けて発散のち収束する期待値はメモ化再帰で。ループの選択肢がある場合は式変形|
-|[ABC350G](https://atcoder.jp/contests/abc350/tasks/abc350_g)||オンラインクエリは平方分割やマージテクなど|
+|[ABC350E](https://atcoder.jp/contests/abc350/tasks/abc350_e)|1385|終わりに向けて発散のち収束する期待値はメモ化再帰で。ループの選択肢がある場合は式変形|
+|[ABC350G](https://atcoder.jp/contests/abc350/tasks/abc350_g)|2058|オンラインクエリは平方分割やマージテクなど。根付き木特有の解き方あり|
 |[ABC352D](https://atcoder.jp/contests/abc352/tasks/abc352_d)||ループする側を別の等差数列に変えてみる|
-|[ABC352F](https://atcoder.jp/contests/abc352/tasks/abc352_f)||N=16は各点ループ＋bitDPくらい|
-|[ABC353E](https://atcoder.jp/contests/abc353/tasks/abc353_e)||複数文字列の最小共通接辞頭のパターン数はTrie木。[ヒストグラム内の長方形も]（http://algorithms.blog55.fc2.com/blog-entry-132.html)|
-|[ABC354E](https://atcoder.jp/contests/abc354/tasks/abc354_e)||交互ゲームでパターン数が2**20程度なら必勝を1と置いてbitDPも可能。勿論メモ化再帰でも解ける。|
-|[ABC355F](https://atcoder.jp/contests/abc355/tasks/abc355_f)||重みあり最小全域木の更新は重み上限ごとのUnionFindで減算していく|
-|[ABC357E](https://atcoder.jp/contests/abc357/tasks/abc357_e)||functional graphはループ内から逆算していく|
-|[ABC357F](https://atcoder.jp/contests/abc357/tasks/abc357_f)||モノイドセグ木ついに理解([ABC346G](https://atcoder.jp/contests/abc346/tasks/abc346_g)も併せて)|
-|[ABC359D](https://atcoder.jp/contests/abc359/tasks/abc359_d)||部分文字列の満たすパターン数は状態DPで一字づつ遷移|
-|[ABC359E](https://atcoder.jp/contests/abc359/tasks/abc359_e)||ヒストグラム内の最大長方形はsegTreeでなくstackで|
-|[ABC359G](https://atcoder.jp/contests/abc359/tasks/abc359_g)||木のdfsにマージテクで状態ごとの総和計算|
-|[ABC360E](https://atcoder.jp/contests/abc360/tasks/abc360_e)||期待値問題は確率dpも期待値dpも可能なので、楽な方で|
-|[ABC361D](https://atcoder.jp/contests/abc361/tasks/abc361_d)|1202|状態数が20以下のパズルの最適手はbitDPかBFS|
+|[ABC352F](https://atcoder.jp/contests/abc352/tasks/abc352_f)|2052|N=16は各点ループ＋bitDPくらい|
+|[ABC353E](https://atcoder.jp/contests/abc353/tasks/abc353_e)|1217|複数文字列の最小共通接辞頭のパターン数はTrie木。[ヒストグラム内の長方形も]（http://algorithms.blog55.fc2.com/blog-entry-132.html)|
+|[ABC354E](https://atcoder.jp/contests/abc354/tasks/abc354_e)|1223|交互ゲームでパターン数が2**20程度なら必勝を1と置いてbitDPも可能。勿論メモ化再帰でも解ける。|
+|[ABC355F](https://atcoder.jp/contests/abc355/tasks/abc355_f)|1924|重みあり最小全域木の更新は重み上限ごとのUnionFindで減算していく|
+|[ABC357E](https://atcoder.jp/contests/abc357/tasks/abc357_e)|1295|functional graphはループ内から逆算していく|
+|[ABC357F](https://atcoder.jp/contests/abc357/tasks/abc357_f)|1793|モノイドセグ木ついに理解([ABC346G](https://atcoder.jp/contests/abc346/tasks/abc346_g)も併せて)|
+|[ABC359D](https://atcoder.jp/contests/abc359/tasks/abc359_d)|1381|部分文字列の満たすパターン数は状態DPで一字づつ遷移|
+|[ABC359E](https://atcoder.jp/contests/abc359/tasks/abc359_e)|1275|ヒストグラム内の最大長方形はsegTreeでなくstackで|
+|[ABC359G](https://atcoder.jp/contests/abc359/tasks/abc359_g)|2099|木のdfsにマージテクで状態ごとの総和計算|
+|[ABC360E](https://atcoder.jp/contests/abc360/tasks/abc360_e)|1249|期待値問題は確率dpも期待値dpも可能なので、楽な方で|
+|[ABC361D](https://atcoder.jp/contests/abc361/tasks/abc361_d)||状態数が20以下のパズルの最適手はbitDPかBFS|
 |[ABC361F](https://atcoder.jp/contests/abc361/tasks/abc361_f)|1606|べき乗パターン数問題で約数包除原理|
 |[ABC362E](https://atcoder.jp/contests/abc362/tasks/abc362_e)|1225|DPの次数を削減する時は捜査の方向に気をつけて|
 |[ABC362G](https://atcoder.jp/contests/abc362/tasks/abc362_g)|1625|文字列部分一致の個数をO(logN)で繰り返し判定はSuffix Array|
