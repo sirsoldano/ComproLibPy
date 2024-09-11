@@ -98,6 +98,12 @@ permutations(list,subnum)
 ~~~
 from bisect import bisect_left as bl
 min(abs(A[min(N-1,i)]-b),abs(A[max(0,i-1)]-b))
+def binsearch(l,r):
+    while r-l>1:
+        m = (l+r)//2
+        if judge(m) : l=m
+        else : r=m
+    return l
 ~~~
 #### 多重集合
 ~~~
