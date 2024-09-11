@@ -33,6 +33,7 @@
 |[ABC236E](https://atcoder.jp/contests/abc236/tasks/abc236_e)||平均値、中央値の最大化は解の二分探索|
 |[ABC237E](https://atcoder.jp/contests/abc237/tasks/abc237_e)|1208|負の辺あってもポテンシャル用いてDijkstra利用可能かも|
 |[ABC237F](https://atcoder.jp/contests/abc237/tasks/abc237_f)|1857|LISの進捗(最小パターン)をkey管理してDP。（その他LIS：[ABC354F](https://atcoder.jp/contests/abc354/tasks/abc354_f),[ABC360G](https://atcoder.jp/contests/abc360/tasks/abc360_g)）|
+|[ABC237G](https://atcoder.jp/contests/abc237/tasks/abc237_g)|2088|繰り返しの並び替えも、参照値に対する大小で01置換すればSegTにて処理可能|
 |[ABC238E](https://atcoder.jp/contests/abc238/tasks/abc238_e)|1577|問題の適切な置き換えでグラフへ|
 |[ABC239F](https://atcoder.jp/contests/abc239/tasks/abc239_f)|1959|木の連結はUnionFind+マージテク|
 |[ABC239G](https://atcoder.jp/contests/abc239/tasks/abc239_g)|2215|最小カットのパターン提示はカット後に残フロー計算でなく色分け|
