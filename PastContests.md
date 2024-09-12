@@ -103,6 +103,7 @@
 |[ABC295E](https://atcoder.jp/contests/abc295/tasks/abc295_e)||1以上M以下の確率変数Xの期待値合計∑i*p(X==i) => ∑p(X>=i)|
 |[ABC296F](https://atcoder.jp/contests/abc296/tasks/abc296_f)||順番入れ替えで数列を一致させられるかは転倒数の奇遇一致次第|
 |[ABC297G](https://atcoder.jp/contests/abc297/tasks/abc297_g)||多山NimはGrundy数のXORでゼロのみ後手勝ち|
+|[ABC300F](https://atcoder.jp/contests/abc300/tasks/abc300_f)|1846|最長連続部分作成は開始点ループで二分探索|
 |[ABC301E](https://atcoder.jp/contests/abc301/tasks/abc301_e)||N=20で最短経路長bit全探索は巡回セールスマン|
 |[ABC302B](https://atcoder.jp/contests/abc302/tasks/abc302_b)||計算量が許すなら愚直に8方向探索を|
 |[ABC302F](https://atcoder.jp/contests/abc302/tasks/abc302_f)||辺も頂点とみなしてみる超頂点|
