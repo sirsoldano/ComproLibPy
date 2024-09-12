@@ -105,12 +105,6 @@ def binsearch(l,r):
         else : r=m
     return l
 ~~~
-#### 多重集合
-~~~
-# add,pop,clear,remove,discard,bisect_left,bisect_right,count,index
-from sortedcontainers import SortedList
-sl = SortedList()
-~~~
 #### 累積和
 ~~~
 def cs(l):
@@ -127,18 +121,6 @@ def imos(A):
     for n in range(1,N):
         cs[n]=cs[n-1]+updn[n]
     return cs
-~~~
-#### キュー
-~~~
-from collections import deque
-q = deque()
-q.append(s)
-while q:
-    pos = q.popleft()
-import heapq as hq
-q = []
-hq.heappush(q,i)
-hq.heappop(q)
 ~~~
 #### 座標
 ~~~
