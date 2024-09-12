@@ -128,7 +128,7 @@
 |[ABC346G](https://atcoder.jp/contests/abc346/tasks/abc346_g)||長方形の和集合の面積を求める|
 |[ABC348F](https://atcoder.jp/contests/abc348/tasks/abc348_f)||2000^3でどれかbit演算可能そうならbitsetで通せる|
 |[ABC349F](https://atcoder.jp/contests/abc349/tasks/abc349_f)||bitwise orのパターン数はゼータメビウス変換使えるかも|
-|[ABC350E](https://atcoder.jp/contests/abc350/tasks/abc350_e)|1385|終わりに向けて発散のち収束する期待値はメモ化再帰で。ループの選択肢がある場合は式変形|
+|[ABC350E](https://atcoder.jp/contests/abc350/tasks/abc350_e)|1385|終わりに向けて発散のち収束する期待値はメモ化再帰で。ループの選択肢がある場合は式変形（確率ver:[ABC300E](https://atcoder.jp/contests/abc300/tasks/abc300_e)）|
 |[ABC350G](https://atcoder.jp/contests/abc350/tasks/abc350_g)|2058|オンラインクエリは平方分割やマージテクなど。根付き木特有の解き方あり|
 |[ABC352D](https://atcoder.jp/contests/abc352/tasks/abc352_d)||ループする側を別の等差数列に変えてみる|
 |[ABC352F](https://atcoder.jp/contests/abc352/tasks/abc352_f)|2052|N=16は各点ループ＋bitDPくらい|
