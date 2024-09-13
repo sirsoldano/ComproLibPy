@@ -107,6 +107,8 @@
 |[ABC302B](https://atcoder.jp/contests/abc302/tasks/abc302_b)||計算量が許すなら愚直に探索を|
 |[ABC302F](https://atcoder.jp/contests/abc302/tasks/abc302_f)|1430|辺も頂点とみなしてみる超頂点|
 |[ABC302G](https://atcoder.jp/contests/abc302/tasks/abc302_g)|1891|数列をswapで一致させるは、一致先へ辺を伸ばして作成したグラフの閉路を短い方からつぶす|
+|[ABC304F](https://atcoder.jp/contests/abc304/tasks/abc304_f)|1609|10^5の約数は128程度。包除原理使わずとも昇順処理で自身の約数の解を引く|
+|[ABC305G](https://atcoder.jp/contests/abc305/tasks/abc305_g)|1989|DP遷移を行列で表記し繰り返し二乗法|
 |[ABC308G](https://atcoder.jp/contests/abc308/tasks/abc308_g)||集合内のXORは隣り合う数字同士が最小候補（min(x^y,y^z)<x^z)|
 |[ABC309F](https://atcoder.jp/contests/abc309/tasks/abc309_f)||3要素の比較にソート+セグ木(圧座後)|
 |[ABC310D](https://atcoder.jp/contests/abc310/tasks/abc310_d)||N=10で全探索は再帰で階乗かも|
