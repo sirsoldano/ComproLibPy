@@ -104,8 +104,9 @@
 |[ABC296F](https://atcoder.jp/contests/abc296/tasks/abc296_f)||順番入れ替えで数列を一致させられるかは転倒数の奇遇一致次第|
 |[ABC297G](https://atcoder.jp/contests/abc297/tasks/abc297_g)||多山NimはGrundy数のXORでゼロのみ後手勝ち|
 |[ABC300F](https://atcoder.jp/contests/abc300/tasks/abc300_f)|1846|最長連続部分作成は開始点ループで二分探索|
-|[ABC302B](https://atcoder.jp/contests/abc302/tasks/abc302_b)||計算量が許すなら愚直に8方向探索を|
-|[ABC302F](https://atcoder.jp/contests/abc302/tasks/abc302_f)||辺も頂点とみなしてみる超頂点|
+|[ABC302B](https://atcoder.jp/contests/abc302/tasks/abc302_b)||計算量が許すなら愚直に探索を|
+|[ABC302F](https://atcoder.jp/contests/abc302/tasks/abc302_f)|1430|辺も頂点とみなしてみる超頂点|
+|[ABC302G](https://atcoder.jp/contests/abc302/tasks/abc302_g)|1891|数列をswapで一致させるは、一致先へ辺を伸ばして作成したグラフの閉路を短い方からつぶす|
 |[ABC308G](https://atcoder.jp/contests/abc308/tasks/abc308_g)||集合内のXORは隣り合う数字同士が最小候補（min(x^y,y^z)<x^z)|
 |[ABC309F](https://atcoder.jp/contests/abc309/tasks/abc309_f)||3要素の比較にソート+セグ木(圧座後)|
 |[ABC310D](https://atcoder.jp/contests/abc310/tasks/abc310_d)||N=10で全探索は再帰で階乗かも|
