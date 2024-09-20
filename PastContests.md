@@ -111,7 +111,7 @@
 |[ABC305G](https://atcoder.jp/contests/abc305/tasks/abc305_g)|1989|DP遷移を行列で表記し繰り返し二乗法|
 |[ABC307E](https://atcoder.jp/contests/abc307/tasks/abc307_e)|1240|ループDPは式化か一箇所決め打ち|
 |[ABC308G](https://atcoder.jp/contests/abc308/tasks/abc308_g)|2008|集合内のXORは隣り合う数字同士が最小候補（min(x^y,y^z)<x^z)|
-|[ABC309F](https://atcoder.jp/contests/abc309/tasks/abc309_f)|1619|3要素の比較にソート+セグ木(圧座後)|
+|[ABC309F](https://atcoder.jp/contests/abc309/tasks/abc309_f)|1619|3要素の比較にソート+セグ木(圧座後)。同値の扱いはまとめて更新orソート工夫|
 |[ABC310D](https://atcoder.jp/contests/abc310/tasks/abc310_d)|1368|N=10で全探索はbitDPでなく再帰で階乗かも|
 |[ABC310F](https://atcoder.jp/contests/abc310/tasks/abc310_f)|1938|20以下の集合のパターン数(確率)はbitDP|
 |[ABC314E](https://atcoder.jp/contests/abc314/tasks/abc314_e)||到達期待値は末尾から計算|
