@@ -115,7 +115,9 @@
 |[ABC310D](https://atcoder.jp/contests/abc310/tasks/abc310_d)|1368|N=10で全探索はbitDPでなく再帰で階乗かも|
 |[ABC310F](https://atcoder.jp/contests/abc310/tasks/abc310_f)|1938|20以下の集合のパターン数(確率)はbitDP|
 |[ABC311F](https://atcoder.jp/contests/abc311/tasks/abc311_f)|1984|斜めは扱いにくいためh-w,h+wなどで解消|
+|[ABC312E](https://atcoder.jp/contests/abc312/tasks/abc312_e)|2047|座標をnodeに落込みedgeを数える|
 |[ABC312F](https://atcoder.jp/contests/abc312/tasks/abc312_f)|1534|ソート＋貪欲でo(N)探索可能なアルゴリズムを見つける|
+|[ABC312G](https://atcoder.jp/contests/abc312/tasks/abc312_g)|1819|異なる三要素の積の和|
 |[ABC314E](https://atcoder.jp/contests/abc314/tasks/abc314_e)||到達期待値は末尾から計算|
 |[ABC315F](https://atcoder.jp/contests/abc315/tasks/abc315_f)||制約から最低限必要な状態数を見積もる|
 |[ABC317E](https://atcoder.jp/contests/abc317/tasks/abc317_e)||マップ探索はグラフ作成不要、毎クエリ4方向見るだけ|
