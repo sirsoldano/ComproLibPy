@@ -122,7 +122,7 @@
 |[ABC313D](https://atcoder.jp/contests/abc313/tasks/abc313_d)|1630|和の奇遇はxorと同値。すべての等式の両辺の和を考えてみる|
 |[ABC314E](https://atcoder.jp/contests/abc314/tasks/abc314_e)|1722|到達期待値は末尾から計算。ループ漸化式は式変形|
 |[ABC314F](https://atcoder.jp/contests/abc314/tasks/abc314_f)|1736|UnionFind＋超頂点で木を生成しdfs。マージテクは木の処理順整理にも使える|
-|[ABC315F](https://atcoder.jp/contests/abc315/tasks/abc315_f)||制約から最低限必要な状態数を見積もる|
+|[ABC315F](https://atcoder.jp/contests/abc315/tasks/abc315_f)|1674|2乗は60回までなど、制約から最低限必要な状態数を見積もる|
 |[ABC317E](https://atcoder.jp/contests/abc317/tasks/abc317_e)||マップ探索はグラフ作成不要、毎クエリ4方向見るだけ|
 |[ABC317F](https://atcoder.jp/contests/abc317/tasks/abc317_f)||2進数で桁DP（**未完**)|
 |[ABC318F](https://atcoder.jp/contests/abc318/tasks/abc318_f)||変化座標候補を事前列挙|
