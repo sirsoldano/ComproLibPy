@@ -191,6 +191,18 @@ for n in range(N):
     if node[n] == None:
         bfs(n,i)
         i+=1
+# maze
+ans = [[-1]*W for h in range(H)]
+q = deque([(sh,sw)])
+ans[sh][sw] = 0
+tera=((1,0),(0,1),(-1,0),(0,-1))
+while q:
+    h,w = q.popleft()
+    for dh,dw in tera:
+        if 0<=h+dh<H and 0<=w+dw<W and ans[h+dh][w+dw]==-1 and mp[h+dh][w+dw]==".":
+            q.append((h+dh,w+dw))
+            ans[h+dh][w+dw] = ans[h][w]+1
+print(ans[gh][gw])
 ~~~
 </details>
 
