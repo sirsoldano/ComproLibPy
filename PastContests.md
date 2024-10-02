@@ -124,7 +124,7 @@
 |[ABC314F](https://atcoder.jp/contests/abc314/tasks/abc314_f)|1736|UnionFind＋超頂点で木を生成しdfs。マージテクは木の処理順整理にも使える|
 |[ABC315F](https://atcoder.jp/contests/abc315/tasks/abc315_f)|1674|2乗は60回までなど、制約から最低限必要な状態数を見積もる|
 |[ABC317F](https://atcoder.jp/contests/abc317/tasks/abc317_f)||2進数で桁DP|
-|[ABC318D](https://atcoder.jp/contests/abc318/tasks/abc318_d)||N=16の組み合わせは二重階乗の計算量でBitDPか再帰で解ける。|
+|[ABC318D](https://atcoder.jp/contests/abc318/tasks/abc318_d)||N=16程度の組み合わせは2^N*N^2でBitDPか二重階乗の計算量で再帰で解ける。類題(ABC354E)[https://atcoder.jp/contests/abc354/tasks/abc354_e]|
 |[ABC318F](https://atcoder.jp/contests/abc318/tasks/abc318_f)||変化座標候補を事前列挙|
 |[ABC322F](https://atcoder.jp/contests/abc322/tasks/abc322_f)||モノイドセグ木|
 |[ABC324F](https://atcoder.jp/contests/abc324/tasks/abc324_f)||答えの二分探索はfloatでも可|
