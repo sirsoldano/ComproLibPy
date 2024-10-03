@@ -126,6 +126,9 @@
 |[ABC317F](https://atcoder.jp/contests/abc317/tasks/abc317_f)||2進数で桁DP|
 |[ABC318D](https://atcoder.jp/contests/abc318/tasks/abc318_d)|1017|N=16程度の組み合わせは2^N*N^2でBitDPか二重階乗の計算量で再帰で解ける。類題[ABC354E](https://atcoder.jp/contests/abc354/tasks/abc354_e)|
 |[ABC318F](https://atcoder.jp/contests/abc318/tasks/abc318_f)||変化座標候補を事前列挙|
+|[ABC321E](https://atcoder.jp/contests/abc321/tasks/abc321_e)|1627|N<=10^18で完全二分木の深さは60以下|
+|[ABC321F](https://atcoder.jp/contests/abc321/tasks/abc321_f)||ナップサックの降順処理による一次DPは、パターン数問題なら昇順処理で除去も可能|
+|[ABC322E](https://atcoder.jp/contests/abc322/tasks/abc322_e)||◯進数DPの典型問題|
 |[ABC322F](https://atcoder.jp/contests/abc322/tasks/abc322_f)||モノイドセグ木|
 |[ABC324F](https://atcoder.jp/contests/abc324/tasks/abc324_f)||答えの二分探索はfloatでも可|
 |[ABC326F](https://atcoder.jp/contests/abc326/tasks/abc326_f)||N=40は半分全列挙|
