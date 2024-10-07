@@ -131,7 +131,7 @@
 |[ABC322E](https://atcoder.jp/contests/abc322/tasks/abc322_e)||◯進数DPの典型問題|
 |[ABC322F](https://atcoder.jp/contests/abc322/tasks/abc322_f)|1806|モノイドセグ木の典型問題|
 |[ABC323E](https://atcoder.jp/contests/abc323/tasks/abc323_e)|1279|確率DPはループがなければ素直に遷移をコード化。一応式化も|
-|[ABC324F](https://atcoder.jp/contests/abc324/tasks/abc324_f)||答えの二分探索はfloatでも可|
+|[ABC324F](https://atcoder.jp/contests/abc324/tasks/abc324_f)|1815|解の二分探索はfloatでも可。分数DPは解を決め打ちすれば非分数DPに|
 |[ABC326F](https://atcoder.jp/contests/abc326/tasks/abc326_f)||N=40は半分全列挙|
 |[ABC330F](https://atcoder.jp/contests/abc330/tasks/abc330_f)||微分で極小を求めたい時は代わりに中央値的な考え方を。左右ずらしいずれも損をする位置。[slope trickも可](https://maspypy.com/slope-trick-1-%E8%A7%A3%E8%AA%AC%E7%B7%A8)|
 |[ABC331F](https://atcoder.jp/contests/abc331/tasks/abc331_f)||更新ありの回文判定はローリングハッシュ＋セグ木で|
