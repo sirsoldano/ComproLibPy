@@ -108,8 +108,8 @@ def binsearch(l,r):
 #### 累積和
 ~~~
 def cs(l):
-    lsum = [l[0]]
-    for n in range(1,len(l)) : lsum.append(lsum[-1]+l[n])
+    lsum = [0]
+    for n in range(len(l)) : lsum.append(lsum[-1]+l[n])
     return lsum
 def imos(A):
     N = max(r for l,r,h in A)+1
@@ -216,17 +216,17 @@ for m in range(M):
     a,b,c = map(int,input().split())
     edge[a-1].append((b-1,c))
     edge[b-1].append((a-1,c))
-import heapq as hq
+from heapq import heappush, heappop
 def dijkstra(s):
     q = []
-    hq.heappush(q,(0,s))
+    heappush(q,(0,s))
     while len(q)>0 :
-        dist,pos = hq.heappop(q)
+        dist,pos = heappop(q)
         if node[pos] < 1<<60 : continue
         node[pos] = dist
         for p,d in edge[pos]:
             if node[p] > dist+d:
-                hq.heappush(q,(dist+d,p))
+                heappush(q,(dist+d,p))
 ~~~
 </details>
 
