@@ -138,7 +138,7 @@
 |[ABC327F](https://atcoder.jp/contests/abc327/tasks/abc327_f)|1624|長方形内の最大内包点数は点を右上と置いた長方形の最大重なり数で計算。平面走査|
 |[ABC329E](https://atcoder.jp/contests/abc329/tasks/abc329_e)|1539|処理逆順の貪欲orDP[Sの◯文字目まで][Tの◯文字目]|
 |[ABC329F](https://atcoder.jp/contests/abc326/tasks/abc329_f)|1207|箱内容移替→マージテク＋インデックス入れ替え|
-|[ABC330F](https://atcoder.jp/contests/abc330/tasks/abc330_f)||微分で極小を求めたい時は代わりに中央値的な考え方を。左右ずらしいずれも損をする位置。[slope trickも可](https://maspypy.com/slope-trick-1-%E8%A7%A3%E8%AA%AC%E7%B7%A8)|
+|[ABC330F](https://atcoder.jp/contests/abc330/tasks/abc330_f)|1718|微分で極小を求めたい時は代わりに中央値的な考え方を。左右ずらしいずれも損をする位置。[slope trickも可](https://maspypy.com/slope-trick-1-%E8%A7%A3%E8%AA%AC%E7%B7%A8)|
 |[ABC331F](https://atcoder.jp/contests/abc331/tasks/abc331_f)||更新ありの回文判定はローリングハッシュ＋セグ木で|
 |[ABC336E](https://atcoder.jp/contests/abc336/tasks/abc336_e)||ハーシャッド数は総和リミット決め打ちで和、余り、上限張付を別管理する桁DP|
 |[ABC339D](https://atcoder.jp/contests/abc339/tasks/abc339_d)||2人の位置関係を扱う問題は組み合わせの遷移を考えることでグラフ的に解ける([ABC289E](https://atcoder.jp/contests/abc289/tasks/abc289_e))|
