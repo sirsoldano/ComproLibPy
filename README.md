@@ -89,11 +89,6 @@ def judge(l,r) : return (h1[r]-r1[r-l]*h1[l])%mod==(rh1[N-l]-r1[r-l]*rh1[N-r])%m
 
 </details>
 
-#### 順列、部分集合
-~~~
-from itertools import permutations,combinations
-permutations(list,subnum)
-~~~
 #### 二分探索
 ~~~
 from bisect import bisect_left as bl
@@ -273,6 +268,34 @@ def op(s1,s2) : return max(s1,s2)
 def mp(f,s) : return s+f
 def comp(f2,f1) : return f1+f2
 lst = LazySegTree(op,0,mp,comp,0,[0 for n in range(200001)])
+~~~
+</details>
+
+<details>
+<summary>
+
+#### UnionFind
+</summary>
+
+~~~
+class UnionFind:
+    def __init__(self,n):
+        self.uft = [-1]*n
+        self.rank = [0]*n
+    def root(self,pos):
+        if self.uft[pos] == -1 : return pos
+        self.uft[pos]=self.root(self.uft[pos])
+        return self.uft[pos]
+    def union(self,a,b):
+        ra,rb = self.root(a),self.root(b)
+        if ra==rb : return
+        if self.rank[ra] < self.rank[rb] :
+            self.uft[ra] = rb
+        else :
+            self.uft[rb] = ra
+            if self.rank[ra]==self.rank[rb] : self.rank[ra]+=1
+    def same(self,a,b):
+        return self.root(a)==self.root(b)
 ~~~
 </details>
 
