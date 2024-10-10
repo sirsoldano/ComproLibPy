@@ -42,10 +42,7 @@ compressed = [(k, len(list(g))) for k,g in itertools.groupby(s)] # ランレン�
 def palind(s): return sum(1 for n in range(len(s)//2) if s[n]!=s[-n-1])==0
 ~~~
 <details>
-<summary>
-
-##### 一致区間探索
-</summary>
+<summary>一致区間探索</summary>
 
 ##### Z-algorithm
 [ABC257G](https://atcoder.jp/contests/abc257/tasks/abc257_g)
