@@ -271,11 +271,10 @@ lst = LazySegTree(op,0,mp,comp,0,[0 for n in range(200001)])
 ~~~
 </details>
 
-<details>
-<summary>
-
 #### UnionFind
-</summary>
+
+<details>
+<summary>基本UF</summary>
 
 ~~~
 class UnionFind:
@@ -298,6 +297,33 @@ class UnionFind:
         return self.root(a)==self.root(b)
 ~~~
 </details>
+
+<details>
+<summary>クラスカル法</summary>
+
+~~~
+items.sort()
+ans,cnt=0,0
+for c,l,r in items :
+    if uf.same(l,r)==False:
+        uf.union(l,r)
+        ans, cnt = ans+c, cnt+1
+if cnt==N : print(ans)
+
+# heapq ver
+import heapq as hq
+ans,cnt=0,1
+uf = UnionFind(N)
+while e:
+    c,l,r=hq.heappop(e)
+    if uf.same(l,r)==False:
+        uf.union(l,r)
+        ans, cnt = ans+c, cnt+1
+if cnt==N : print(ans)
+else : print(-1)
+~~~
+</details>
+
 
 #### 周期性利用、ダブリング
 
