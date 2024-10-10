@@ -109,13 +109,15 @@ def cs(l):
 def imos(A):
     N = max(r for l,r,h in A)+1
     updn = [0]*(N+1)
-    for l,r,h in A:
-        updn[l]+=h
-        updn[r+1]-=h
+    for l,r,h in A : updn[l]+=h;updn[r+1]-=h
     cs = [updn[0]]+[0]*(N-1)
-    for n in range(1,N):
-        cs[n]=cs[n-1]+updn[n]
+    for n in range(1,N) : cs[n]=cs[n-1]+updn[n]
     return cs
+# CS2d
+for l in range(1,N+1):
+    for r in range(1,N+1) : lr[l][r]+=lr[l][r-1] + a[l-1][r-1]
+    for r in range(1,N+1) : lr[l][r]+=lr[l-1][r]
+cssum = lr[r1][r2]-lr[r1][l2-1]-lr[l1-1][r2]+lr[l1-1][l2-1]
 ~~~
 #### 座標
 ~~~
