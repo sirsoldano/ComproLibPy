@@ -142,6 +142,7 @@
 |[ABC331D](https://atcoder.jp/contests/abc331/tasks/abc331_d)|1361|２次元累積和の典型問題|
 |[ABC331F](https://atcoder.jp/contests/abc331/tasks/abc331_f)|1666|更新ありの回文判定はローリングハッシュ＋セグ木で|
 |[ABC332D](https://atcoder.jp/contests/abc332/tasks/abc332_d)|1175|swap回数は転倒数|
+|[ABC333D](https://atcoder.jp/contests/abc333/tasks/abc333_e)|1883|部分集合すべてから遷移するo(3^N*N)の典型問題。0となるまでsubbit=(subbit-1)&bitとすればo(3^N)で全列挙可能|
 |[ABC332F](https://atcoder.jp/contests/abc332/tasks/abc332_f)|1786|掛け算→足し算を繰り返す更新は双対セグ木で恒等写像は(1,0)|
 |[ABC336E](https://atcoder.jp/contests/abc336/tasks/abc336_e)||ハーシャッド数は総和リミット決め打ちで和、余り、上限張付を別管理する桁DP|
 |[ABC339D](https://atcoder.jp/contests/abc339/tasks/abc339_d)||2人の位置関係を扱う問題は組み合わせの遷移を考えることでグラフ的に解ける([ABC289E](https://atcoder.jp/contests/abc289/tasks/abc289_e))|
