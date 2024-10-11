@@ -141,6 +141,7 @@
 |[ABC330F](https://atcoder.jp/contests/abc330/tasks/abc330_f)|1718|微分で極小を求めたい時は代わりに中央値的な考え方を。左右ずらしいずれも損をする位置。[slope trickも可](https://maspypy.com/slope-trick-1-%E8%A7%A3%E8%AA%AC%E7%B7%A8)|
 |[ABC331D](https://atcoder.jp/contests/abc331/tasks/abc331_d)|1361|２次元累積和の典型問題|
 |[ABC331F](https://atcoder.jp/contests/abc331/tasks/abc331_f)|1666|更新ありの回文判定はローリングハッシュ＋セグ木で|
+|[ABC332D](https://atcoder.jp/contests/abc332/tasks/abc332_d)|1175|swap回数は転倒数|
 |[ABC336E](https://atcoder.jp/contests/abc336/tasks/abc336_e)||ハーシャッド数は総和リミット決め打ちで和、余り、上限張付を別管理する桁DP|
 |[ABC339D](https://atcoder.jp/contests/abc339/tasks/abc339_d)||2人の位置関係を扱う問題は組み合わせの遷移を考えることでグラフ的に解ける([ABC289E](https://atcoder.jp/contests/abc289/tasks/abc289_e))|
 |[ABC339F](https://atcoder.jp/contests/abc339/tasks/abc339_f)||長大な数字も扱えはするが桁数だけの計算時間がかかるのでmodなどでシーリング|
