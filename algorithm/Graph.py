@@ -348,5 +348,21 @@ for b in range(1,(1<<N)-1):
                 dp[b|(1<<to)][to] = dp[b][fr]+d[fr][to]
 print(min(dp[(1<<N)-1])) if min(dp[(1<<N)-1])<1<<60 else print("No")
 
+# Bridge(橋)判定のアルゴリズム https://nupioca.hatenadiary.jp/entry/2013/11/03/200006 , https://ikatakos.com/pot/programming_algorithm/contest_history/atcoder/2017/1014_abc075
+# 例題：https://atcoder.jp/contests/abc375/tasks/abc375_g
+import sys; sys.setrecursionlimit(10**6); import pypyjit; pypyjit.set_param('max_unroll_recursion=-1')
+def dfs(v, p, a):
+    if pre[v] != -1:
+        low[a] = min(low[a], low[v])
+        return low[a]
+    pre[v] = p
+    low[v] = p
+    for u in edge[v]:
+        if u != a : low[v] = min(low[v], dfs(u, p + 1, v))
+    if pre[v] == low[v] and a is not None : ans[e[(v,a)]]="Yes"
+    return low[v]
+pre,low = [-1]*N,[-1]*N
+dfs(0,0,None)
+
 # 単一始点最短経路問題、全点対間最短経路問題(Warshall-Floyd:N^3)
 # 二部マッチング(Hopcroft-Karp:M√N)
