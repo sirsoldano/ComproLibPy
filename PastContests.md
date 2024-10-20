@@ -148,7 +148,7 @@
 |[ABC334F](https://atcoder.jp/contests/abc334/tasks/abc334_f)|1813|そこまでの総距離でなく余分にかかる距離の方ならheapqで最小値取得可能|
 |[ABC335E](https://atcoder.jp/contests/abc335/tasks/abc335_e)|1540|最長パス長はトポロジカルソートでDP。dijkstraするならheapqに入れる追加情報が必要|
 |[ABC335F](https://atcoder.jp/contests/abc335/tasks/abc335_f)|1690|数が大きい場合と小さい場合で最適な解法が異なる場合は平方分割でいけるかも|
-|[ABC336E](https://atcoder.jp/contests/abc336/tasks/abc336_e)||ハーシャッド数は総和リミット決め打ちで和、余り、上限張付を別管理する桁DP|
+|[ABC336E](https://atcoder.jp/contests/abc336/tasks/abc336_e)|1538|和で割り切れる問うは暫定和とmodでDP。桁DPの上限張付パターン数は常に1。ハーシャッド数(桁和で割り切れる数)|
 |[ABC339D](https://atcoder.jp/contests/abc339/tasks/abc339_d)||2人の位置関係を扱う問題は組み合わせの遷移を考えることでグラフ的に解ける([ABC289E](https://atcoder.jp/contests/abc289/tasks/abc289_e))|
 |[ABC339F](https://atcoder.jp/contests/abc339/tasks/abc339_f)||長大な数字も扱えはするが桁数だけの計算時間がかかるのでmodなどでシーリング|
 |[ABC339G](https://atcoder.jp/contests/abc339/tasks/abc339_g)||更新の入らないオンラインクエリ区間の種類数問題はマージソート木|
