@@ -151,8 +151,8 @@
 |[ABC336E](https://atcoder.jp/contests/abc336/tasks/abc336_e)|1538|和で割り切れる問うは暫定和とmodでDP。桁DPの上限張付パターン数は常に1。ハーシャッド数(桁和で割り切れる数)|
 |[ABC338F](https://atcoder.jp/contests/abc338/tasks/abc338_f)|1835|負辺あり負閉路無し巡回セールスマン|
 |[ABC339D](https://atcoder.jp/contests/abc339/tasks/abc339_d)||2人の位置関係を扱う問題は組み合わせの遷移を考えることでグラフ的に解ける([ABC289E](https://atcoder.jp/contests/abc289/tasks/abc289_e))|
-|[ABC339F](https://atcoder.jp/contests/abc339/tasks/abc339_f)||長大な数字も扱えはするが桁数だけの計算時間がかかるのでmodなどでシーリング|
-|[ABC339G](https://atcoder.jp/contests/abc339/tasks/abc339_g)||更新の入らないオンラインクエリ区間の種類数問題はマージソート木|
+|[ABC339F](https://atcoder.jp/contests/abc339/tasks/abc339_f)|1716|長大な数字も扱えはするが桁数だけの計算時間がかかるのでmodなどでシーリング。乱択|
+|[ABC339G](https://atcoder.jp/contests/abc339/tasks/abc339_g)|1792|更新の入らないオンラインクエリ区間の種類数問題はマージソート木|
 |[ABC340F](https://atcoder.jp/contests/abc340/tasks/abc340_f)||一次不定方程式は拡張ユークリッド([ABC186E](https://atcoder.jp/contests/abc186/tasks/abc186_e)も)|
 |[ABC346G](https://atcoder.jp/contests/abc346/tasks/abc346_g)||長方形の和集合の面積を求める|
 |[ABC348F](https://atcoder.jp/contests/abc348/tasks/abc348_f)||2000^3でどれかbit演算可能そうならbitsetで通せる|
