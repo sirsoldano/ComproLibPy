@@ -155,6 +155,7 @@
 |[ABC339G](https://atcoder.jp/contests/abc339/tasks/abc339_g)|1792|更新の入らないオンラインクエリ区間の種類数問題はマージソート木|
 |[ABC340F](https://atcoder.jp/contests/abc340/tasks/abc340_f)|1516|一次不定方程式の整数解は拡張ユークリッド([ABC186E](https://atcoder.jp/contests/abc186/tasks/abc186_e)も)|
 |[ABC343F](https://atcoder.jp/contests/abc343/tasks/abc343_f)|1370|セグ木にモノイド載せる基本問題|
+|[ABC344F](https://atcoder.jp/contests/abc344/tasks/abc344_f)|1922|直近で最後に〇〇した場所から遷移するDP（類題：[ABC370E](https://atcoder.jp/contests/abc370/tasks/abc370_e)）|
 |[ABC346G](https://atcoder.jp/contests/abc346/tasks/abc346_g)||長方形の和集合の面積を求める|
 |[ABC348F](https://atcoder.jp/contests/abc348/tasks/abc348_f)||2000^3でどれかbit演算可能そうならbitsetで通せる|
 |[ABC349F](https://atcoder.jp/contests/abc349/tasks/abc349_f)||bitwise orのパターン数はゼータメビウス変換使えるかも|
