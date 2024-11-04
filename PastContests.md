@@ -156,9 +156,9 @@
 |[ABC340F](https://atcoder.jp/contests/abc340/tasks/abc340_f)|1516|一次不定方程式の整数解は拡張ユークリッド([ABC186E](https://atcoder.jp/contests/abc186/tasks/abc186_e)も)|
 |[ABC343F](https://atcoder.jp/contests/abc343/tasks/abc343_f)|1370|セグ木にモノイド載せる基本問題|
 |[ABC344F](https://atcoder.jp/contests/abc344/tasks/abc344_f)|1922|直近で最後に〇〇した場所から遷移するDP（類題：[ABC370E](https://atcoder.jp/contests/abc370/tasks/abc370_e)）|
-|[ABC346G](https://atcoder.jp/contests/abc346/tasks/abc346_g)||長方形の和集合の面積を求める|
-|[ABC348F](https://atcoder.jp/contests/abc348/tasks/abc348_f)||2000^3でどれかbit演算可能そうならbitsetで通せる|
-|[ABC349F](https://atcoder.jp/contests/abc349/tasks/abc349_f)||bitwise orのパターン数はゼータメビウス変換使えるかも|
+|[ABC346G](https://atcoder.jp/contests/abc346/tasks/abc346_g)|2166|長方形の和集合の面積を求める|
+|[ABC348F](https://atcoder.jp/contests/abc348/tasks/abc348_f)|1955|2000^3でどれかbit演算可能そうならbitsetで通せる|
+|[ABC349F](https://atcoder.jp/contests/abc349/tasks/abc349_f)|2169|bitwise orのパターン数はゼータメビウス変換使えるかも|
 |[ABC350E](https://atcoder.jp/contests/abc350/tasks/abc350_e)|1385|終わりに向けて発散のち収束する期待値はメモ化再帰で。ループの選択肢がある場合は式変形（確率ver:[ABC300E](https://atcoder.jp/contests/abc300/tasks/abc300_e)）|
 |[ABC350G](https://atcoder.jp/contests/abc350/tasks/abc350_g)|2058|オンラインクエリは平方分割やマージテクなど。根付き木特有の解き方あり|
 |[ABC352D](https://atcoder.jp/contests/abc352/tasks/abc352_d)||ループする側を別の等差数列に変えてみる|
