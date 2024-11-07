@@ -29,7 +29,7 @@
 |[ABC189E](https://atcoder.jp/contests/abc189/tasks/abc189_e)||関数の合成はその関数が行列として取扱可能かまず考える。座標変換など線形な操作は行列表示可能|
 |[ABC189F](https://atcoder.jp/contests/abc189/tasks/abc189_f)||漸化式が循環する場合、解をXと置いて一次方程式として表現可能かも。次数1の係数aと次数0の係数bを並行してDP|
 |[ABC194E](https://atcoder.jp/contests/abc194/tasks/abc194_e)||MEXは候補側をSortedListかheapQ+Counterで保持。[ABC330Eも](https://atcoder.jp/contests/abc330/tasks/abc330_e)|
-|[ABC225E](https://atcoder.jp/contests/abc225/tasks/abc225_e)||座標上に図形を被らないように配置→区間スケジューリング|
+|[ABC225E](https://atcoder.jp/contests/abc225/tasks/abc225_e)||座標上に図形を被らないように配置→区間スケジューリング。浮動小数点の比較は念の為decimalを使用|
 |[ABC232F](https://atcoder.jp/contests/abc232/tasks/abc232_f)||順列全探索をbitDPに落とし込む典型。遷移先をN通りとすることで乗り切るタイプ|
 |[ABC235F](https://atcoder.jp/contests/abc235/tasks/abc235_f)|2129|N以下の桁DPは上限張り付きを別管理。和の場合は和とパターン数保持|
 |[ABC236E](https://atcoder.jp/contests/abc236/tasks/abc236_e)|1893|平均値、中央値の最大化は解の二分探索。平均は差分和DP>=0、中央値は未満-1以上1で和DP>0|
