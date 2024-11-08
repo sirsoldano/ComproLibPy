@@ -102,7 +102,7 @@
 |[ABC289G](https://atcoder.jp/contests/abc289/tasks/abc289_g)||いくつかの直線から構成される最大値(最小値)はconvex_hull|
 |[ABC294G](https://atcoder.jp/contests/abc294/tasks/abc294_g)||更新入る木の距離はダブリング＋オイラーツアー|
 |[ABC295E](https://atcoder.jp/contests/abc295/tasks/abc295_e)||1以上M以下の確率変数Xの期待値合計∑i*p(X==i) => ∑p(X>=i)|
-|[ABC296F](https://atcoder.jp/contests/abc296/tasks/abc296_f)|1811|3つ絡むswapで数列を一致させられるかは転倒数の奇遇一致次第|
+|[ABC296F](https://atcoder.jp/contests/abc296/tasks/abc296_f)|1811|swapは転倒数を必ず変化させる。長さ3の巡回置換は転倒数が奇数だと0にはできない|
 |[ABC297F](https://atcoder.jp/contests/abc297/tasks/abc297_f)|1990|グリッド上パターンの除法原理の基本|
 |[ABC297G](https://atcoder.jp/contests/abc297/tasks/abc297_g)|1834|多山NimはGrundy数のXORでゼロのみ後手勝ち|
 |[ABC299G](https://atcoder.jp/contests/abc299/tasks/abc299_g)|2066|辞書順最小は最低限満たすものの中で前から貪欲|
