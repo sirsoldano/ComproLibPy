@@ -100,8 +100,10 @@
 |[ABC286F](https://atcoder.jp/contests/abc286/tasks/abc286_f)||(中国剰余定理)互いに素な数で除した余が与えられる場合、最小公倍数以下では解が一意|
 |[ABC288D](https://atcoder.jp/contests/abc288/tasks/abc288_d)||不変量を見極めて条件を単純化|
 |[ABC289G](https://atcoder.jp/contests/abc289/tasks/abc289_g)||いくつかの直線から構成される最大値(最小値)はconvex_hull|
-|[ABC294G](https://atcoder.jp/contests/abc294/tasks/abc294_g)||更新入る木の距離はダブリング＋オイラーツアー|
-|[ABC295E](https://atcoder.jp/contests/abc295/tasks/abc295_e)||1以上M以下の確率変数Xの期待値合計∑i*p(X==i) => ∑p(X>=i)|
+|[ABC293E](https://atcoder.jp/contests/abc293/tasks/abc293_e)|1453|シンプルな漸化式で表現可能な解は行列で繰り返し2乗法可能|
+|[ABC294F](https://atcoder.jp/contests/abc294/tasks/abc294_f)|1891|分数最適解は解の決め打ちで分数解除|
+|[ABC294G](https://atcoder.jp/contests/abc294/tasks/abc294_g)|1702|更新入る木の距離はダブリング＋オイラーツアー|
+|[ABC295E](https://atcoder.jp/contests/abc295/tasks/abc295_e)|2157|1以上M以下の確率変数Xの期待値合計∑i*p(X==i) => ∑p(X>=i)|
 |[ABC296F](https://atcoder.jp/contests/abc296/tasks/abc296_f)|1811|swapは転倒数を必ず変化させる。長さ3の巡回置換は転倒数が奇数だと0にはできない|
 |[ABC297F](https://atcoder.jp/contests/abc297/tasks/abc297_f)|1990|グリッド上パターンの除法原理の基本|
 |[ABC297G](https://atcoder.jp/contests/abc297/tasks/abc297_g)|1834|多山NimはGrundy数のXORでゼロのみ後手勝ち|
