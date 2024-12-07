@@ -100,6 +100,7 @@
 |[ABC286F](https://atcoder.jp/contests/abc286/tasks/abc286_f)||(中国剰余定理)互いに素な数で除した余が与えられる場合、最小公倍数以下では解が一意|
 |[ABC288D](https://atcoder.jp/contests/abc288/tasks/abc288_d)||不変量を見極めて条件を単純化|
 |[ABC289G](https://atcoder.jp/contests/abc289/tasks/abc289_g)||いくつかの直線から構成される最大値(最小値)はconvex_hull|
+|[ABC290E](https://atcoder.jp/contests/abc290/tasks/abc290_e)|1485|回文問題は挟み撃ちで順次処理すると楽かも|
 |[ABC293E](https://atcoder.jp/contests/abc293/tasks/abc293_e)|1453|シンプルな漸化式で表現可能な解は行列で繰り返し2乗法可能|
 |[ABC294F](https://atcoder.jp/contests/abc294/tasks/abc294_f)|1891|分数最適解は解の決め打ちで分数解除|
 |[ABC294G](https://atcoder.jp/contests/abc294/tasks/abc294_g)|1702|更新入る木の距離はダブリング＋オイラーツアー|
