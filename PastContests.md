@@ -98,7 +98,7 @@
 |[ABC283F](https://atcoder.jp/contests/abc283/tasks/abc283_f)||絶対値は可能ならば場合分けして外す|
 |[ABC283G](https://atcoder.jp/contests/abc283/tasks/abc283_g)||xorの昇順列挙はxor基底列挙して順序を0-indexとして算出|
 |[ABC286F](https://atcoder.jp/contests/abc286/tasks/abc286_f)||(中国剰余定理)互いに素な数で除した余が与えられる場合、最小公倍数以下では解が一意|
-|[ABC288D](https://atcoder.jp/contests/abc288/tasks/abc288_d)||不変量を見極めて条件を単純化|
+|[ABC288D](https://atcoder.jp/contests/abc288/tasks/abc288_d)|1757|数列にまとめて操作を加える場合、連動する部分に不変量あり、解法の糸口に|
 |[ABC289G](https://atcoder.jp/contests/abc289/tasks/abc289_g)||いくつかの直線から構成される最大値(最小値)はconvex_hull|
 |[ABC290E](https://atcoder.jp/contests/abc290/tasks/abc290_e)|1485|回文問題は挟み撃ちで順次処理すると楽かも|
 |[ABC293E](https://atcoder.jp/contests/abc293/tasks/abc293_e)|1453|シンプルな漸化式で表現可能な解は行列で繰り返し2乗法可能|
