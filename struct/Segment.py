@@ -43,7 +43,7 @@ class SegT:
         self.func = func
         self.slen = 1
         while(self.slen<N) : self.slen<<=1
-        self.st = [self.default] * (self.slen*2)
+        self.st = [self.default for _ in range(self.slen*2)]
     def update(self,i,x):
         i += self.slen
         self.st[i] = x
