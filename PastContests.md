@@ -95,7 +95,8 @@
 |[ABC273E](https://atcoder.jp/contests/abc273/tasks/abc273_e)||リストの複数回記録と呼び出しは木構造で可能|
 |[ABC278F](https://atcoder.jp/contests/abc278/tasks/abc278_f)||N=16程度の並び替えは状態DPでいけるかも|
 |[ABC282E](https://atcoder.jp/contests/abc282/tasks/abc282_e)||最大全域木はunionfind+クラスカル法(グラフ不要)|
-|[ABC283F](https://atcoder.jp/contests/abc283/tasks/abc283_f)||絶対値は可能ならば場合分けして外す|
+|[ABC283E](https://atcoder.jp/contests/abc283/tasks/abc283_e)|1802|状態遷移の最小手数はnまで走査時に完成してる場合の最小をDPで|
+|[ABC283F](https://atcoder.jp/contests/abc283/tasks/abc283_f)|1771|絶対値は可能ならば場合分けして外す|
 |[ABC283G](https://atcoder.jp/contests/abc283/tasks/abc283_g)||xorの昇順列挙はxor基底列挙して順序を0-indexとして算出|
 |[ABC285E](https://atcoder.jp/contests/abc285/tasks/abc285_e)|1466|ループのDPは帳尻合わせに集中|
 |[ABC285F](https://atcoder.jp/contests/abc285/tasks/abc285_f)|1876|アルファベット昇順はBITで高速に検証可能|
