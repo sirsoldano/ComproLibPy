@@ -241,7 +241,29 @@ for n in range(N):
 ~~~
 </details>
 
-#### セグ木
+#### セグ木、BIT
+
+<details>
+<summary>BIT</summary>
+
+~~~
+class FenT:
+    def __init__(self,N):
+        self.tree=[0]*(N+1)
+    def add(self,n,i):
+        while n<=len(self.tree)-1:
+            self.tree[n]+=i
+            n += n&-n
+    def sum(self,l,r):
+        return self._sum(r)-self._sum(l)
+    def _sum(self,n):
+        ans = 0
+        while n>0:
+            ans += self.tree[n]
+            n -= n&-n
+        return ans
+~~~
+</details>
 
 <details>
 <summary>セグ木</summary>
