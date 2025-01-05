@@ -230,14 +230,14 @@ N = int(input())
 a = [*map(lambda x:int(x)-1,input().split())]
 heiro,visited = [],[0]*N
 for n in range(N):
-  if visited[n]:continue
-  root = []
-  while visited[n]==0:
-    root.append(n)
-    visited[n]=1
-    n = a[n]
-  if n not in root : continue
-  heiro.append(root[root.index(n):])
+    if visited[n]:continue
+    root = []
+    while visited[n]==0:
+        root.append(n)
+        visited[n]=1
+        n = a[n]
+    if n not in root : continue
+    heiro.append(root[root.index(n):])
 ~~~
 </details>
 
