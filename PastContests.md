@@ -93,7 +93,10 @@
 |[ABC270F](https://atcoder.jp/contests/abc270/tasks/abc270_f)||多点ワープはnodeと見做す。最小全域木はクラスカル法かプラム法(ダイクストラ)|
 |[ABC272G](https://atcoder.jp/contests/abc272/tasks/abc272_g)||条件満たすものを一つでも挙げるは乱択か|
 |[ABC273E](https://atcoder.jp/contests/abc273/tasks/abc273_e)||リストの複数回記録と呼び出しは木構造で可能|
-|[ABC278F](https://atcoder.jp/contests/abc278/tasks/abc278_f)||N=16程度の並び替えは状態DPでいけるかも|
+|[ABC276F](https://atcoder.jp/contests/abc276/tasks/abc276_f)|1562|期待値問題は遷移の式化を必ず|
+|[ABC278F](https://atcoder.jp/contests/abc278/tasks/abc278_f)|1452|N!を2^N*N^2にする典型。勝ち確1で遷移先で反転の和集合|
+|[ABC280F](https://atcoder.jp/contests/abc280/tasks/abc280_f)|1819|閉路あり負の重み付きグラフも閉路和がゼロならば木同様に距離計算可能|
+|[ABC281F](https://atcoder.jp/contests/abc281/tasks/abc281_f)|1714|XORの最大最小は上の桁から決めていく、候補複数は再帰的に|
 |[ABC282D](https://atcoder.jp/contests/abc282/tasks/abc282_d)|1154|二分グラフは実際に白黒に属性を分けてから考える。余事象|
 |[ABC282E](https://atcoder.jp/contests/abc282/tasks/abc282_e)||最大全域木はunionfind+クラスカル法(グラフ不要)|
 |[ABC283E](https://atcoder.jp/contests/abc283/tasks/abc283_e)|1802|状態遷移の最小手数はnまで走査時に完成してる場合の最小をDPで|
