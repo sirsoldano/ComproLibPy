@@ -60,6 +60,7 @@ def convex_hull(xys):
         while len(cfs)>=t+1 and outerP(cfs[-1],cfs[-2],xy,xy)>=0 : cfs.pop()
         cfs.append(xy)
     return cfs
+convex_hull(sorted(xys))
 # 多角形面積
 def polygon_area(xys) : return abs(sum(xys[i-1][0]*xys[i-1][1] - xys[i][1]*xys[i][0] for i in range(len(xys)))) / 2
 
