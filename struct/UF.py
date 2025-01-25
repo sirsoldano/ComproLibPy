@@ -26,7 +26,7 @@ for c,l,r in items :
     if uf.same(l,r)==False:
         uf.union(l,r)
         ans, cnt = ans+c, cnt+1
-if cnt==N : print(ans)
+if cnt==N-1 : print(ans)
 
 # heapq ver
 import heapq as hq
