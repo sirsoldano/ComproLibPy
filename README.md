@@ -395,6 +395,54 @@ a = [x for x in a[::-1]]
 # 転置
 a = [[*x] for x in zip(*a)]
 ~~~
+
+<details>
+<summary>####畳み込み(Convolution)</summary>
+
+~~~
+class Convolution:
+    def __init__(self,mod=998244353,K=119,M=23,W=31):
+        self.mod,self.k,self.m,self.w = mod,K,M,W
+        self.w = [pow(W,2**i,mod) for i in range(M,-1,-1)]
+        self.iw = [pow(w,-1,mod) for w in self.w]
+
+    def dft(self,A):
+        if len(A) == 1: return
+        n = len(A)
+        k = n.bit_length()-1
+        r = 1<<(k-1)
+        for w in self.w[k:0:-1]:
+            for l in range(0,n,2*r):
+                wi = 1
+                for i in range(r): # Gentleman-Sade butterfly
+                    A[l+i],A[l+i+r] = (A[l+i]+A[l+i+r])%self.mod,(A[l+i]-A[l+i+r])*wi%self.mod
+                    wi = wi*w%self.mod
+            r = r//2
+    def idft(self,A):
+        if len(A) == 1: return
+        n = len(A)
+        k = (n-1).bit_length()
+        r = 1
+        for w in self.iw[1:k+1]:
+            for l in range(0,n,2*r):
+                wi = 1
+                for i in range(r): # Colley-Tukey butterfly
+                    A[l+i],A[l+i+r] = (A[l+i]+A[l+i+r]*wi)%self.mod,(A[l+i]-A[l+i+r]*wi)%self.mod
+                    wi = wi*w%self.mod
+            r = r*2
+        ni = pow(n, self.mod-2, self.mod)
+        for i in range(n):
+            A[i] = A[i]*ni%self.mod
+    def calc(self,A,B):
+        n = 2**(len(A)+len(B)-2).bit_length()
+        A,B = [x % self.mod for x in A]+[0]*(n-len(B)), [x % self.mod for x in B]+[0]*(n-len(B))
+        self.dft(A);self.dft(B)
+        C = [(A[i]*B[i])%self.mod for i in range(n)]
+        self.idft(C)
+        return C
+~~~
+</details>
+
 ## 計算量表
 |logN|√N|**N**|NlogN|N<sup>2</sup>|N<sup>3</sup>|2<sup>N</sup>|N!|
 |:----|:----|:----|:----|:----|:----|:----|:----|
