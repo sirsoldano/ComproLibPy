@@ -397,7 +397,9 @@ a = [[*x] for x in zip(*a)]
 ~~~
 
 <details>
-<summary>####畳み込み(Convolution)</summary>
+<summary>
+    ####畳み込み(Convolution)
+</summary>
 
 ~~~
 class Convolution:
