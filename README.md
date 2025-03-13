@@ -74,12 +74,19 @@ class RollingHash:
     def __init__(self,N,s,b1=998244353,b2=100000007,mod=1000000007):
         self.mod,self.b1,self.b2 = mod,b1,b2
         self.h1,self.h2 = [0]*(N+1),[0]*(N+1)
-        self.r1,self.r2 = [pow(b1,n,mod) for n in range(1,N+1)],[pow(b2,n,mod) for n in range(1,N+1)]
+        self.r1,self.r2 = [pow(b1,n,mod) for n in range(N+1)],[pow(b2,n,mod) for n in range(N+1)]
         for n in range(N) : 
             self.h1[n+1] = (self.h1[n]*self.b1+s[n])%mod
             self.h2[n+1] = (self.h2[n]*self.b2+s[n])%mod
-#(h1[l1+strlen]-r1*h1[l1])%mod==(h1[l2+strlen]-r1*h1[l2])%mod
-def judge(l,r) : return (h1[r]-r1[r-l]*h1[l])%mod==(rh1[N-l]-r1[r-l]*rh1[N-r])%mod and (h2[r]-r2[r-l]*h2[l])%mod==(rh2[N-l]-r2[r-l]*rh2[N-r])%mod
+    def get(self,l,r) : 
+        return ((self.h1[r]-self.r1[r-l]*self.h1[l])%self.mod , (self.h2[r]-self.r2[r-l]*self.h2[l])%self.mod)
+    def lcp(self, l1, r1, l2, r2):
+        low,high = 0, min(r1-l1, r2-l2) + 1
+        while high - low > 1:
+            mid = (high + low) // 2
+            if self.get(l1, l1 + mid) == self.get(l2, l2 + mid) : low = mid
+            else : high = mid
+        return low
 ~~~
 
 </details>
