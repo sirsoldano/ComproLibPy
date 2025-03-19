@@ -47,42 +47,39 @@ class DubTree:
         lca = self.lca(a,b)
         return self.wei[a] + self.wei[b] - 2*self.wei[lca]
 
-# オイラーツアー https://atcoder.jp/contests/abc294/submissions/50893914
+# オイラーツアー
+# https://atcoder.jp/contests/abc294/submissions/50893914
+# https://atcoder.jp/contests/abc133/submissions/63951344
 import sys; sys.setrecursionlimit(10**6); import pypyjit; pypyjit.set_param('max_unroll_recursion=-1')
 class DubTree:
     def __init__(self,N):
         self.N, self.K = N, 1
         while (1<<self.K)<N : self.K += 1
-        self.node,self.wei = [None]*self.N, [None]*self.N
+        self.node = [None]*self.N
         self.edge = [[] for n in range(self.N)]
         self.parent = [[None]*N for k in range(self.K)]
         self.euler = []
-        self.eufl = [[0,0] for n in range(N)]
+        self.postoeunum = [0]*N
         self.fent = []
-    def append_edge(self,a,b,w=1):
-        self.edge[a].append((b,w)); self.edge[b].append((a,w))
-    def dfs_dub(self,s):
-        stack, self.node[s],self.wei[s] = [s], 0, 0
-        self.parent[0][s] = None
-        self._dfs(s)
-        self._doubling()
-        self.fent = [0]*(len(self.euler)+1)
-    def _dfs(self,pos):
+        self.edgetoeunum = dict()
+        self.fentc = []
+    def _dfs(self,pos,bef):
+        self.postoeunum[pos] = len(self.euler)
         self.euler.append(pos)
-        self.eufl[pos][0] = len(self.euler)
-        for p,w in self.edge[pos]:
-            if self.node[p] is None:
-                self.node[p], self.wei[p] = self.node[pos]+1, self.wei[pos]+w
-                self.parent[0][p] = pos
-                self._dfs(p)
+        for nex,d in self.edge[pos]:
+            if nex!=bef:
+                self.node[nex] = self.node[pos]+1
+                self.edgetoeunum[(pos,nex)] = len(self.euler)
+                self.parent[0][nex] = pos
+                self._dfs(nex,pos)
                 self.euler.append(pos)
-        self.eufl[pos][1] = len(self.euler)+1
+                self.edgetoeunum[(nex,pos)] = len(self.euler)
     def _doubling(self):
         for k in range(self.K-1):
             for n in range(self.N):
                 if self.parent[k][n] is None : self.parent[k+1][n] = None
                 else : self.parent[k+1][n] = self.parent[k][self.parent[k][n]]
-    def lca(self,a,b):
+    def _lca(self,a,b):
         if self.node[a]<self.node[b] : a,b=b,a
         for k in range(self.K-1,-1,-1):
             if self.node[a]-self.node[b]>=(1<<k) : a = self.parent[k][a]
@@ -91,26 +88,62 @@ class DubTree:
             if self.parent[k][a]!=self.parent[k][b] : 
                 a,b = self.parent[k][a],self.parent[k][b]
         return self.parent[0][a]
-    def dist(self,a,b):
-        lca = self.lca(a,b)
-        alen = self.wei[a] + self._sum(self.eufl[a][0]) - self.wei[lca] - self._sum(self.eufl[lca][0])
-        blen = self.wei[b] + self._sum(self.eufl[b][0]) - self.wei[lca] - self._sum(self.eufl[lca][0])
-        return alen + blen
-    def add(self,a,i):
-        n = self.eufl[a][0]
+    def _add(self,n,i):
         while n<=len(self.fent)-1:
             self.fent[n]+=i
             n += n&-n
-        n = self.eufl[a][1]
-        while n<=len(self.fent)-1:
-            self.fent[n]-=i
+    def _addc(self,n,i):
+        while n<=len(self.fentc)-1:
+            self.fentc[n]+=i
             n += n&-n
     def _sum(self,n):
-        ans = 0
+        ret = 0
         while n>0:
-            ans += self.fent[n]
+            ret += self.fent[n]
             n -= n&-n
-        return ans
+        return ret
+    def _sumc(self,n):
+        ret = 0
+        while n>0:
+            ret += self.fentc[n]
+            n -= n&-n
+        return ret
+    def append_edge(self,a,b,d):
+        self.edge[a].append((b,d)); self.edge[b].append((a,d))
+    def make_euler(self,s):
+        self.node[s] = 0
+        self.parent[0][s] = None
+        self._dfs(s,s)
+        self._doubling()
+        self.fent = [0]*(len(self.euler)+1)
+        self.fentc = [0]*(len(self.euler)+1)
+        for n in range(self.N):
+            for p,d in self.edge[n]:
+                if self.edgetoeunum[(n,p)]<self.edgetoeunum[(p,n)]:
+                    self._add(self.edgetoeunum[(n,p)],d)
+                    self._add(self.edgetoeunum[(p,n)],-d)
+    def dist(self,a,b):
+        lca = self._lca(a,b)
+        alen = self._sum(self.postoeunum[a])-self._sum(self.postoeunum[lca])
+        blen = self._sum(self.postoeunum[b])-self._sum(self.postoeunum[lca])
+        return alen + blen
+    def cnt(self,a,b):
+        lca = self._lca(a,b)
+        alen = self._sumc(self.postoeunum[a])-self._sumc(self.postoeunum[lca])
+        blen = self._sumc(self.postoeunum[b])-self._sumc(self.postoeunum[lca])
+        return alen + blen
+    def add_d(self,a,b,d):
+        if self.edgetoeunum[(a,b)]<self.edgetoeunum[(b,a)]:
+            self._add(self.edgetoeunum[(a,b)],d)
+            self._add(self.edgetoeunum[(b,a)],-d)
+            self._addc(self.edgetoeunum[(a,b)],-d//abs(d))
+            self._addc(self.edgetoeunum[(b,a)],d//abs(d))
+        else:
+            self._add(self.edgetoeunum[(a,b)],-d)
+            self._add(self.edgetoeunum[(b,a)],d)
+            self._addc(self.edgetoeunum[(a,b)],d//abs(d))
+            self._addc(self.edgetoeunum[(b,a)],-d//abs(d))
+
 
 # Trie木
 tree,ans = {},0
