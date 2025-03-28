@@ -32,8 +32,7 @@ class DubTree:
     def doubling(self):
         for k in range(self.K-1):
             for n in range(self.N):
-                if self.parent[k][n] is None : self.parent[k+1][n] = None
-                else : self.parent[k+1][n] = self.parent[k][self.parent[k][n]]
+                if self.parent[k][n] is not None : self.parent[k+1][n] = self.parent[k][self.parent[k][n]]
     def lca(self,a,b):
         if self.node[a]<self.node[b] : a,b=b,a
         for k in range(self.K-1,-1,-1):
@@ -77,8 +76,7 @@ class DubTree:
     def _doubling(self):
         for k in range(self.K-1):
             for n in range(self.N):
-                if self.parent[k][n] is None : self.parent[k+1][n] = None
-                else : self.parent[k+1][n] = self.parent[k][self.parent[k][n]]
+                if self.parent[k][n] is not None : self.parent[k+1][n] = self.parent[k][self.parent[k][n]]
     def _lca(self,a,b):
         if self.node[a]<self.node[b] : a,b=b,a
         for k in range(self.K-1,-1,-1):
