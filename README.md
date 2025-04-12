@@ -176,20 +176,16 @@ def dfs(pos):
 
 ~~~
 from collections import deque
-def bfs(s,i):
-    q,node[s] = deque(),i
-    q.append(s)
-    while q:
-        pos = q.popleft()
-        for p in edge[pos]:
-            if node[p] is None:
-                q.append(p)
-                node[p]=i
-i=0
-for n in range(N):
-    if node[n] == None:
-        bfs(n,i)
-        i+=1
+q = deque()
+q.append(0)
+node[0]=0
+while q:
+    pos = q.popleft()
+    for p in edge[pos]:
+        if node[p]==-1:
+            q.append(p)
+            node[p]=node[pos]+1
+
 # maze
 ans = [[-1]*W for h in range(H)]
 q = deque([(sh,sw)])
