@@ -275,6 +275,57 @@ class Dinic:
                     sside.add(p)
                     deq.append(p)
         return sside
+# Dinic (dict ver)
+class Dinic:
+    def __init__(self, N):
+        self.N = N
+        self.graph = [[] for _ in range(N)]
+        self.capacity = defaultdict(int)
+
+    def add_edge(self, fr, to, cap):
+        self.graph[fr].append(to)
+        self.graph[to].append(fr)
+        self.capacity[(fr, to)] += cap
+        self.capacity[(to, fr)] += 0
+
+    def bfs(self, s, t):
+        self.level = [None]*self.N
+        queue = deque([s])
+        self.level[s] = 0
+        while queue:
+            v = queue.popleft()
+            for to in self.graph[v]:
+                if self.capacity[(v, to)] > 0 and self.level[to] is None:
+                    self.level[to] = self.level[v] + 1
+                    queue.append(to)
+        return self.level[t] is not None
+
+    def dfs(self, v, t, upTo):
+        if v == t:
+            return upTo
+        for i in range(self.iter[v], len(self.graph[v])):
+            to = self.graph[v][i]
+            if self.capacity[(v, to)] > 0 and self.level[v] < self.level[to]:
+                d = self.dfs(to, t, min(upTo, self.capacity[(v, to)]))
+                if d > 0:
+                    self.capacity[(v, to)] -= d
+                    self.capacity[(to, v)] += d
+                    return d
+            self.iter[v] += 1
+        return 0
+
+    def flow(self, s, t):
+        total = 0
+        INF = 1 << 60
+        while self.bfs(s, t):
+            self.iter = [0] * self.N
+            while True:
+                f = self.dfs(s, t, INF)
+                if f == 0:
+                    break
+                total += f
+        return total
+
 # 燃やす埋める問題(https://atcoder.jp/contests/typical90/tasks/typical90_an)
 # 解説 https://zenn.dev/kiwamachan/articles/37a2c646f82c7d
 
