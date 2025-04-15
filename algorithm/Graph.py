@@ -276,11 +276,12 @@ class Dinic:
                     deq.append(p)
         return sside
 # Dinic (dict ver)
+from collections import deque, Counter
 class Dinic:
     def __init__(self, N):
         self.N = N
         self.graph = [[] for _ in range(N)]
-        self.capacity = defaultdict(int)
+        self.capacity = Counter()
 
     def add_edge(self, fr, to, cap):
         self.graph[fr].append(to)
