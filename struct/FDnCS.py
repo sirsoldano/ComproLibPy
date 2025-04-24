@@ -10,10 +10,11 @@ def cs(A):
     return csum
 
 # CS2d
+cs = [[0]*(N+1) for n in range(N+1)]
 for l in range(1,N+1):
-    for r in range(1,N+1) : lr[l][r]+=lr[l][r-1] + a[l-1][r-1]
-    for r in range(1,N+1) : lr[l][r]+=lr[l-1][r]
-cssum = lr[r1][r2]-lr[r1][l2-1]-lr[l1-1][r2]+lr[l1-1][l2-1]
+    for r in range(1,N+1) : cs[l][r]+=cs[l][r-1] + a[l-1][r-1]
+    for r in range(1,N+1) : cs[l][r]+=cs[l-1][r]
+def getsum(cs,lh,lw,rh,rw) : return cs[rh][rw]-cs[rh][lw-1]-cs[lh-1][rw]+cs[lh-1][lw-1]
 
 psum = [[0]*(N+1) for n in range(N+1)]
 for n in range(N):
