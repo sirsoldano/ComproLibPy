@@ -361,3 +361,68 @@ class SegT:
                 res = min(res,self.st[r])
             l >>= 1; r >>= 1
         return res
+
+
+# 動的セグ木
+#import sys; sys.setrecursionlimit(10**6); import pypyjit; pypyjit.set_param('max_unroll_recursion=-1')
+class Node:
+    def __init__(self):
+        self.len = 0
+        self.odd = 0
+        self.even = 0
+        self.left = None
+        self.right = None
+
+class DynamicSegmentTree:
+    def __init__(self, L=0, R=10**18):
+        self.L, self.R = L, R
+        self.root = Node()
+
+    def update(self, idx, value):
+        self._update(self.root, self.L, self.R, idx, value)
+
+    def _update(self, node, l, r, idx, value):
+        if r - l == 1: # leaf
+            self.mapping(node, value)
+            return
+
+        mid = (l + r) // 2
+        if idx < mid: # left
+            if node.left is None : node.left = Node()
+            self._update(node.left, l, mid, idx, value)
+        else: # right
+            if node.right is None : node.right = Node()
+            self._update(node.right, mid, r, idx, value)
+
+        self.op(node,node.left,node.right)
+
+    def all_prod(self):
+        return self.root
+
+    def prod(self, ql, qr):
+        return self._query(self.root, self.L, self.R, ql, qr)
+
+    def _query(self, node, l, r, ql, qr):
+        if node is None or qr <= l or r <= ql : return
+        if ql <= l and r <= qr : return node
+        mid = (l + r) // 2
+        s1 = self._query(node.left, l, mid, ql, qr)
+        s2 = self._query(node.right, mid, r, ql, qr)
+        return self.op(Node(),s1,s2)
+
+    def op(self,node,s1,s2) : 
+        if s1 is not None : s1len,s1even,s1odd = s1.len,s1.even,s1.odd
+        else : s1len,s1even,s1odd = 0,0,0
+        if s2 is not None : s2len,s2even,s2odd = s2.len,s2.even,s2.odd
+        else : s2len,s2even,s2odd = 0,0,0
+        if s1len&1 : 
+            node.len, node.even, node.odd = s1len + s2len, s1even + s2odd, s1odd + s2even
+        else : 
+            node.len, node.even, node.odd = s1len + s2len, s1even + s2even, s1odd + s2odd
+        return node
+
+    def mapping(self,node,f) : 
+        if node.len & 1 : 
+            node.len, node.even, node.odd = node.len+1, node.even+f, node.odd
+        else : 
+            node.len, node.even, node.odd = node.len+1, node.even, node.odd+f
