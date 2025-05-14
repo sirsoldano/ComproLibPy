@@ -14,6 +14,7 @@
 - [再帰](/algorithm/Recursion.py)
 - [幾何学](/algorithm/Vector.py)
 - [bit演算諸々](/algorithm/Bit.py)
+- [平方分割](/algorithm/SqDeco.py)
 
 ## データ構造集
 - [階差と累積和](/struct/FDnCS.py)
