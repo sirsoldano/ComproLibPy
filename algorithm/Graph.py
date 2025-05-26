@@ -327,6 +327,69 @@ class Dinic:
                 total += f
         return total
 
+# 燃やす埋める問題(https://atcoder.jp/contests/typical90/tasks/typical90_an)
+# 解説 https://zenn.dev/kiwamachan/articles/37a2c646f82c7d
+
+# 最小費用フロー https://atcoder.jp/contests/abc247/submissions/53489839
+# https://tjkendev.github.io/procon-library/python/min_cost_flow/primal-dual.html
+from heapq import heappush, heappop
+class MinCostFlow:
+    def __init__(self, N):
+        self.N = N
+        self.edge = [[] for i in range(N)] 
+        # [to, cap, cost, rev]
+    def addEdge(self, f, t, cap, cost):
+        forward = [t, cap, cost, None]
+        backward = forward[3] = [f, 0, -cost, forward]
+        self.edge[f].append(forward)
+        self.edge[t].append(backward)
+    def minCostFlow(self, s, t, f):
+        N = self.N; G = self.edge
+        INF = 1<<60
+        res = 0
+        H = [0]*N
+        prv_v = [0]*N
+        prv_e = [None]*N
+
+        d0 = [INF]*N
+        dist = [INF]*N
+
+        while f:
+            dist[:] = d0
+            dist[s] = 0
+            que = [(0, s)]
+
+            while que:
+                c, v = heappop(que)
+                if dist[v] < c:
+                    continue
+                r0 = dist[v] + H[v]
+                for e in G[v]:
+                    w, cap, cost, _ = e
+                    if cap > 0 and r0 + cost - H[w] < dist[w]:
+                        dist[w] = r = r0 + cost - H[w]
+                        prv_v[w] = v; prv_e[w] = e
+                        heappush(que, (r, w))
+            if dist[t] == INF:
+                return None
+
+            for i in range(N):
+                H[i] += dist[i]
+
+            d = f; v = t
+            while v != s:
+                d = min(d, prv_e[v][1])
+                v = prv_v[v]
+            f -= d
+            res += d * H[t]
+            v = t
+            while v != s:
+                e = prv_e[v]
+                e[1] -= d
+                e[3][1] += d
+                v = prv_v[v]
+        return res
+
 # minimum cost flow slope https://atcoder.jp/contests/abc407/tasks/abc407_g
 import heapq
 class mcf_graph():
@@ -427,70 +490,6 @@ class mcf_graph():
             result.append((flow,cost))
             prev_cost=cost
         return result
-
-# 燃やす埋める問題(https://atcoder.jp/contests/typical90/tasks/typical90_an)
-# 解説 https://zenn.dev/kiwamachan/articles/37a2c646f82c7d
-
-# 最小費用フロー https://atcoder.jp/contests/abc247/submissions/53489839
-# https://tjkendev.github.io/procon-library/python/min_cost_flow/primal-dual.html
-from heapq import heappush, heappop
-class MinCostFlow:
-    def __init__(self, N):
-        self.N = N
-        self.edge = [[] for i in range(N)] 
-        # [to, cap, cost, rev]
-    def addEdge(self, f, t, cap, cost):
-        forward = [t, cap, cost, None]
-        backward = forward[3] = [f, 0, -cost, forward]
-        self.edge[f].append(forward)
-        self.edge[t].append(backward)
-    def minCostFlow(self, s, t, f):
-        N = self.N; G = self.edge
-        INF = 1<<60
-        res = 0
-        H = [0]*N
-        prv_v = [0]*N
-        prv_e = [None]*N
-
-        d0 = [INF]*N
-        dist = [INF]*N
-
-        while f:
-            dist[:] = d0
-            dist[s] = 0
-            que = [(0, s)]
-
-            while que:
-                c, v = heappop(que)
-                if dist[v] < c:
-                    continue
-                r0 = dist[v] + H[v]
-                for e in G[v]:
-                    w, cap, cost, _ = e
-                    if cap > 0 and r0 + cost - H[w] < dist[w]:
-                        dist[w] = r = r0 + cost - H[w]
-                        prv_v[w] = v; prv_e[w] = e
-                        heappush(que, (r, w))
-            if dist[t] == INF:
-                return None
-
-            for i in range(N):
-                H[i] += dist[i]
-
-            d = f; v = t
-            while v != s:
-                d = min(d, prv_e[v][1])
-                v = prv_v[v]
-            f -= d
-            res += d * H[t]
-            v = t
-            while v != s:
-                e = prv_e[v]
-                e[1] -= d
-                e[3][1] += d
-                v = prv_v[v]
-        return res
-# 解説 https://ikatakos.com/pot/programming_algorithm/graph_theory/bipartite_matching
 
 # 巡回セールスマン問題(bitDP) N=20まで https://qiita.com/Ll_e_ki/items/fa475f5bb224ada9be97
 # ABC301E https://atcoder.jp/contests/abc301/submissions/41428508
