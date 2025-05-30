@@ -31,13 +31,13 @@
 ~~~
 N=int(input())
 N,M = map(int,input().split())
-A = [*map(int,input().split())]
-XY = [[*map(int,input().split())] for n in range(N)]
+a = [*map(int,input().split())]
+xy = [[*map(int,input().split())] for n in range(N)]
 ~~~
 #### 文字列
 ~~~
 alp,ALP = "abcdefghijklmnopqrstuvwxyz","ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-S = [*map(lambda x:ord(x)-97,input().rstrip())]
+s = [*map(lambda x:ord(x)-97,input().rstrip())]
 print("".join(map(lambda i:chr(i+97),ans))) # 大文字はord(c)-65
 compressed = [(k, len(list(g))) for k,g in itertools.groupby(s)] # ランレングス圧縮
 def palind(s): return sum(1 for n in range(len(s)//2) if s[n]!=s[-n-1])==0
@@ -165,10 +165,9 @@ for m in range(M):
 
 ~~~
 #import sys; sys.setrecursionlimit(10**6); import pypyjit; pypyjit.set_param('max_unroll_recursion=-1')
-def dfs(pos):
-    node[pos] = 1
-    for p in edge[pos]:
-        if node[p] is None : dfs(p)
+def dfs(pos,bef):
+    for nex in edge[pos]:
+        if pos!=bef : dfs(nex,pos)
 ~~~
 </details>
 
