@@ -167,7 +167,7 @@ for m in range(M):
 #import sys; sys.setrecursionlimit(10**6); import pypyjit; pypyjit.set_param('max_unroll_recursion=-1')
 def dfs(pos,bef):
     for nex in edge[pos]:
-        if pos!=bef : dfs(nex,pos)
+        if nex!=bef : dfs(nex,pos)
 ~~~
 </details>
 
