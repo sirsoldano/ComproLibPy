@@ -117,10 +117,14 @@ def imos(A):
     for n in range(1,N) : cs[n]=cs[n-1]+updn[n]
     return cs
 # CS2d
-for l in range(1,N+1):
-    for r in range(1,N+1) : lr[l][r]+=lr[l][r-1] + a[l-1][r-1]
-    for r in range(1,N+1) : lr[l][r]+=lr[l-1][r]
-cssum = lr[r1][r2]-lr[r1][l2-1]-lr[l1-1][r2]+lr[l1-1][l2-1]
+def cs2d(a):
+    H,W = len(a),len(a[0])
+    cs = [[0]*(W+1) for h in range(H+1)]
+    for l in range(1,H+1):
+        for r in range(1,W+1) : cs[l][r]+=cs[l][r-1] + a[l-1][r-1]
+        for r in range(1,W+1) : cs[l][r]+=cs[l-1][r]
+    return cs
+def cssum(cs,hmin,wmin,hmax,wmax) : return cs[hmax][wmax]-cs[hmax][wmin-1]-cs[hmin-1][wmax]+cs[hmin-1][wmin-1]
 ~~~
 #### 座標
 ~~~
