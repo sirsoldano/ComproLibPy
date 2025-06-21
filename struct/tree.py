@@ -156,6 +156,23 @@ for n in range(N):
     temp = temp[c][1]
 print(ans)
 
+# trie木 ABC377G
+trie,ans = [[] for n in range(26)],0
+for _ in range(int(input())):
+    s = input()
+    temp = trie
+    l = 0
+    ans = len(s)
+    for i in range(len(s)):
+        c = ord(s[i])-97
+        if temp[c] : 
+            ans = min(ans,temp[c][0]+len(s)-i-1)
+            temp[c][0] = min(temp[c][0],len(s)-i-1)
+        else : 
+            temp[c] = [len(s)-i-1,[[] for n in range(26)]]
+        temp = temp[c][1]
+    print(ans)
+
 # 重心分解
 N = int(input())
 edge,parent,nodenum = [set() for n in range(N)],[None]*N,[None]*N
