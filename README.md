@@ -274,33 +274,12 @@ class FenT:
 
 <details>
 <summary>セグ木</summary>
-
+st = SegTree(lambda x,y:max(x,y),0,[0]*N)
+st.prod(l,r) #l~r-1
+st.set(l,x)
 ~~~
-class SegT:
-    def __init__(self,N,func,default):
-        self.default = default
-        self.func = func
-        self.slen = 1
-        while(self.slen<N) : self.slen<<=1
-        self.st = [self.default] * (self.slen*2)
-    def update(self,i,x):
-        i += self.slen
-        self.st[i] = x
-        while i>=2 :
-            i>>=1
-            self.st[i] = self.func(self.st[i*2],self.st[i*2+1])
-    def get(self,l,r):
-        l += self.slen; r += self.slen
-        res = self.default
-        while l < r:
-            if l & 1 : 
-                res = self.func(res, self.st[l])
-                l += 1
-            if r & 1: 
-                r -= 1 
-                res = self.func(res, self.st[r])
-            l >>= 1; r >>= 1
-        return res
+from atcoder.segtree import SegTree
+
 ~~~
 </details>
 
