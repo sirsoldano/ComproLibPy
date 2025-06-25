@@ -274,12 +274,13 @@ class FenT:
 
 <details>
 <summary>セグ木</summary>
+    
+~~~
+from atcoder.segtree import SegTree
 st = SegTree(lambda x,y:max(x,y),0,[0]*N)
 st.prod(l,r) #l~r-1
 st.set(l,x)
-~~~
-from atcoder.segtree import SegTree
-
+st.max_right(l, lambda el: el < v) # l以上でlambdaがtrueの最右位置
 ~~~
 </details>
 
