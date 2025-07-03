@@ -35,10 +35,18 @@ def sqrt(x):
     return l
 
 # 最長増加部分列(LIS)
-A = [*map(int,input().split())]
-p,P = [],[0]*N
+a = [*map(int,input().split())]
+p,ind_list = [],[0]*N
 for n in range(N):
-    pi = bl(p,A[n])
-    if pi==len(p) : p.append(A[n])
-    else : p[pi] = A[n]
-    P[n] = pi+1
+    pi = br(p,a[n])
+    if pi==len(p) : p.append(a[n])
+    else : p[pi] = a[n]
+    ind_list[n] = pi+1
+lis = []
+i = len(p)
+for n in range(N-1,-1,-1):
+    if ind_list[n]==i:
+        lis.append(n)
+        i-=1
+lis.reverse()
+print(lis)
