@@ -293,6 +293,20 @@ def op(s1,s2) : return max(s1,s2)
 def mp(f,s) : return s+f
 def comp(f2,f1) : return f1+f2
 lst = LazySegTree(op,0,mp,comp,0,[0 for n in range(200001)])
+# 区間変更・区間和取得
+def op(s1,s2) : return s1[0]+s2[0],s1[1]+s2[1]
+def mp(f,s) : 
+    if f is None: return s
+    else : return s[0],s[0]*f
+def comp(f2,f1) : 
+    if f2 is None : return f1
+    else : return f2
+lst = LazySegTree(op,(0,0),mp,comp,None,[(1,a[n]) for n in range(N)])
+# 区間加算の場合は
+def op(s1,s2) : return s1[0]+s2[0],s1[1]+s2[1]
+def mp(f,s) : return s[0],s[0]*f + s[1]
+def comp(f2,f1) : return f1+f2
+lst = LazySegTree(op,(0,0),mp,comp,0,[(1,a[n]) for n in range(N)])
 ~~~
 </details>
 
