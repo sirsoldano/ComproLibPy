@@ -1,13 +1,45 @@
-# tc : NloglogN
-# ul : 10^7
-def eratos(N):
-    prime,is_prime,p = [],[0,0]+[1]*(N-1),2
-    while p<=N:
-        if is_prime[p]:
-            prime.append(p)
-            for i in range(2,N//p+1) : is_prime[i*p]=0
-        p+=1
-    return prime
+from collections import Counter
+class Eratos:
+    def __init__(self,n=10**7):
+        self.primes,self.minfac,self.mobius,p = [],[i for i in range(n+1)],[1]*(n+1),2
+        while p<=n:
+            if self.minfac[p]==p:
+                self.primes.append(p)
+                self.mobius[p] = -1
+                for i in range(2,n//p+1) : 
+                    if self.minfac[i*p] == i*p : self.minfac[i*p]=p
+                    if i%p==0 : self.mobius[i*p] = 0
+                    else : self.mobius[i*p] = -self.mobius[i*p]
+            p+=1
+    def get_pf(self,x):
+        pf = Counter()
+        while x>1:
+            pf[self.minfac[x]]+=1
+            x //= self.minfac[x]
+        return pf
+    def get_divs(self,x):
+        pf = self.get_pf(x)
+        divs = [1]
+        for p in sorted(pf):
+            for i in range(len(divs)):
+                mul = 1
+                for j in range(pf[p]):
+                    mul *= p
+                    divs.append(divs[i]*mul)
+        return sorted(divs)
+    def fastzeta(self,f):
+        N = len(f)
+        for p in range(2,N):
+            if self.minfac[p]!=p : continue
+            for i in range((N-1)//p,0,-1):
+                f[i] += f[i*p]
+    def fastmobius(self,f):
+        N = len(f)
+        for p in range(2,N):
+            if self.minfac[p]!=p : continue
+            for i in range(1,(N-1)//p+1):
+                f[i] -= f[i*p]
+
 # 約数の個数を事前列挙
 # tc : NlogN
 # ul : 10^7
@@ -57,9 +89,6 @@ def tridiv(n):
         else : ind+=1
     if n>1 : pf.append(n)
     return pf
-
-import collections
-collections.Counter(tridiv(int(input())))
 
 #GCD
 # tc : log(A+B)
