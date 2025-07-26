@@ -144,7 +144,7 @@ cc = { v: i for i, v in enumerate(sa) }
 #### モジュラ
 ~~~
 class MOD:
-    def __init__(self,mod,N=4000001):
+    def __init__(self,mod=998244353,N=400001):
         self.mod,self.fac,self.finv,self.inv = mod,[0]*N,[0]*N,[0]*N
         self.fac[0] = self.fac[1] = self.finv[0] = self.finv[1] = self.inv[1] = 1
         for i in range(2,N):
