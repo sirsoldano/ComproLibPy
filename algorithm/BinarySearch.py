@@ -34,11 +34,11 @@ def sqrt(x):
             l = m
     return l
 
-# 最長増加部分列(LIS)
+# 最長増加部分列(LIS) 狭義ならbl、広義ならbr
 a = [*map(int,input().split())]
 p,ind_list = [],[0]*N
 for n in range(N):
-    pi = br(p,a[n])
+    pi = bl(p,a[n])
     if pi==len(p) : p.append(a[n])
     else : p[pi] = a[n]
     ind_list[n] = pi+1
