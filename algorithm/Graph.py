@@ -58,10 +58,11 @@ for m in range(M):
     d[a-1][b-1]=c
     d[b-1][a-1]=c
     abc.append((a-1,b-1,c))
-for a in range(N):
-    for b in range(N):
-        for c in range(N):
-            d[b][c] = min(d[b][c],d[b][a]+d[a][c])
+def update(path):
+    for u in range(N+1):
+        for v in range(N+1):
+            d[u][v] = min(d[u][v],d[u][path]+d[path]
+for n in range(N) : update(n)
 # Bellman-Ford
 d = [0]+[1<<60]*(N-1)
 for n in range(N-1):
