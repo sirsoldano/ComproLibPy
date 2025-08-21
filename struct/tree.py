@@ -173,6 +173,40 @@ for _ in range(int(input())):
         temp = temp[c][1]
     print(ans)
 
+# AhoCorasick法 ABC419F
+from collections import deque
+class AhoCorasick:
+    def __init__(self, terms, sigma=26):
+        self.sigma = sigma
+        self.node = [[0] * sigma]
+        self.last = [0]
+        for n in range(len(terms)) : self.add(terms[n],n)
+        self.build()
+    def add(self, term, n):
+        v = 0
+        for c in term:
+            if self.node[v][c] == 0 :
+                self.node[v][c] = len(self.node)
+                self.node.append([0] * self.sigma)
+                self.last.append(0)
+            v = self.node[v][c]
+        self.last[v] |= 1 << n
+    def build(self):
+        link = [0] * len(self.node)
+        que = deque()
+        for i in range(self.sigma):
+            if self.node[0][i] > 0 : que.append(self.node[0][i])
+        while que:
+            fr = que.popleft()
+            self.last[fr] |= self.last[link[fr]]
+            for i in range(self.sigma):
+                to = self.node[fr][i]
+                if to > 0:
+                    link[to] = self.node[link[fr]][i]
+                    que.append(to)
+                else:
+                    self.node[fr][i] = self.node[link[fr]][i]
+
 # 重心分解
 N = int(input())
 edge,parent,nodenum = [set() for n in range(N)],[None]*N,[None]*N
