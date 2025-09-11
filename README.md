@@ -436,7 +436,7 @@ class Convolution:
             A[i] = A[i]*ni%self.mod
     def calc(self,A,B):
         n = 2**(len(A)+len(B)-2).bit_length()
-        A,B = [x % self.mod for x in A]+[0]*(n-len(B)), [x % self.mod for x in B]+[0]*(n-len(B))
+        A,B = [x % self.mod for x in A]+[0]*(n-len(A)), [x % self.mod for x in B]+[0]*(n-len(B))
         self.dft(A);self.dft(B)
         C = [(A[i]*B[i])%self.mod for i in range(n)]
         self.idft(C)
