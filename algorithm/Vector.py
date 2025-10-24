@@ -16,6 +16,32 @@ if outerP(axy,dxy,cxy,cxy)==0 and outerP(bxy,dxy,cxy,cxy)==0:
         True
 elif outerP(axy,dxy,cxy,cxy)*outerP(bxy,dxy,cxy,cxy)<=0 and outerP(cxy,bxy,axy,axy)*outerP(dxy,bxy,axy,axy)<=0:
     True
+# 点と線分の最短距離
+def distance_point_to_segment(p1, p2, p = (0,0)):
+    px, py = p
+    x1, y1 = p1
+    x2, y2 = p2
+    # 線分ベクトルの成分
+    vec_x = x2 - x1
+    vec_y = y2 - y1
+    # 線分の長さの2乗を計算
+    length_squared = vec_x**2 + vec_y**2
+    # 線分が点である場合（端点1と2が同じ座標）
+    if length_squared == 0 : return sqrt((px - x1)**2 + (py - y1)**2)
+    # 点pが線分のどの位置に射影されるかを計算する
+    # t = ((p - p1)・(p2 - p1)) / |p2 - p1|^2
+    t = ((px - x1) * vec_x + (py - y1) * vec_y) / length_squared
+    # 射影点が線分の外側 (p1側) にある場合
+    if t < 0 : return sqrt((px - x1)**2 + (py - y1)**2)
+    # 射影点が線分の外側 (p2側) にある場合
+    elif t > 1 : return sqrt((px - x2)**2 + (py - y2)**2)
+    # 射影点が線分上にある場合 (0 <= t <= 1)
+    else:
+        # 垂線の足(射影点)の座標を計算
+        projection_x = x1 + t * vec_x
+        projection_y = y1 + t * vec_y
+        # 点pと射影点の距離が最短となる
+        return sqrt((px - projection_x)**2 + (py - projection_y)**2)
 # 円が接するかの判定
 def istouched(cs1,cs2):
     return (cs1[2]+cs2[2])**2>=distpow(cs1[:2],cs2[:2]) and distpow(cs1[:2],cs2[:2])+min(cs1[2],cs2[2])>=max(cs1[2],cs2[2])
