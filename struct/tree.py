@@ -45,6 +45,8 @@ class DubTree:
     def dist(self,a,b):
         lca = self.lca(a,b)
         return self.wei[a] + self.wei[b] - 2*self.wei[lca]
+    def is_onpass(self,a,b,i): # iがa,b上にあるか
+        return self.dist(a, b) == self.dist(a, i) + self.dist(i, b)
 
 # オイラーツアー
 # https://atcoder.jp/contests/abc294/submissions/50893914
