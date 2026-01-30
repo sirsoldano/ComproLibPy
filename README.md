@@ -269,6 +269,17 @@ class FenT:
             ans += self.tree[n]
             n -= n&-n
         return ans
+
+from atcoder.fenwicktree import FenwickTree
+def min_swap(p1, p2):
+    target_pos = {val: i for i, val in enumerate(p2)}
+    new_a = [target_pos[x] for x in p1]
+    ft = FenwickTree(len(p1))
+    ans = 0
+    for i, x in enumerate(new_a):
+        ans += i - ft.sum(0, x)
+        ft.add(x, 1)
+    return ans
 ~~~
 </details>
 
