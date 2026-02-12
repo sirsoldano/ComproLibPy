@@ -67,7 +67,7 @@ def arg_sort(p0, p1):
     return 1 if x0*y1-y0*x1>0 else 0 if x0*y1-y0*x1==0 else -1
 N = int(input())
 xy = [Arg(*([*map(int,input().split())]+[n])) for n in range(N)]
-xys = sorted(xy)
+xys = sorted(xy) # 4,3,2,1象限の順
 
 # 三角形の外接円 https://tjkendev.github.io/procon-library/python/geometry/circles_associated_with_triangle.html
 def circumcircle(P1, P2, P3):
