@@ -52,6 +52,23 @@ for n in range(N) :
 def getdist(p1,p2):
     return max(abs(p1[0]-p2[0]),abs(p1[1]-p2[1]))
 
+# 偏角ソート https://atcoder.jp/contests/abc442/tasks/abc442_e
+class Arg:
+    def __init__ (self, x, y, n):
+        self.x , self.y, self.n = x , y, n
+    def __lt__ (self, other):
+        return arg_sort(self,other)<=0
+def arg_sort(p0, p1):
+    x0, y0 = p0.x,p0.y
+    x1, y1 = p1.x,p1.y
+    h0 = y0<0 or (y0==0 and x0<0)
+    h1 = y1<0 or (y1==0 and x1<0)
+    if h0!=h1 : return 1 if h0<h1 else -1
+    return 1 if x0*y1-y0*x1>0 else 0 if x0*y1-y0*x1==0 else -1
+N = int(input())
+xy = [Arg(*([*map(int,input().split())]+[n])) for n in range(N)]
+xys = sorted(xy)
+
 # 三角形の外接円 https://tjkendev.github.io/procon-library/python/geometry/circles_associated_with_triangle.html
 def circumcircle(P1, P2, P3):
     x1, y1 = P1; x2, y2 = P2; x3, y3 = P3
