@@ -1,4 +1,19 @@
 from collections import Counter
+class Atkin:
+    def __init__(self,n=10**7):
+        self.primes,self.minfac,p = [],[i for i in range(n+1)],2
+        for p in range(2,n+1):
+            if self.minfac[p]==p : self.primes.append(p)
+            for i in self.primes :
+                if i*p>n or self.minfac[p] < i : break
+                self.minfac[i*p] = i
+    def get_pf(self,x):
+        pf = Counter()
+        while x>1:
+            pf[self.minfac[x]]+=1
+            x //= self.minfac[x]
+        return pf
+from collections import Counter
 class Eratos:
     def __init__(self,n=10**7):
         self.primes,self.minfac,self.mobius,p = [],[i for i in range(n+1)],[1]*(n+1),2
