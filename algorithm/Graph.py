@@ -188,6 +188,7 @@ class SCC:
         self.reds = [[] for n in range(N)]
         self.nnums = []
         self.used = [False]*N
+        self.number = [-1]*N
         self.inc = 0
     def addedge(self,a,b):
         self.teds[a].append(b)
@@ -200,10 +201,19 @@ class SCC:
         self.nnums.append(pos)
     def rdfs(self,pos):
         self.used[pos]=False
+        self.number[pos] = N-self.inc
         self.inc += 1
         for p in self.reds[pos] :
             if self.used[p]==True:
                 self.rdfs(p)
+    def step1(self):
+        for n in range(self._n):
+            if self.used[n]==False:
+                self.tdfs(n)
+    def step2(self):
+        for n in self.nnums:
+            if self.used[n]==True:
+                self.rdfs(n)
 
 # functional graph
 N = int(input())
