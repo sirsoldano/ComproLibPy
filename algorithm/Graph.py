@@ -210,6 +210,7 @@ class SCC:
         for n in range(self._n):
             if self.used[n]==False:
                 self.tdfs(n)
+        self.nnums.reverse()
     def step2(self):
         for n in self.nnums:
             if self.used[n]==True:
